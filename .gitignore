@@ -1,0 +1,13 @@
+.DS_Store
+.vscode/
+__pycache__/
+*.pyc
+venv/
+.venv/
+env/
+.ipynb_checkpoints/
+*.gpkg
+*.tif
+*.tiff
+*.zip
+*.tar.gz
