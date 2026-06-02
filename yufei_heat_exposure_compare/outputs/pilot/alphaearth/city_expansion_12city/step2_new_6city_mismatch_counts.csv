@@ -1,0 +1,27 @@
+mismatch_class,n,city,city_label,pct_of_total
+Both LST and HI hotspot,121,new_york,New York,5.116279069767442
+HI-only hotspot,408,new_york,New York,17.251585623678647
+LST-only hotspot,401,new_york,New York,16.955602536997887
+Missing,277,new_york,New York,11.71247357293869
+Neither hotspot,1158,new_york,New York,48.964059196617335
+Both LST and HI hotspot,161,chicago,Chicago,18.46330275229358
+HI-only hotspot,153,chicago,Chicago,17.545871559633028
+LST-only hotspot,57,chicago,Chicago,6.536697247706422
+Neither hotspot,501,chicago,Chicago,57.45412844036697
+Both LST and HI hotspot,15,atlanta,Atlanta,6.726457399103139
+HI-only hotspot,72,atlanta,Atlanta,32.28699551569507
+LST-only hotspot,41,atlanta,Atlanta,18.385650224215247
+Neither hotspot,95,atlanta,Atlanta,42.600896860986545
+Both LST and HI hotspot,56,dallas,Dallas,12.47216035634744
+HI-only hotspot,84,dallas,Dallas,18.70824053452116
+LST-only hotspot,57,dallas,Dallas,12.694877505567929
+Neither hotspot,252,dallas,Dallas,56.12472160356348
+Both LST and HI hotspot,6,seattle,Seattle,3.015075376884422
+HI-only hotspot,62,seattle,Seattle,31.155778894472363
+LST-only hotspot,41,seattle,Seattle,20.603015075376884
+Missing,11,seattle,Seattle,5.527638190954774
+Neither hotspot,79,seattle,Seattle,39.698492462311556
+Both LST and HI hotspot,50,san_francisco,San Francisco,19.230769230769234
+HI-only hotspot,100,san_francisco,San Francisco,38.46153846153847
+Missing,72,san_francisco,San Francisco,27.692307692307693
+Neither hotspot,38,san_francisco,San Francisco,14.615384615384617

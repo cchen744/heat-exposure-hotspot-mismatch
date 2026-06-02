@@ -1,0 +1,4 @@
+city,n_ready,mean_lst_c,mean_hi_c,mean_hi_minus_lst,q75_lst_c,q75_hi_c,priority_n,priority_pct
+houston,549,47.94,34.15,-13.79,49.66,34.2,199,36.25
+phoenix,332,57.06,33.29,-23.77,58.37,33.69,129,38.86
+las_vegas,458,47.0,31.1,-15.91,48.0,31.99,128,27.95

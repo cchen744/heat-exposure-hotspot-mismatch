@@ -1,0 +1,3 @@
+city,status,next_step
+Miami,missing_required_inputs,Need tract-level merged gpkg with LST + HI + population columns
+Las Vegas,missing_required_inputs,Need tract-level merged gpkg with LST + HI + population columns

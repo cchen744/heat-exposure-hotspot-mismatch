@@ -1,0 +1,3 @@
+city,baseline_r2,pc_only_r2,rawdim_only_r2,combined_r2,n_shared_dims,n_city_unique_dims,best_model,takeaway
+Houston,0.403,0.7833,0.7544,0.7773,3,12,baseline_plus_pc1_to_pc7,Houston: PC-only and combined models are very close (combined - PC-only = -0.006); extra raw dims add limited gain.
+Phoenix,0.1759,0.6685,0.7212,0.7311,3,13,baseline_plus_pc1_to_pc7_plus_stable_rawdims,Phoenix: stable raw dims add meaningful value beyond PC1–PC7 (combined - PC-only = 0.063).

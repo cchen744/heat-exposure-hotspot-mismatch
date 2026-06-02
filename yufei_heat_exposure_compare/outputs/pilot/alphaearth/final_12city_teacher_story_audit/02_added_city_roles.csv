@@ -1,0 +1,7 @@
+city_label_clean,broad_context_final,story_group_final,hi_minus_lst_hotspot_pct,hi_only_pct,lst_only_pct,total_detected_hotspot_pct_final,lst_hi_corr,ready_pct,n_ready,data_readiness_flag
+San Francisco,Coastal / water-influenced,Strong HI-shift,53.191489361702125,53.191489361702125,0.0,79.7872340425532,0.2762610770023599,72.3076923076923,188,Caution: ready_pct < 80
+Atlanta,Inland Sun Belt,Moderate HI-shift,13.90134529147982,32.28699551569507,18.385650224215247,57.399103139013455,-0.268547625635977,100.0,223,High completeness
+Seattle,Coastal / water-influenced,Moderate HI-shift,11.170212765957444,32.97872340425532,21.808510638297875,57.97872340425532,-0.0637213215272988,94.47236180904522,188,Moderate caution: ready_pct < 95
+Chicago,Great Lakes,Moderate HI-shift,11.009174311926609,17.545871559633028,6.536697247706422,42.54587155963303,0.631142924321808,100.0,872,High completeness
+Dallas,Inland Sun Belt,Mixed / transitional,6.013363028953231,18.70824053452116,12.694877505567929,43.87527839643653,0.1087414753143568,100.0,449,High completeness
+New York,Coastal / water-influenced,Mixed / transitional,0.3352490421455911,19.54022988505747,19.20498084291188,44.54022988505747,0.0533020407087778,88.28752642706131,2088,Moderate caution: ready_pct < 95

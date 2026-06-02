@@ -1,0 +1,5 @@
+city,status,tract_rows,valid_both_n,missing_hi_n,median_lst_c,median_hi_c,lst_hotspot_threshold_top20_c,hi_hotspot_threshold_top20_c,lst_hotspot_n,hi_hotspot_n,overlap_n,lst_only_n,hi_only_n,jaccard_index,overlap_share_pct,lst_only_share_pct,hi_only_share_pct,population_overlap_share_pct,geoid_col,pop_col
+Houston,ok,654.0,549.0,105.0,48.531293320761506,34.182124562548104,50.31463115561765,34.19809785111112,131.0,146.0,38.0,45.0,108.0,0.19895287958115182,6.9216757741347905,8.19672131147541,19.672131147540984,6.188047272723686,GEOID,total_population
+Phoenix,ok,373.0,332.0,41.0,57.21703991853516,33.3082424010499,58.60717741783293,33.694000437113615,75.0,73.0,29.0,37.0,44.0,0.2636363636363636,8.734939759036145,11.144578313253012,13.253012048192772,9.343613696325392,GEOID,total_population
+Miami,missing_required_inputs,,,,,,,,,,,,,,,,,,,
+Las Vegas,missing_required_inputs,,,,,,,,,,,,,,,,,,,

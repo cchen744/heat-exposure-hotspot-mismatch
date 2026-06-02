@@ -1,0 +1,6 @@
+city,top_pct,lst_threshold,hi_threshold,lst_hot_n,hi_hot_n,lst_only_n,hi_only_n,overlap_n
+Phoenix,10,59.235,33.807,34,61,20,47,14
+Phoenix,15,58.835,33.807,50,61,33,44,17
+Phoenix,20,58.603,33.694,67,73,37,43,30
+Phoenix,25,58.368,33.686,83,97,47,61,36
+Phoenix,30,58.182,33.684,100,107,53,60,47

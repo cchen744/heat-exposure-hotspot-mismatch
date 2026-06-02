@@ -1,0 +1,639 @@
+notebook,cell_index,matched_keywords,preview_first_lines
+04_heat_pilot_setup.ipynb,26,heat index,"import json
+from pathlib import Path
+
+print(""Current cwd:"", Path.cwd())
+
+project_root = Path.cwd()
+if not (project_root / ""archive_old"").exists():
+    project_root = project_root.parent
+
+print(""Project root:"", project_root)
+
+nb_path = project_root / ""archive_old"" / ""02_four_city_extension.ipynb""
+print(""Notebook path:"", nb_path)
+print(""Notebook exists?"", nb_path.exists())
+
+nb = json.loads(nb_path.read_text(encoding=""utf-8""))
+
+keywords = [
+    ""jaccard"", ""hotspot"", ""Heat Index"", ""heat index"", ""LST"
+04_heat_pilot_setup.ipynb,28,"hi_c, heat index, relative humidity","# ============================================================
+# Block A: tract-level pilot Heat Index extraction (FULL REPLACEMENT)
+# ============================================================
+
+from pathlib import Path
+import json
+import pandas as pd
+import ee
+
+# ---------- locate project root ----------
+project_root = Path.cwd()
+if not (project_root / ""data_processed"").exists():
+    project_root = project_root.parent
+
+data_processed = project_root / ""data_processed""
+output_dir = project_root"
+04_heat_pilot_setup.ipynb,30,"hi_c, heat index","# ============================================================
+# Block B (robust): merge HI back and make LST vs HI comparison maps
+# ============================================================
+
+from pathlib import Path
+import numpy as np
+import pandas as pd
+import geopandas as gpd
+import matplotlib.pyplot as plt
+from matplotlib.patches import Patch
+
+# ---------- locate project root ----------
+project_root = Path.cwd()
+if not (project_root / ""data_processed"").exists():
+    project_root = projec"
+04_heat_pilot_setup.ipynb,31,"hi_c, heat index","# ============================================================
+# Block C (robust): hotspot overlap, Jaccard, and mismatch maps
+# ============================================================
+
+import numpy as np
+import pandas as pd
+import geopandas as gpd
+import matplotlib.pyplot as plt
+from matplotlib.patches import Patch
+
+houston_cmp = gpd.read_file(data_processed / ""houston"" / ""houston_master_with_lst_hi.gpkg"")
+phoenix_cmp = gpd.read_file(data_processed / ""phoenix"" / ""phoenix_master_with_lst_hi"
+04_heat_pilot_setup.ipynb,33,"hi_c, heat index","# ============================================================
+# Block B2: FIXED merge + LST vs Heat Index anomaly panel
+# ============================================================
+
+from pathlib import Path
+import numpy as np
+import pandas as pd
+import geopandas as gpd
+import matplotlib.pyplot as plt
+from matplotlib.patches import Patch
+
+# ---------- locate project root ----------
+project_root = Path.cwd()
+if not (project_root / ""data_processed"").exists():
+    project_root = project_root.pare"
+04_heat_pilot_setup.ipynb,34,"hi_c, heat index","# ============================================================
+# FINAL REPLACEMENT CELL
+# Teacher-ready LST vs Heat Index comparison for RQ1
+# ============================================================
+
+from pathlib import Path
+import numpy as np
+import pandas as pd
+import geopandas as gpd
+import matplotlib.pyplot as plt
+from matplotlib.patches import Patch
+
+# ----------------------------
+# 0) locate project root
+# ----------------------------
+project_root = Path.cwd()
+if not (project_root / """
+04_heat_pilot_setup.ipynb,35,"hi_c, heat index","# ============================================================
+# Block 36 FINAL POLISH REPLACEMENT
+# Teacher-requested original-value choropleth map
+# Polished version for professor review
+# ============================================================
+
+from pathlib import Path
+import numpy as np
+import pandas as pd
+import geopandas as gpd
+import matplotlib.pyplot as plt
+from matplotlib.patches import Patch
+
+# -----------------------------
+# locate project root
+# -----------------------------
+pro"
+05_rq1_city_comparison.ipynb,0,"hi_c, heat index","# ============================================================
+# Cell 1
+# RQ1 city-level comparison summary:
+# LST vs Heat Index hotspot mismatch metrics
+# ============================================================
+
+from pathlib import Path
+import numpy as np
+import pandas as pd
+import geopandas as gpd
+
+# ------------------------------------------------------------
+# locate project root
+# ------------------------------------------------------------
+project_root = Path.cwd()
+if not (project_roo"
+05_rq1_city_comparison.ipynb,1,heat index,"# ============================================================
+# Cell 2
+# Paper-style summary figure for RQ1 city comparison
+# ============================================================
+
+from pathlib import Path
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+
+project_root = Path.cwd()
+if not (project_root / ""outputs"").exists():
+    project_root = project_root.parent
+
+output_dir = project_root / ""outputs"" / ""pilot""
+figure_dir = project_root / ""figures"" / ""pilot""
+figure_d"
+05_rq1_city_comparison.ipynb,3,"hi_c, hi_minus_lst, heat index","# ============================================================
+# Cell 5
+# ADVANCED MAP:
+# standardized HI-LST gap + hotspot mismatch outlines
+# ============================================================
+
+from pathlib import Path
+import numpy as np
+import pandas as pd
+import geopandas as gpd
+import matplotlib.pyplot as plt
+from matplotlib.patches import Patch
+from matplotlib.lines import Line2D
+
+# ------------------------------------------------------------
+# locate project root
+# -------------"
+05_rq1_city_comparison.ipynb,4,"hi_c, hi_minus_lst, heat index","# ============================================================
+# Cell 6
+# PAPER-READY ASSETS FOR RQ1
+# summary table + results notes + figure captions
+# ============================================================
+
+from pathlib import Path
+import numpy as np
+import pandas as pd
+import geopandas as gpd
+
+# ------------------------------------------------------------
+# locate project root
+# ------------------------------------------------------------
+project_root = Path.cwd()
+if not (project_root /"
+05_rq1_city_comparison.ipynb,5,"hi_c, hi_minus_lst, heat index, relative humidity","# ============================================================
+# Cell 7
+# PAPER STRUCTURE ASSETS:
+# figure plan + results draft + methods draft
+# ============================================================
+
+from pathlib import Path
+import numpy as np
+import pandas as pd
+
+# ------------------------------------------------------------
+# locate project root
+# ------------------------------------------------------------
+project_root = Path.cwd()
+if not (project_root / ""outputs"").exists():
+    proje"
+08_rq1_deep_dive_maps.ipynb,0,hi_c,"# ============================================================
+# 08 / Cell 1
+# Load tract-level data for Houston + Phoenix
+# ============================================================
+
+from pathlib import Path
+import numpy as np
+import pandas as pd
+import geopandas as gpd
+import matplotlib.pyplot as plt
+from matplotlib.patches import Rectangle
+
+# -----------------------------
+# project root
+# -----------------------------
+PROJECT_ROOT = Path.cwd()
+if PROJECT_ROOT.name == ""notebooks"":
+    PROJE"
+08_rq1_deep_dive_maps.ipynb,1,hi_c,"# ============================================================
+# 08 / Cell 2
+# Build bivariate LST-HI classes (within-city tertiles)
+# ============================================================
+
+# 3x3 bivariate palette
+# key = ""LSTclass-HIclass""
+# 1 = low, 2 = mid, 3 = high
+BIVARIATE_COLORS = {
+    ""1-1"": ""#e8e8e8"",  # low LST, low HI
+    ""2-1"": ""#ace4e4"",
+    ""3-1"": ""#5ac8c8"",
+    ""1-2"": ""#dfb0d6"",
+    ""2-2"": ""#a5add3"",
+    ""3-2"": ""#5698b9"",
+    ""1-3"": ""#be64ac"",
+    ""2-3"": ""#8c62aa"",
+    ""3-"
+08_rq1_deep_dive_maps.ipynb,2,"hi_c, heat index","# ============================================================
+# 08 / Cell 3 (FINAL CLEAN VERSION)
+# Cleaner bivariate LST-HI typology map
+# ============================================================
+
+from matplotlib.patches import Rectangle
+import matplotlib.pyplot as plt
+import geopandas as gpd
+import numpy as np
+
+# ------------------------------------------------------------
+# 1. Stronger and cleaner bivariate palette
+# row = HI (low -> high)
+# col = LST (low -> high)
+# --------------------"
+08_rq1_deep_dive_maps.ipynb,3,hi_c,"# ============================================================
+# 08 / Cell 4
+# Quantify concordance vs discordance from bivariate classes
+# ============================================================
+
+summary_rows = []
+
+for city, obj in city_data.items():
+    gdf = obj[""gdf_bivar""].copy()
+
+    valid = gdf[gdf[""plot_class""] != ""missing""].copy()
+    n_valid = len(valid)
+
+    diag_classes = [""1-1"", ""2-2"", ""3-3""]
+    extreme_discordant_classes = [""1-3"", ""3-1""]
+
+    diag_n = int(valid[""plot_class""]."
+08_rq1_deep_dive_maps.ipynb,4,hi_c,"# ============================================================
+# 08 / Cell 5
+# Direction-of-mismatch map
+# ============================================================
+
+import geopandas as gpd
+import pandas as pd
+import matplotlib.pyplot as plt
+
+DIR_COLORS = {
+    ""Strong HI > LST"": ""#b2182b"",
+    ""Mild HI > LST"": ""#ef8a62"",
+    ""Equal"": ""#f7f7f7"",
+    ""Mild LST > HI"": ""#67a9cf"",
+    ""Strong LST > HI"": ""#2166ac"",
+    ""Missing"": ""#d9d9d9""
+}
+
+def classify_direction(row):
+    if row[""plot_class""] ="
+08_rq1_deep_dive_maps.ipynb,5,"hi_c, heat index","# ============================================================
+# 08 / Cell 6
+# Scatter-quadrant figure: tract-level LST vs HI
+# ============================================================
+
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# ------------------------------------------------------------
+# build tract-level scatter data
+# ------------------------------------------------------------
+scatter_rows = []
+
+for city, obj in city_data.items():
+    gdf = obj[""gdf_bivar"
+08_rq1_deep_dive_maps.ipynb,6,hi_c,"# ============================================================
+# 08 / Cell 7
+# Advanced figure: LISA cluster map of standardized HI-LST gap
+# ============================================================
+
+import numpy as np
+import pandas as pd
+import geopandas as gpd
+import matplotlib.pyplot as plt
+from matplotlib.patches import Rectangle
+from libpysal.weights import Queen
+from esda.moran import Moran_Local, Moran
+
+# ------------------------------------------------------------
+# helpers
+# -------"
+08_rq1_deep_dive_maps.ipynb,7,"hi_c, heat index","# ============================================================
+# 08 / FAST RELIABLE VERSION
+# tract-level mismatch direction:
+# citywide + focus zoom, no html / no basemap / no heavy union
+# ============================================================
+
+from pathlib import Path
+import numpy as np
+import pandas as pd
+import geopandas as gpd
+import matplotlib.pyplot as plt
+from matplotlib.patches import Patch
+
+# ------------------------------------------------------------
+# project root
+# ---------"
+08_rq1_deep_dive_maps.ipynb,8,hi_c,"# ============================================================
+# 08 / NEW STYLE
+# RQ1 deep-dive: hexbin basemap map of HI-LST mismatch
+# truly different from tract-fill choropleth
+# ============================================================
+
+from pathlib import Path
+import numpy as np
+import pandas as pd
+import geopandas as gpd
+import matplotlib.pyplot as plt
+from matplotlib.colors import TwoSlopeNorm
+import contextily as ctx
+
+# ------------------------------------------------------------
+# pr"
+08_rq1_deep_dive_maps.ipynb,9,hi_c,"# ============================================================
+# 08 / NEW CELL 1
+# Robust load for single-city deep-dive maps
+# ============================================================
+
+from pathlib import Path
+import numpy as np
+import pandas as pd
+import geopandas as gpd
+import matplotlib.pyplot as plt
+
+try:
+    import contextily as ctx
+    HAS_CONTEXTILY = True
+except Exception:
+    HAS_CONTEXTILY = False
+
+from scipy.stats import gaussian_kde
+from matplotlib.patches import Patch
+"
+08_rq1_deep_dive_maps.ipynb,11,hi_c,"# ============================================================
+# 08 / Separate hexbin figures for Houston and Phoenix
+# RQ1 deep-dive: tract-centroid hexbin view of HI-LST mismatch
+# ============================================================
+
+from pathlib import Path
+import numpy as np
+import pandas as pd
+import geopandas as gpd
+import matplotlib.pyplot as plt
+from matplotlib.colors import TwoSlopeNorm
+import contextily as ctx
+
+# -----------------------------
+# 1) Find project root
+# ---------"
+08_rq1_deep_dive_maps.ipynb,12,hi_c,"# ============================================================
+# Phoenix only: redraw hexbin better
+# Output:
+#   1) full city portrait version
+#   2) focus/urban-core version
+# ============================================================
+
+from pathlib import Path
+import numpy as np
+import pandas as pd
+import geopandas as gpd
+import matplotlib.pyplot as plt
+from matplotlib.colors import TwoSlopeNorm
+import contextily as ctx
+
+# -----------------------------
+# 1) project root
+# -------------------"
+08_rq1_deep_dive_maps.ipynb,13,hi_c,"# ============================================================
+# Phoenix single-city roomy hexbin map
+# Put this in 08_rq1_deep_dive_maps.ipynb
+# ============================================================
+
+from pathlib import Path
+import numpy as np
+import pandas as pd
+import geopandas as gpd
+import matplotlib.pyplot as plt
+from matplotlib.colors import TwoSlopeNorm
+import contextily as ctx
+
+# -----------------------------
+# 1) Find project root
+# -----------------------------
+def find_project"
+08_rq1_deep_dive_maps.ipynb,14,hi_c,"# ============================================================
+# 08 / KDE hotspot maps helpers
+# ============================================================
+
+from pathlib import Path
+import numpy as np
+import pandas as pd
+import geopandas as gpd
+import matplotlib.pyplot as plt
+from matplotlib.patches import Patch
+from scipy.stats import gaussian_kde
+import contextily as ctx
+
+# ----------------------------
+# basic helpers
+# ----------------------------
+def find_project_root(start=None):
+    p = "
+08_rq1_deep_dive_maps.ipynb,17,hi_c,"# ============================================================
+# 08 / Cell A
+# Threshold stability map (阈值稳定性地图)
+# ============================================================
+
+from pathlib import Path
+import numpy as np
+import pandas as pd
+import geopandas as gpd
+import matplotlib.pyplot as plt
+from matplotlib.patches import Patch
+
+try:
+    import contextily as ctx
+    HAS_CTX = True
+except Exception:
+    HAS_CTX = False
+
+# ---------- project root ----------
+PROJECT_ROOT = Path.cwd().resolve()"
+08_rq1_deep_dive_maps.ipynb,18,hi_c,"# ============================================================
+# 08 / Cell B
+# Compute threshold stability
+# ============================================================
+
+def compute_threshold_stability(cfg, top_pcts=TOP_PCTS, min_stable_count=MIN_STABLE_COUNT):
+    city = cfg[""city""]
+    slug = cfg[""slug""]
+    lst_col = cfg[""lst_col""]
+    hi_col = cfg[""hi_col""]
+    geoid_col = cfg[""geoid_col""]
+    pop_col = cfg[""pop_col""]
+
+    gdf = gpd.read_file(cfg[""gpkg""]).copy()
+
+    keep_cols = [c for c in"
+08_rq1_deep_dive_maps.ipynb,44,"hi_c, hi_minus_lst","from pathlib import Path
+import geopandas as gpd
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+
+# ================================
+# read Houston PC geojson
+# ================================
+pc_geojson = Path(""/Users/yufeizhou/Desktop/heat-exposure-compare/outputs/pilot/alphaearth/houston_tracts_with_alphaearth_pc5_corrected.geojson"")
+out_dir = Path(""/Users/yufeizhou/Desktop/heat-exposure-compare/outputs/pilot/alphaearth"")
+out_dir.mkdir(parents=True, exist_ok=True)
+
+gdf"
+08_rq1_deep_dive_maps.ipynb,46,hi_c,"from pathlib import Path
+import pandas as pd
+import geopandas as gpd
+
+project_root = Path(""/Users/yufeizhou/Desktop/heat-exposure-compare"")
+
+candidates = []
+for p in project_root.rglob(""*houston*""):
+    if p.suffix.lower() in ["".geojson"", "".gpkg"", "".csv""]:
+        candidates.append(p)
+
+print(""n candidate files:"", len(candidates))
+
+rows = []
+
+for p in sorted(candidates):
+    try:
+        if p.suffix.lower() in ["".geojson"", "".gpkg""]:
+            df = gpd.read_file(p)
+        else:"
+08_rq1_deep_dive_maps.ipynb,47,hi_c,"from pathlib import Path
+import pandas as pd
+import geopandas as gpd
+
+project_root = Path(""/Users/yufeizhou/Desktop/heat-exposure-compare"")
+
+rows = []
+for p in project_root.rglob(""*houston*""):
+    if p.suffix.lower() not in ["".geojson"", "".gpkg"", "".csv""]:
+        continue
+    try:
+        if p.suffix.lower() in ["".geojson"", "".gpkg""]:
+            df = gpd.read_file(p)
+        else:
+            df = pd.read_csv(p, nrows=5)
+
+        cols = list(df.columns)
+        rows.append({
+            ""file"": s"
+08_rq1_deep_dive_maps.ipynb,48,"hi_c, hi_minus_lst","from pathlib import Path
+import numpy as np
+import pandas as pd
+import geopandas as gpd
+
+from sklearn.model_selection import KFold, cross_validate
+from sklearn.ensemble import RandomForestRegressor
+
+# =========================================
+# files
+# =========================================
+heat_file = Path(""/Users/yufeizhou/Desktop/heat-exposure-compare/data_processed/houston/houston_rq1_compare.gpkg"")
+pc5_file = Path(""/Users/yufeizhou/Desktop/heat-exposure-compare/outputs/pilot/alphaearth/h"
+08_rq1_deep_dive_maps.ipynb,50,"hi_c, hi_minus_lst","from pathlib import Path
+import numpy as np
+import pandas as pd
+import geopandas as gpd
+import matplotlib.pyplot as plt
+
+from sklearn.ensemble import RandomForestRegressor
+
+# try import shap
+try:
+    import shap
+except ImportError:
+    raise ImportError(""shap not installed. Run: %pip install shap"")
+
+# =========================================
+# files
+# =========================================
+heat_file = Path(""/Users/yufeizhou/Desktop/heat-exposure-compare/data_processed/houston/houston_rq1_com"
+08_rq1_deep_dive_maps.ipynb,51,"hi_c, hi_minus_lst","from pathlib import Path
+import numpy as np
+import pandas as pd
+import geopandas as gpd
+
+from sklearn.model_selection import KFold, cross_validate
+from sklearn.ensemble import RandomForestRegressor
+
+# =========================================
+# files
+# =========================================
+heat_file = Path(""/Users/yufeizhou/Desktop/heat-exposure-compare/data_processed/houston/houston_rq1_compare.gpkg"")
+pc7_file = Path(""/Users/yufeizhou/Desktop/heat-exposure-compare/outputs/pilot/alphaearth/h"
+08_rq1_deep_dive_maps.ipynb,62,"hi_c, hi_minus_lst","from pathlib import Path
+import numpy as np
+import pandas as pd
+import geopandas as gpd
+
+from sklearn.model_selection import KFold, cross_validate
+from sklearn.ensemble import RandomForestRegressor
+
+# =========================================
+# files
+# =========================================
+heat_file = Path(""/Users/yufeizhou/Desktop/heat-exposure-compare/data_processed/phoenix/phoenix_rq1_compare.gpkg"")
+pc5_file = Path(""/Users/yufeizhou/Desktop/heat-exposure-compare/outputs/pilot/alphaearth/p"
+08_rq1_deep_dive_maps.ipynb,63,"hi_c, hi_minus_lst","from pathlib import Path
+import numpy as np
+import pandas as pd
+import geopandas as gpd
+
+from sklearn.model_selection import KFold, cross_validate
+from sklearn.ensemble import RandomForestRegressor
+
+# ========================================
+# fixed Phoenix file only
+# ========================================
+heat_file = Path(""/Users/yufeizhou/Desktop/heat-exposure-compare/data_processed/phoenix/phoenix_rq1_compare.gpkg"")
+pc7_file = Path(""/Users/yufeizhou/Desktop/heat-exposure-compare/outputs/pi"
+08_rq1_deep_dive_maps.ipynb,64,"hi_c, hi_minus_lst","from pathlib import Path
+import numpy as np
+import pandas as pd
+import geopandas as gpd
+import matplotlib.pyplot as plt
+from sklearn.ensemble import RandomForestRegressor
+
+# try import shap
+try:
+    import shap
+except ImportError:
+    raise ImportError(""shap not installed. Run: %pip install shap"")
+
+# ========================================
+# fixed Phoenix files
+# ========================================
+heat_file = Path(""/Users/yufeizhou/Desktop/heat-exposure-compare/data_processed/phoenix/phoe"
+08_rq1_deep_dive_maps.ipynb,67,"hi_c, hi_minus_lst","from pathlib import Path
+import numpy as np
+import pandas as pd
+import geopandas as gpd
+
+# =========================================================
+# paths
+# =========================================================
+project_root = Path(""/Users/yufeizhou/Desktop/heat-exposure-compare"")
+out_dir = project_root / ""outputs/pilot/alphaearth""
+
+city_cfg = {
+    ""Houston"": {
+        ""embed_file"": out_dir / ""houston_alphaearth_2024_tract_mean_mosaic_clean.csv"",
+        ""heat_file"": project_root / ""data_p"
+08_rq1_deep_dive_maps.ipynb,68,"hi_c, hi_minus_lst","from pathlib import Path
+import pandas as pd
+import numpy as np
+
+# =========================================================
+# paths
+# =========================================================
+project_root = Path(""/Users/yufeizhou/Desktop/heat-exposure-compare"")
+out_dir = project_root / ""outputs/pilot/alphaearth""
+
+compact_file = out_dir / ""city_top4_pc_loading_compact_summary.csv""
+factor_top_file = out_dir / ""city_top4_pc_factor_top4.csv""
+dim_top_file = out_dir / ""city_top4_pc_dim_factor_top8.cs"

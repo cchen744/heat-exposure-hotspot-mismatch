@@ -1,0 +1,2 @@
+city,filter_rule,rows_before,rows_after,unique_geoid_after,duplicate_geoid_after,projected_gpkg,clean_geojson,backup_gpkg
+las_vegas,COUNTYFP == 003 (Clark County),779,535,535,0,/Users/yufeizhou/Desktop/heat-exposure-compare/data_processed/las_vegas/las_vegas_tracts_projected.gpkg,/Users/yufeizhou/Desktop/heat-exposure-compare/data_processed/las_vegas/las_vegas_tracts_clean.geojson,/Users/yufeizhou/Desktop/heat-exposure-compare/data_processed/las_vegas/las_vegas_tracts_projected_statewide_backup.gpkg

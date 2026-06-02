@@ -1,0 +1,13 @@
+{
+"type": "FeatureCollection",
+"name": "hotspot_centroid_points_BOLD",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "city": "houston", "center_type": "LST hotspot center" }, "geometry": { "type": "Point", "coordinates": [ -95.47401629160855, 29.74698482410485 ] } },
+{ "type": "Feature", "properties": { "city": "houston", "center_type": "HI hotspot center" }, "geometry": { "type": "Point", "coordinates": [ -95.432103662378381, 29.68236119774809 ] } },
+{ "type": "Feature", "properties": { "city": "phoenix", "center_type": "LST hotspot center" }, "geometry": { "type": "Point", "coordinates": [ -112.121073526606978, 33.716647728719408 ] } },
+{ "type": "Feature", "properties": { "city": "phoenix", "center_type": "HI hotspot center" }, "geometry": { "type": "Point", "coordinates": [ -112.130718683199547, 33.399311752620847 ] } },
+{ "type": "Feature", "properties": { "city": "las_vegas", "center_type": "LST hotspot center" }, "geometry": { "type": "Point", "coordinates": [ -114.922591680663501, 35.882556997284425 ] } },
+{ "type": "Feature", "properties": { "city": "las_vegas", "center_type": "HI hotspot center" }, "geometry": { "type": "Point", "coordinates": [ -114.666983689724148, 36.291936943689727 ] } }
+]
+}

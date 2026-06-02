@@ -1,0 +1,28 @@
+Twelve-city story mining notes
+==================================
+
+Potential paper storyline:
+Across 12 U.S. cities, LST and Heat Index do not identify the same urban heat-risk geographies. The mismatch is not random: it varies systematically by coastal influence, humidity, desert setting, and urban form.
+
+Strongest HI-shift cities:
+San Francisco, Miami, Boston, Atlanta
+
+Lowest HI-shift / more balanced cities:
+Phoenix, Houston, New York, Las Vegas
+
+Most coupled LST-HI cities:
+Las Vegas, Chicago, Los Angeles
+
+Highest priority-tract cities:
+San Francisco, Miami, Boston, Seattle
+
+Most similar city pairs:
+- Phoenix + Houston | distance=1.25
+- Dallas + Houston | distance=1.55
+- Los Angeles + New York | distance=1.64
+- Atlanta + Seattle | distance=1.69
+- Atlanta + New York | distance=1.84
+- Seattle + New York | distance=1.89
+
+Important caution:
+Cities with lower ready_pct, especially San Francisco and New York if applicable, should be interpreted carefully. They can still reveal useful patterns, but the paper should report completeness and avoid overstating them.

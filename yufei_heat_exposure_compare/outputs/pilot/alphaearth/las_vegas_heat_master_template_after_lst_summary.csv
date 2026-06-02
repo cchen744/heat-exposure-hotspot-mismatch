@@ -1,0 +1,2 @@
+city,rows,unique_geoid_n,non_null_lst_n,missing_lst_n,lst_min_c,lst_mean_c,lst_max_c,output_csv
+las_vegas,535,535,535,0,39.91986734312887,47.02727956861036,50.08782933252306,/Users/yufeizhou/Desktop/heat-exposure-compare/city_intake/las_vegas/working/las_vegas_heat_master_template.csv

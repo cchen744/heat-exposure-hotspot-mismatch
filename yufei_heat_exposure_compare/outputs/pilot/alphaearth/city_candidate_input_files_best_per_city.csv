@@ -1,0 +1,3 @@
+city,source_tag,file_path,file_name,suffix,score,size_mb
+houston,data_processed,/Users/yufeizhou/Desktop/heat-exposure-compare/data_processed/houston/houston_master_with_lst_hi_fixed.gpkg,houston_master_with_lst_hi_fixed.gpkg,.gpkg,17,1.598
+phoenix,data_processed,/Users/yufeizhou/Desktop/heat-exposure-compare/data_processed/phoenix/phoenix_master_with_lst_hi_fixed.gpkg,phoenix_master_with_lst_hi_fixed.gpkg,.gpkg,17,1.012

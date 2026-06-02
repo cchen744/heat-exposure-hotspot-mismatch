@@ -1,0 +1,33 @@
+Potential paper story:
+Across 12 cities, LST and Heat Index identify overlapping but systematically different hotspot patterns. The mismatch is structured by city context rather than random noise.
+
+Strongest HI-only hotspot cities:
+- San Francisco: HI-only 53.2%, LST-only 0.0%, gap 53.2 pp, mechanism = Strong HI-dominant, ready = 72.3%.
+- Miami: HI-only 52.0%, LST-only 2.4%, gap 49.6 pp, mechanism = Strong HI-dominant, ready = 96.9%.
+- Boston: HI-only 47.6%, LST-only 11.5%, gap 36.1 pp, mechanism = Strong HI-dominant, ready = 92.3%.
+- Seattle: HI-only 33.0%, LST-only 21.8%, gap 11.2 pp, mechanism = Moderate HI-dominant, ready = 94.5%.
+- Atlanta: HI-only 32.3%, LST-only 18.4%, gap 13.9 pp, mechanism = Moderate HI-dominant, ready = 100.0%.
+
+Cities with strongest apparent-heat shift, measured by HI-only minus LST-only hotspot share:
+- San Francisco: +53.2 percentage points.
+- Miami: +49.6 percentage points.
+- Boston: +36.1 percentage points.
+- Atlanta: +13.9 percentage points.
+- Seattle: +11.2 percentage points.
+
+Highest LST-HI coupling:
+- Las Vegas: LST-HI correlation = 0.75, mechanism = Coupled LST-HI.
+- Chicago: LST-HI correlation = 0.63, mechanism = Moderate HI-dominant.
+- Los Angeles: LST-HI correlation = 0.35, mechanism = Moderate HI-dominant.
+- Houston: LST-HI correlation = 0.34, mechanism = Mixed / transitional.
+- Phoenix: LST-HI correlation = 0.29, mechanism = Mixed / transitional.
+
+Lowest LST-HI coupling:
+- Atlanta: LST-HI correlation = -0.27, mechanism = Moderate HI-dominant.
+- Seattle: LST-HI correlation = -0.06, mechanism = Moderate HI-dominant.
+- Boston: LST-HI correlation = 0.00, mechanism = Strong HI-dominant.
+- New York: LST-HI correlation = 0.05, mechanism = Mixed / transitional.
+- Dallas: LST-HI correlation = 0.11, mechanism = Mixed / transitional.
+
+Important caution:
+Cities with lower ready percentages, especially San Francisco and New York, should be interpreted carefully. They are still useful for pattern discovery, but final claims should mention analysis-ready coverage.

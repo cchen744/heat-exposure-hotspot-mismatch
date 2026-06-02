@@ -1,0 +1,5 @@
+City,LST,Heat Index,LST_minus_HI,Jaccard_80,Jaccard_85,Jaccard_90,Mismatch_rank_80,Mismatch_rank_90,Gap_rank
+Phoenix,50.41,32.04,18.37,0.03,0.0,0.0,1.0,1.0,1.0
+Houston,36.2,31.99,4.21,0.2,0.2,0.06,2.0,2.0,4.0
+Miami,36.68,31.5,5.18,0.21,0.16,0.1,3.0,3.0,3.0
+Las Vegas,46.84,28.87,17.97,0.45,0.48,0.5,4.0,4.0,2.0

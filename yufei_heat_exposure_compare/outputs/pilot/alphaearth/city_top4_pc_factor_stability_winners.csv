@@ -1,0 +1,9 @@
+city,pc,stable_winner_variable,times_top_across_k,k_list,mean_abs_spearman_r_across_k,example_top_dims
+Houston,PC1,ALAND,5,"4, 6, 8, 10, 12",0.614268,"A16, A07, A56, A34"
+Houston,PC2,lst_c,5,"4, 6, 8, 10, 12",0.427239,"A51, A42, A25, A32"
+Houston,PC3,hi_minus_lst,2,"4, 6",0.285941,"A28, A17, A02, A31"
+Houston,PC4,lst_c,5,"4, 6, 8, 10, 12",0.310194,"A25, A22, A59, A04"
+Phoenix,PC1,ALAND,5,"4, 6, 8, 10, 12",0.488575,"A62, A40, A52, A01"
+Phoenix,PC2,median_household_income_clean,4,"4, 8, 10, 12",0.237149,"A63, A04, A61, A44"
+Phoenix,PC3,hi_minus_lst,5,"4, 6, 8, 10, 12",0.417711,"A59, A22, A09, A58"
+Phoenix,PC4,hi_minus_lst,5,"4, 6, 8, 10, 12",0.255223,"A26, A47, A03, A19"

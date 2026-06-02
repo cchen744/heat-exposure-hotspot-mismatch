@@ -1,0 +1,1197 @@
+cell_index,snippet_type,line_start,line_end,matched_keywords,snippet_text
+28,line_hit,2,2,heat index,# Block A: tract-level pilot Heat Index extraction (FULL REPLACEMENT)
+28,line_hit,60,60,"temperature, heat index",# ---------- Heat Index from temperature + dew point ----------
+28,line_hit,61,61,hi_c,def image_to_hi_c(image):
+28,line_hit,63,63,temperature,"    t_c = image.select(""temperature_2m"").subtract(273.15).rename(""T_C"")"
+28,line_hit,64,64,temperature,"    td_c = image.select(""dewpoint_temperature_2m"").subtract(273.15).rename(""TD_C"")"
+28,line_hit,66,66,"relative humidity, humidity",    # Relative humidity from T and Td
+28,line_hit,78,78,temperature,    # Simple HI approximation for lower temperatures
+28,line_hit,102,102,hi_c,"    hi_c = hi_f.subtract(32).multiply(5 / 9).rename(""HI_C"")"
+28,line_hit,104,104,hi_c,"    return hi_c.copyProperties(image, image.propertyNames())"
+28,line_hit,106,106,hi_c,def build_city_hi_collection(boundary_fc):
+28,line_hit,111,111,hi_c,        .map(image_to_hi_c)
+28,line_hit,115,115,hi_c,houston_hi_coll = build_city_hi_collection(houston_boundary_fc)
+28,line_hit,116,116,hi_c,phoenix_hi_coll = build_city_hi_collection(phoenix_boundary_fc)
+28,line_hit,118,118,hi_c,houston_hi_median = houston_hi_coll.median().clip(houston_boundary_fc)
+28,line_hit,119,119,hi_c,phoenix_hi_median = phoenix_hi_coll.median().clip(phoenix_boundary_fc)
+28,line_hit,171,171,hi_c,"        ""era5_hourly_count"": houston_hi_coll.size().getInfo(),"
+28,line_hit,179,179,hi_c,"        ""era5_hourly_count"": phoenix_hi_coll.size().getInfo(),"
+28,line_hit,186,186,hi_c,"houston_hi_csv = output_dir / ""houston_hi_pilot.csv"""
+28,line_hit,187,187,hi_c,"phoenix_hi_csv = output_dir / ""phoenix_hi_pilot.csv"""
+28,line_hit,190,190,hi_c,"houston_hi_df.to_csv(houston_hi_csv, index=False)"
+28,line_hit,191,191,hi_c,"phoenix_hi_df.to_csv(phoenix_hi_csv, index=False)"
+28,line_hit,195,195,hi_c,"for p in [houston_hi_csv, phoenix_hi_csv, hi_extract_qc_csv]:"
+28,context_window,1,14,heat index,"0001: # ============================================================
+0002: # Block A: tract-level pilot Heat Index extraction (FULL REPLACEMENT)
+0003: # ============================================================
+0004: 
+0005: from pathlib import Path
+0006: import json
+0007: import pandas as pd
+0008: import ee
+0009: 
+0010: # ---------- locate project root ----------
+0011: project_root = Path.cwd()
+0012: if not (project_root / ""data_processed"").exists():
+0013:     project_root = project_root.parent
+0014: "
+28,context_window,48,131,"temperature, relative humidity, humidity, hi_c, heat index","0048: phoenix_boundary_fc = geojson_to_ee_fc(phoenix_boundary_geojson)
+0049: houston_tract_fc = geojson_to_ee_fc(houston_tract_geojson)
+0050: phoenix_tract_fc = geojson_to_ee_fc(phoenix_tract_geojson)
+0051: 
+0052: # ---------- pilot window ----------
+0053: # end is exclusive in Earth Engine filterDate, so use 2023-09-01
+0054: pilot_start = ""2023-06-01""
+0055: pilot_end = ""2023-09-01""
+0056: 
+0057: # ---------- ERA5-Land ----------
+0058: era5_land = ee.ImageCollection(""ECMWF/ERA5_LAND/HOURLY"")
+0059: 
+0060: # ---------- Heat Index from temperature + dew point ----------
+0061: def image_to_hi_c(image):
+0062:     # Kelvin -> Celsius
+0063:     t_c = image.select(""temperature_2m"").subtract(273.15).rename(""T_C"")
+0064:     td_c = image.select(""dewpoint_temperature_2m"").subtract(273.15).rename(""TD_C"")
+0065: 
+0066:     # Relative humidity from T and Td
+0067:     rh = t_c.expression(
+0068:         ""100 * exp((17.625 * Td) / (243.04 + Td) - (17.625 * T) / (243.04 + T))"",
+0069:         {
+0070:             ""T"": t_c,
+0071:             ""Td"": td_c
+0072:         }
+0073:     ).clamp(0, 100).rename(""RH"")
+0074: 
+0075:     # Celsius -> Fahrenheit
+0076:     t_f = t_c.multiply(9 / 5).add(32).rename(""T_F"")
+0077: 
+0078:     # Simple HI approximation for lower temperatures
+0079:     simple_hi_f = t_f.expression(
+0080:         ""0.5 * (T + 61.0 + ((T - 68.0) * 1.2) + (RH * 0.094))"",
+0081:         {
+0082:             ""T"": t_f,
+0083:             ""RH"": rh
+0084:         }
+0085:     ).rename(""HI_simple_F"")
+0086: 
+0087:     # Rothfusz regression
+0088:     roth_hi_f = t_f.expression(
+0089:         ""-42.379 + 2.04901523*T + 10.14333127*RH - 0.22475541*T*RH""
+0090:         "" - 0.00683783*T*T - 0.05481717*RH*RH + 0.00122874*T*T*RH""
+0091:         "" + 0.00085282*T*RH*RH - 0.00000199*T*T*RH*RH"",
+0092:         {
+0093:             ""T"": t_f,
+0094:             ""RH"": rh
+0095:         }
+0096:     ).rename(""HI_roth_F"")
+0097: 
+0098:     # Use simple formula when T < 80 F
+0099:     hi_f = roth_hi_f.where(t_f.lt(80), simple_hi_f).rename(""HI_F"")
+0100: 
+0101:     # Fahrenheit -> Celsius
+0102:     hi_c = hi_f.subtract(32).multiply(5 / 9).rename(""HI_C"")
+0103: 
+0104:     return hi_c.copyProperties(image, image.propertyNames())
+0105: 
+0106: def build_city_hi_collection(boundary_fc):
+0107:     coll = (
+0108:         era5_land
+0109:         .filterDate(pilot_start, pilot_end)
+0110:         .filterBounds(boundary_fc)
+0111:         .map(image_to_hi_c)
+0112:     )
+0113:     return coll
+0114: 
+0115: houston_hi_coll = build_city_hi_collection(houston_boundary_fc)
+0116: phoenix_hi_coll = build_city_hi_collection(phoenix_boundary_fc)
+0117: 
+0118: houston_hi_median = houston_hi_coll.median().clip(houston_boundary_fc)
+0119: phoenix_hi_median = phoenix_hi_coll.median().clip(phoenix_boundary_fc)
+0120: 
+0121: # ---------- reduce to tracts ----------
+0122: def reduce_hi_to_tracts(hi_image, tract_fc):
+0123:     return hi_image.reduceRegions(
+0124:         collection=tract_fc,
+0125:         reducer=ee.Reducer.mean().combine(
+0126:             reducer2=ee.Reducer.median(),
+0127:             sharedInputs=True
+0128:         ),
+0129:         scale=11132,
+0130:         tileScale=4
+0131:     )"
+28,context_window,159,196,hi_c,"0159: display(houston_hi_df.head())
+0160: 
+0161: print(""Phoenix HI sample:"")
+0162: display(phoenix_hi_df.head())
+0163: 
+0164: hi_extract_qc = pd.DataFrame([
+0165:     {
+0166:         ""city"": ""Houston"",
+0167:         ""tract_rows"": len(houston_hi_df),
+0168:         ""unique_geoids"": houston_hi_df[""GEOID""].nunique() if ""GEOID"" in houston_hi_df.columns else None,
+0169:         ""missing_hi_mean"": houston_hi_df[""hi_summer_mean_c""].isna().sum() if ""hi_summer_mean_c"" in houston_hi_df.columns else None,
+0170:         ""missing_hi_median"": houston_hi_df[""hi_summer_median_c""].isna().sum() if ""hi_summer_median_c"" in houston_hi_df.columns else None,
+0171:         ""era5_hourly_count"": houston_hi_coll.size().getInfo(),
+0172:     },
+0173:     {
+0174:         ""city"": ""Phoenix"",
+0175:         ""tract_rows"": len(phoenix_hi_df),
+0176:         ""unique_geoids"": phoenix_hi_df[""GEOID""].nunique() if ""GEOID"" in phoenix_hi_df.columns else None,
+0177:         ""missing_hi_mean"": phoenix_hi_df[""hi_summer_mean_c""].isna().sum() if ""hi_summer_mean_c"" in phoenix_hi_df.columns else None,
+0178:         ""missing_hi_median"": phoenix_hi_df[""hi_summer_median_c""].isna().sum() if ""hi_summer_median_c"" in phoenix_hi_df.columns else None,
+0179:         ""era5_hourly_count"": phoenix_hi_coll.size().getInfo(),
+0180:     }
+0181: ])
+0182: 
+0183: print(""HI extraction QC:"")
+0184: display(hi_extract_qc)
+0185: 
+0186: houston_hi_csv = output_dir / ""houston_hi_pilot.csv""
+0187: phoenix_hi_csv = output_dir / ""phoenix_hi_pilot.csv""
+0188: hi_extract_qc_csv = output_dir / ""hi_extract_qc.csv""
+0189: 
+0190: houston_hi_df.to_csv(houston_hi_csv, index=False)
+0191: phoenix_hi_df.to_csv(phoenix_hi_csv, index=False)
+0192: hi_extract_qc.to_csv(hi_extract_qc_csv, index=False)
+0193: 
+0194: print(""\nBlock A file check:"")
+0195: for p in [houston_hi_csv, phoenix_hi_csv, hi_extract_qc_csv]:
+0196:     print(p, ""->"", p.exists())"
+30,line_hit,42,42,hi_c,"houston_hi_csv = output_dir / ""houston_hi_pilot.csv"""
+30,line_hit,43,43,hi_c,"phoenix_hi_csv = output_dir / ""phoenix_hi_pilot.csv"""
+30,line_hit,52,52,hi_c,houston_hi = pd.read_csv(houston_hi_csv)
+30,line_hit,53,53,hi_c,phoenix_hi = pd.read_csv(phoenix_hi_csv)
+30,line_hit,59,59,lst_c,"def detect_lst_col(gdf, city_name):"
+30,line_hit,60,60,lst_c,"    for c in [""lst_summer_median_c"", ""median_lst_c"", ""lst_median_c""]:"
+30,line_hit,65,65,lst_c,"houston_lst_col = detect_lst_col(houston, ""Houston"")"
+30,line_hit,66,66,lst_c,"phoenix_lst_col = detect_lst_col(phoenix, ""Phoenix"")"
+30,line_hit,68,68,lst_c,"print(""Houston LST column:"", houston_lst_col)"
+30,line_hit,69,69,lst_c,"print(""Phoenix LST column:"", phoenix_lst_col)"
+30,line_hit,84,84,lst_c,"houston_cmp[""lst_anomaly""] = houston_cmp[houston_lst_col] - houston_cmp[houston_lst_col].median()"
+30,line_hit,85,85,lst_c,"phoenix_cmp[""lst_anomaly""] = phoenix_cmp[phoenix_lst_col] - phoenix_cmp[phoenix_lst_col].median()"
+30,line_hit,95,95,lst_c,"        ""median_lst_c"": float(houston_cmp[houston_lst_col].median()),"
+30,line_hit,96,96,hi_c,"        ""median_hi_c"": float(houston_cmp[""hi_summer_median_c""].median()),"
+30,line_hit,102,102,lst_c,"        ""median_lst_c"": float(phoenix_cmp[phoenix_lst_col].median()),"
+30,line_hit,103,103,hi_c,"        ""median_hi_c"": float(phoenix_cmp[""hi_summer_median_c""].median()),"
+30,line_hit,191,191,heat index,"plot_class_map(axes[0, 1], houston_cmp, ""hi_anom_class"", ""B. Houston Heat Index anomaly"")"
+30,line_hit,193,193,heat index,"plot_class_map(axes[1, 1], phoenix_cmp, ""hi_anom_class"", ""D. Phoenix Heat Index anomaly"")"
+30,line_hit,209,209,heat index,"fig.suptitle(""RQ1 comparison figure: LST vs Heat Index within-city anomaly"", fontsize=18, y=0.98)"
+30,line_hit,212,212,hi_c,"lst_hi_compare_out = figure_dir / ""rq1_lst_vs_hi_anomaly_panel.png"""
+30,line_hit,213,213,hi_c,"plt.savefig(lst_hi_compare_out, dpi=300, bbox_inches=""tight"")"
+30,line_hit,217,217,hi_c,"comparison_qc_out = output_dir / ""rq1_lst_vs_hi_comparison_qc.csv"""
+30,line_hit,226,226,hi_c,"for p in [lst_hi_compare_out, comparison_qc_out, houston_cmp_out, phoenix_cmp_out]:"
+30,context_window,30,115,"hi_c, lst_c","0030: houston_master_path = first_existing([
+0031:     data_processed / ""houston"" / ""houston_master_with_lst_hotspot.gpkg"",
+0032:     data_processed / ""houston"" / ""houston_master_demo_poverty.gpkg"",
+0033:     data_processed / ""houston"" / ""houston_master_demo.gpkg"",
+0034: ], ""Houston master"")
+0035: 
+0036: phoenix_master_path = first_existing([
+0037:     data_processed / ""phoenix"" / ""phoenix_master_with_lst_hotspot.gpkg"",
+0038:     data_processed / ""phoenix"" / ""phoenix_master_demo_poverty.gpkg"",
+0039:     data_processed / ""phoenix"" / ""phoenix_master_demo.gpkg"",
+0040: ], ""Phoenix master"")
+0041: 
+0042: houston_hi_csv = output_dir / ""houston_hi_pilot.csv""
+0043: phoenix_hi_csv = output_dir / ""phoenix_hi_pilot.csv""
+0044: 
+0045: # ---------- read ----------
+0046: houston = gpd.read_file(houston_master_path).copy()
+0047: phoenix = gpd.read_file(phoenix_master_path).copy()
+0048: 
+0049: houston[""GEOID""] = houston[""GEOID""].astype(str)
+0050: phoenix[""GEOID""] = phoenix[""GEOID""].astype(str)
+0051: 
+0052: houston_hi = pd.read_csv(houston_hi_csv)
+0053: phoenix_hi = pd.read_csv(phoenix_hi_csv)
+0054: 
+0055: houston_hi[""GEOID""] = houston_hi[""GEOID""].astype(str)
+0056: phoenix_hi[""GEOID""] = phoenix_hi[""GEOID""].astype(str)
+0057: 
+0058: # ---------- detect LST column ----------
+0059: def detect_lst_col(gdf, city_name):
+0060:     for c in [""lst_summer_median_c"", ""median_lst_c"", ""lst_median_c""]:
+0061:         if c in gdf.columns:
+0062:             return c
+0063:     raise ValueError(f""{city_name}: cannot find LST column. Available columns: {list(gdf.columns)}"")
+0064: 
+0065: houston_lst_col = detect_lst_col(houston, ""Houston"")
+0066: phoenix_lst_col = detect_lst_col(phoenix, ""Phoenix"")
+0067: 
+0068: print(""Houston LST column:"", houston_lst_col)
+0069: print(""Phoenix LST column:"", phoenix_lst_col)
+0070: 
+0071: # ---------- merge HI ----------
+0072: houston_cmp = houston.merge(
+0073:     houston_hi[[""GEOID"", ""hi_summer_mean_c"", ""hi_summer_median_c""]],
+0074:     on=""GEOID"",
+0075:     how=""left""
+0076: )
+0077: phoenix_cmp = phoenix.merge(
+0078:     phoenix_hi[[""GEOID"", ""hi_summer_mean_c"", ""hi_summer_median_c""]],
+0079:     on=""GEOID"",
+0080:     how=""left""
+0081: )
+0082: 
+0083: # ---------- anomalies ----------
+0084: houston_cmp[""lst_anomaly""] = houston_cmp[houston_lst_col] - houston_cmp[houston_lst_col].median()
+0085: phoenix_cmp[""lst_anomaly""] = phoenix_cmp[phoenix_lst_col] - phoenix_cmp[phoenix_lst_col].median()
+0086: 
+0087: houston_cmp[""hi_anomaly""] = houston_cmp[""hi_summer_median_c""] - houston_cmp[""hi_summer_median_c""].median()
+0088: phoenix_cmp[""hi_anomaly""] = phoenix_cmp[""hi_summer_median_c""] - phoenix_cmp[""hi_summer_median_c""].median()
+0089: 
+0090: comparison_qc = pd.DataFrame([
+0091:     {
+0092:         ""city"": ""Houston"",
+0093:         ""tract_rows"": len(houston_cmp),
+0094:         ""missing_hi_after_merge"": int(houston_cmp[""hi_summer_median_c""].isna().sum()),
+0095:         ""median_lst_c"": float(houston_cmp[houston_lst_col].median()),
+0096:         ""median_hi_c"": float(houston_cmp[""hi_summer_median_c""].median()),
+0097:     },
+0098:     {
+0099:         ""city"": ""Phoenix"",
+0100:         ""tract_rows"": len(phoenix_cmp),
+0101:         ""missing_hi_after_merge"": int(phoenix_cmp[""hi_summer_median_c""].isna().sum()),
+0102:         ""median_lst_c"": float(phoenix_cmp[phoenix_lst_col].median()),
+0103:         ""median_hi_c"": float(phoenix_cmp[""hi_summer_median_c""].median()),
+0104:     }
+0105: ])
+0106: 
+0107: print(""Comparison QC:"")
+0108: display(comparison_qc)
+0109: 
+0110: # ---------- common anomaly bins ----------
+0111: all_abs = pd.concat([
+0112:     houston_cmp[""lst_anomaly""].abs(),
+0113:     phoenix_cmp[""lst_anomaly""].abs(),
+0114:     houston_cmp[""hi_anomaly""].abs(),
+0115:     phoenix_cmp[""hi_anomaly""].abs()"
+30,context_window,179,227,"hi_c, heat index","0179:         sub = gdf[gdf[class_col] == lab]
+0180:         if len(sub) > 0:
+0181:             sub.plot(ax=ax, color=colors[lab], edgecolor=""white"", linewidth=0.18)
+0182:     ax.set_title(title, fontsize=13, pad=8)
+0183:     ax.set_axis_off()
+0184:     add_north_arrow(ax)
+0185:     add_scalebar(ax, length_km=10)
+0186: 
+0187: # ---------- plot ----------
+0188: fig, axes = plt.subplots(2, 2, figsize=(14, 13))
+0189: 
+0190: plot_class_map(axes[0, 0], houston_cmp, ""lst_anom_class"", ""A. Houston LST anomaly"")
+0191: plot_class_map(axes[0, 1], houston_cmp, ""hi_anom_class"", ""B. Houston Heat Index anomaly"")
+0192: plot_class_map(axes[1, 0], phoenix_cmp, ""lst_anom_class"", ""C. Phoenix LST anomaly"")
+0193: plot_class_map(axes[1, 1], phoenix_cmp, ""hi_anom_class"", ""D. Phoenix Heat Index anomaly"")
+0194: 
+0195: handles = [Patch(facecolor=""#d9d9d9"", edgecolor=""none"", label=""Missing / no data"")]
+0196: handles += [Patch(facecolor=colors[l], edgecolor=""none"", label=l) for l in labels]
+0197: 
+0198: fig.legend(
+0199:     handles=handles,
+0200:     title=""Anomaly from city median (°C)"",
+0201:     loc=""lower center"",
+0202:     bbox_to_anchor=(0.5, 0.02),
+0203:     ncol=4,
+0204:     frameon=False,
+0205:     fontsize=10,
+0206:     title_fontsize=11
+0207: )
+0208: 
+0209: fig.suptitle(""RQ1 comparison figure: LST vs Heat Index within-city anomaly"", fontsize=18, y=0.98)
+0210: plt.tight_layout(rect=[0, 0.08, 1, 0.96])
+0211: 
+0212: lst_hi_compare_out = figure_dir / ""rq1_lst_vs_hi_anomaly_panel.png""
+0213: plt.savefig(lst_hi_compare_out, dpi=300, bbox_inches=""tight"")
+0214: plt.show()
+0215: 
+0216: # ---------- save ----------
+0217: comparison_qc_out = output_dir / ""rq1_lst_vs_hi_comparison_qc.csv""
+0218: comparison_qc.to_csv(comparison_qc_out, index=False)
+0219: 
+0220: houston_cmp_out = data_processed / ""houston"" / ""houston_master_with_lst_hi.gpkg""
+0221: phoenix_cmp_out = data_processed / ""phoenix"" / ""phoenix_master_with_lst_hi.gpkg""
+0222: houston_cmp.to_file(houston_cmp_out, driver=""GPKG"")
+0223: phoenix_cmp.to_file(phoenix_cmp_out, driver=""GPKG"")
+0224: 
+0225: print(""\nBlock B file check:"")
+0226: for p in [lst_hi_compare_out, comparison_qc_out, houston_cmp_out, phoenix_cmp_out]:
+0227:     print(p, ""->"", p.exists())"
+31,line_hit,14,14,lst_c,"def detect_lst_col(gdf, city_name):"
+31,line_hit,15,15,lst_c,"    for c in [""lst_summer_median_c"", ""median_lst_c"", ""lst_median_c""]:"
+31,line_hit,20,20,lst_c,"houston_lst_col = detect_lst_col(houston_cmp, ""Houston"")"
+31,line_hit,21,21,lst_c,"phoenix_lst_col = detect_lst_col(phoenix_cmp, ""Phoenix"")"
+31,line_hit,23,23,"hi_c, lst_c","def add_hotspot_sets(gdf, lst_col, hi_col=""hi_summer_median_c""):"
+31,line_hit,26,26,"hi_c, lst_c",    valid = gdf[gdf[lst_col].notna() & gdf[hi_col].notna()].copy()
+31,line_hit,28,28,lst_c,    lst_cut = valid[lst_col].quantile(0.80)
+31,line_hit,29,29,hi_c,    hi_cut = valid[hi_col].quantile(0.80)
+31,line_hit,34,34,lst_c,"    gdf.loc[valid.index, ""lst_hotspot20""] = valid[lst_col] >= lst_cut"
+31,line_hit,35,35,hi_c,"    gdf.loc[valid.index, ""hi_hotspot20""] = valid[hi_col] >= hi_cut"
+31,line_hit,39,39,"hi_c, lst_c","    gdf.loc[valid.index[(valid[lst_col] >= lst_cut) & (valid[hi_col] >= hi_cut)], ""hotspot_mismatch""] = ""Overlap hotspot"""
+31,line_hit,40,40,"hi_c, lst_c","    gdf.loc[valid.index[(valid[lst_col] >= lst_cut) & (valid[hi_col] < hi_cut)], ""hotspot_mismatch""] = ""LST-only hotspot"""
+31,line_hit,41,41,"hi_c, lst_c","    gdf.loc[valid.index[(valid[lst_col] < lst_cut) & (valid[hi_col] >= hi_cut)], ""hotspot_mismatch""] = ""HI-only hotspot"""
+31,line_hit,43,43,"hi_c, lst_c",    intersection = int(((valid[lst_col] >= lst_cut) & (valid[hi_col] >= hi_cut)).sum())
+31,line_hit,44,44,"hi_c, lst_c",    union = int(((valid[lst_col] >= lst_cut) | (valid[hi_col] >= hi_cut)).sum())
+31,line_hit,47,47,"hi_c, lst_c","    return gdf, lst_cut, hi_cut, intersection, union, jaccard, len(valid)"
+31,line_hit,49,49,"hi_c, lst_c","houston_hotcmp, hou_lst_cut, hou_hi_cut, hou_inter, hou_union, hou_jaccard, hou_valid_n = add_hotspot_sets(houston_cmp, houston_lst_col)"
+31,line_hit,50,50,"hi_c, lst_c","phoenix_hotcmp, phx_lst_cut, phx_hi_cut, phx_inter, phx_union, phx_jaccard, phx_valid_n = add_hotspot_sets(phoenix_cmp, phoenix_lst_col)"
+31,line_hit,56,56,lst_c,"        ""lst_hotspot_cut"": hou_lst_cut,"
+31,line_hit,57,57,hi_c,"        ""hi_hotspot_cut"": hou_hi_cut,"
+31,line_hit,68,68,lst_c,"        ""lst_hotspot_cut"": phx_lst_cut,"
+31,line_hit,69,69,hi_c,"        ""hi_hotspot_cut"": phx_hi_cut,"
+31,line_hit,121,121,heat index,"fig.suptitle(""RQ1 comparison figure: overlap and mismatch between LST and Heat Index hotspots"", fontsize=18, y=0.98)"
+31,context_window,2,81,"hi_c, lst_c","0002: # Block C (robust): hotspot overlap, Jaccard, and mismatch maps
+0003: # ============================================================
+0004: 
+0005: import numpy as np
+0006: import pandas as pd
+0007: import geopandas as gpd
+0008: import matplotlib.pyplot as plt
+0009: from matplotlib.patches import Patch
+0010: 
+0011: houston_cmp = gpd.read_file(data_processed / ""houston"" / ""houston_master_with_lst_hi.gpkg"")
+0012: phoenix_cmp = gpd.read_file(data_processed / ""phoenix"" / ""phoenix_master_with_lst_hi.gpkg"")
+0013: 
+0014: def detect_lst_col(gdf, city_name):
+0015:     for c in [""lst_summer_median_c"", ""median_lst_c"", ""lst_median_c""]:
+0016:         if c in gdf.columns:
+0017:             return c
+0018:     raise ValueError(f""{city_name}: cannot find LST column."")
+0019: 
+0020: houston_lst_col = detect_lst_col(houston_cmp, ""Houston"")
+0021: phoenix_lst_col = detect_lst_col(phoenix_cmp, ""Phoenix"")
+0022: 
+0023: def add_hotspot_sets(gdf, lst_col, hi_col=""hi_summer_median_c""):
+0024:     gdf = gdf.copy()
+0025: 
+0026:     valid = gdf[gdf[lst_col].notna() & gdf[hi_col].notna()].copy()
+0027: 
+0028:     lst_cut = valid[lst_col].quantile(0.80)
+0029:     hi_cut = valid[hi_col].quantile(0.80)
+0030: 
+0031:     gdf[""lst_hotspot20""] = False
+0032:     gdf[""hi_hotspot20""] = False
+0033: 
+0034:     gdf.loc[valid.index, ""lst_hotspot20""] = valid[lst_col] >= lst_cut
+0035:     gdf.loc[valid.index, ""hi_hotspot20""] = valid[hi_col] >= hi_cut
+0036: 
+0037:     gdf[""hotspot_mismatch""] = ""Missing""
+0038:     gdf.loc[valid.index, ""hotspot_mismatch""] = ""Neither""
+0039:     gdf.loc[valid.index[(valid[lst_col] >= lst_cut) & (valid[hi_col] >= hi_cut)], ""hotspot_mismatch""] = ""Overlap hotspot""
+0040:     gdf.loc[valid.index[(valid[lst_col] >= lst_cut) & (valid[hi_col] < hi_cut)], ""hotspot_mismatch""] = ""LST-only hotspot""
+0041:     gdf.loc[valid.index[(valid[lst_col] < lst_cut) & (valid[hi_col] >= hi_cut)], ""hotspot_mismatch""] = ""HI-only hotspot""
+0042: 
+0043:     intersection = int(((valid[lst_col] >= lst_cut) & (valid[hi_col] >= hi_cut)).sum())
+0044:     union = int(((valid[lst_col] >= lst_cut) | (valid[hi_col] >= hi_cut)).sum())
+0045:     jaccard = intersection / union if union > 0 else np.nan
+0046: 
+0047:     return gdf, lst_cut, hi_cut, intersection, union, jaccard, len(valid)
+0048: 
+0049: houston_hotcmp, hou_lst_cut, hou_hi_cut, hou_inter, hou_union, hou_jaccard, hou_valid_n = add_hotspot_sets(houston_cmp, houston_lst_col)
+0050: phoenix_hotcmp, phx_lst_cut, phx_hi_cut, phx_inter, phx_union, phx_jaccard, phx_valid_n = add_hotspot_sets(phoenix_cmp, phoenix_lst_col)
+0051: 
+0052: hotspot_compare_qc = pd.DataFrame([
+0053:     {
+0054:         ""city"": ""Houston"",
+0055:         ""valid_tracts_used"": hou_valid_n,
+0056:         ""lst_hotspot_cut"": hou_lst_cut,
+0057:         ""hi_hotspot_cut"": hou_hi_cut,
+0058:         ""lst_hotspot_count"": int((houston_hotcmp[""hotspot_mismatch""].isin([""Overlap hotspot"", ""LST-only hotspot""])).sum()),
+0059:         ""hi_hotspot_count"": int((houston_hotcmp[""hotspot_mismatch""].isin([""Overlap hotspot"", ""HI-only hotspot""])).sum()),
+0060:         ""intersection_count"": hou_inter,
+0061:         ""union_count"": hou_union,
+0062:         ""jaccard_index"": hou_jaccard,
+0063:         ""missing_rows"": int((houston_hotcmp[""hotspot_mismatch""] == ""Missing"").sum()),
+0064:     },
+0065:     {
+0066:         ""city"": ""Phoenix"",
+0067:         ""valid_tracts_used"": phx_valid_n,
+0068:         ""lst_hotspot_cut"": phx_lst_cut,
+0069:         ""hi_hotspot_cut"": phx_hi_cut,
+0070:         ""lst_hotspot_count"": int((phoenix_hotcmp[""hotspot_mismatch""].isin([""Overlap hotspot"", ""LST-only hotspot""])).sum()),
+0071:         ""hi_hotspot_count"": int((phoenix_hotcmp[""hotspot_mismatch""].isin([""Overlap hotspot"", ""HI-only hotspot""])).sum()),
+0072:         ""intersection_count"": phx_inter,
+0073:         ""union_count"": phx_union,
+0074:         ""jaccard_index"": phx_jaccard,
+0075:         ""missing_rows"": int((phoenix_hotcmp[""hotspot_mismatch""] == ""Missing"").sum()),
+0076:     }
+0077: ])
+0078: 
+0079: print(""Hotspot comparison QC:"")
+0080: display(hotspot_compare_qc)
+0081: "
+31,context_window,109,133,heat index,"0109: handles = [Patch(facecolor=c, edgecolor=""none"", label=k) for k, c in mismatch_colors.items()]
+0110: fig.legend(
+0111:     handles=handles,
+0112:     title=""Hotspot comparison"",
+0113:     loc=""lower center"",
+0114:     bbox_to_anchor=(0.5, 0.02),
+0115:     ncol=5,
+0116:     frameon=False,
+0117:     fontsize=10,
+0118:     title_fontsize=11
+0119: )
+0120: 
+0121: fig.suptitle(""RQ1 comparison figure: overlap and mismatch between LST and Heat Index hotspots"", fontsize=18, y=0.98)
+0122: plt.tight_layout(rect=[0, 0.08, 1, 0.95])
+0123: 
+0124: hotspot_mismatch_fig_out = figure_dir / ""rq1_lst_hi_hotspot_mismatch.png""
+0125: plt.savefig(hotspot_mismatch_fig_out, dpi=300, bbox_inches=""tight"")
+0126: plt.show()
+0127: 
+0128: houston_hotcmp_out = data_processed / ""houston"" / ""houston_master_lst_hi_hotcompare.gpkg""
+0129: phoenix_hotcmp_out = data_processed / ""phoenix"" / ""phoenix_master_lst_hi_hotcompare.gpkg""
+0130: houston_hotcmp.to_file(houston_hotcmp_out, driver=""GPKG"")
+0131: phoenix_hotcmp.to_file(phoenix_hotcmp_out, driver=""GPKG"")
+0132: 
+0133: print(""\nBlock C file check:"")"
+33,line_hit,2,2,heat index,# Block B2: FIXED merge + LST vs Heat Index anomaly panel
+33,line_hit,31,31,lst_c,"def detect_lst_col(gdf, city_name):"
+33,line_hit,32,32,lst_c,"    for c in [""lst_summer_median_c"", ""median_lst_c"", ""lst_median_c""]:"
+33,line_hit,65,65,hi_c,"houston_hi_csv = output_dir / ""houston_hi_pilot.csv"""
+33,line_hit,66,66,hi_c,"phoenix_hi_csv = output_dir / ""phoenix_hi_pilot.csv"""
+33,line_hit,72,72,hi_c,"houston_hi = pd.read_csv(houston_hi_csv, dtype={""GEOID"": str}, low_memory=False)"
+33,line_hit,73,73,hi_c,"phoenix_hi = pd.read_csv(phoenix_hi_csv, dtype={""GEOID"": str}, low_memory=False)"
+33,line_hit,80,80,lst_c,"houston_lst_col = detect_lst_col(houston, ""Houston"")"
+33,line_hit,81,81,lst_c,"phoenix_lst_col = detect_lst_col(phoenix, ""Phoenix"")"
+33,line_hit,83,83,lst_c,"print(""Houston LST column:"", houston_lst_col)"
+33,line_hit,84,84,lst_c,"print(""Phoenix LST column:"", phoenix_lst_col)"
+33,line_hit,100,100,lst_c,"houston_cmp[""lst_anomaly""] = houston_cmp[houston_lst_col] - houston_cmp[houston_lst_col].median()"
+33,line_hit,101,101,lst_c,"phoenix_cmp[""lst_anomaly""] = phoenix_cmp[phoenix_lst_col] - phoenix_cmp[phoenix_lst_col].median()"
+33,line_hit,111,111,lst_c,"        ""median_lst_c"": float(houston_cmp[houston_lst_col].median()),"
+33,line_hit,112,112,hi_c,"        ""median_hi_c"": float(houston_cmp[""hi_summer_median_c""].median()),"
+33,line_hit,118,118,lst_c,"        ""median_lst_c"": float(phoenix_cmp[phoenix_lst_col].median()),"
+33,line_hit,119,119,hi_c,"        ""median_hi_c"": float(phoenix_cmp[""hi_summer_median_c""].median()),"
+33,line_hit,186,186,heat index,"plot_class_map(axes[0, 1], houston_cmp, ""hi_anom_class"", ""B. Houston Heat Index anomaly"")"
+33,line_hit,188,188,heat index,"plot_class_map(axes[1, 1], phoenix_cmp, ""hi_anom_class"", ""D. Phoenix Heat Index anomaly"")"
+33,line_hit,204,204,heat index,"fig.suptitle(""RQ1 comparison figure: LST vs Heat Index within-city anomaly"", fontsize=18, y=0.98)"
+33,line_hit,207,207,hi_c,"lst_hi_compare_out = figure_dir / ""rq1_lst_vs_hi_anomaly_panel_fixed.png"""
+33,line_hit,208,208,hi_c,"plt.savefig(lst_hi_compare_out, dpi=300, bbox_inches=""tight"")"
+33,line_hit,212,212,hi_c,"comparison_qc_out = output_dir / ""rq1_lst_vs_hi_comparison_qc_fixed.csv"""
+33,line_hit,221,221,hi_c,"for p in [lst_hi_compare_out, comparison_qc_out, houston_cmp_out, phoenix_cmp_out]:"
+33,context_window,1,14,heat index,"0001: # ============================================================
+0002: # Block B2: FIXED merge + LST vs Heat Index anomaly panel
+0003: # ============================================================
+0004: 
+0005: from pathlib import Path
+0006: import numpy as np
+0007: import pandas as pd
+0008: import geopandas as gpd
+0009: import matplotlib.pyplot as plt
+0010: from matplotlib.patches import Patch
+0011: 
+0012: # ---------- locate project root ----------
+0013: project_root = Path.cwd()
+0014: if not (project_root / ""data_processed"").exists():"
+33,context_window,19,44,lst_c,"0019: figure_dir = project_root / ""figures"" / ""pilot""
+0020: figure_dir.mkdir(parents=True, exist_ok=True)
+0021: 
+0022: # ---------- helper ----------
+0023: def clean_geoid(s):
+0024:     return (
+0025:         s.astype(str)
+0026:          .str.replace(r""\.0$"", """", regex=True)
+0027:          .str.strip()
+0028:          .str.zfill(11)
+0029:     )
+0030: 
+0031: def detect_lst_col(gdf, city_name):
+0032:     for c in [""lst_summer_median_c"", ""median_lst_c"", ""lst_median_c""]:
+0033:         if c in gdf.columns:
+0034:             return c
+0035:     raise ValueError(f""{city_name}: cannot find LST column. Available columns: {list(gdf.columns)}"")
+0036: 
+0037: def add_north_arrow(ax, x=0.91, y=0.88, size=0.08):
+0038:     ax.annotate(
+0039:         ""N"",
+0040:         xy=(x, y), xytext=(x, y - size),
+0041:         xycoords=""axes fraction"",
+0042:         textcoords=""axes fraction"",
+0043:         ha=""center"", va=""center"",
+0044:         fontsize=10, fontweight=""bold"","
+33,context_window,53,131,"hi_c, lst_c","0053:     length_m = length_km * 1000
+0054:     tick_h = (ymax - ymin) * 0.012
+0055: 
+0056:     ax.plot([x0, x0 + length_m], [y0, y0], color=""black"", linewidth=linewidth)
+0057:     ax.plot([x0, x0], [y0 - tick_h, y0 + tick_h], color=""black"", linewidth=linewidth)
+0058:     ax.plot([x0 + length_m, x0 + length_m], [y0 - tick_h, y0 + tick_h], color=""black"", linewidth=linewidth)
+0059:     ax.text(x0 + length_m / 2, y0 + tick_h * 1.6, f""{length_km} km"", ha=""center"", va=""bottom"", fontsize=8)
+0060: 
+0061: # ---------- input paths ----------
+0062: houston_master_path = data_processed / ""houston"" / ""houston_master_with_lst_hotspot.gpkg""
+0063: phoenix_master_path = data_processed / ""phoenix"" / ""phoenix_master_with_lst_hotspot.gpkg""
+0064: 
+0065: houston_hi_csv = output_dir / ""houston_hi_pilot.csv""
+0066: phoenix_hi_csv = output_dir / ""phoenix_hi_pilot.csv""
+0067: 
+0068: # ---------- read ----------
+0069: houston = gpd.read_file(houston_master_path).copy()
+0070: phoenix = gpd.read_file(phoenix_master_path).copy()
+0071: 
+0072: houston_hi = pd.read_csv(houston_hi_csv, dtype={""GEOID"": str}, low_memory=False)
+0073: phoenix_hi = pd.read_csv(phoenix_hi_csv, dtype={""GEOID"": str}, low_memory=False)
+0074: 
+0075: houston[""GEOID""] = clean_geoid(houston[""GEOID""])
+0076: phoenix[""GEOID""] = clean_geoid(phoenix[""GEOID""])
+0077: houston_hi[""GEOID""] = clean_geoid(houston_hi[""GEOID""])
+0078: phoenix_hi[""GEOID""] = clean_geoid(phoenix_hi[""GEOID""])
+0079: 
+0080: houston_lst_col = detect_lst_col(houston, ""Houston"")
+0081: phoenix_lst_col = detect_lst_col(phoenix, ""Phoenix"")
+0082: 
+0083: print(""Houston LST column:"", houston_lst_col)
+0084: print(""Phoenix LST column:"", phoenix_lst_col)
+0085: 
+0086: # ---------- merge ----------
+0087: houston_cmp = houston.merge(
+0088:     houston_hi[[""GEOID"", ""hi_summer_mean_c"", ""hi_summer_median_c""]],
+0089:     on=""GEOID"",
+0090:     how=""left""
+0091: ).copy()
+0092: 
+0093: phoenix_cmp = phoenix.merge(
+0094:     phoenix_hi[[""GEOID"", ""hi_summer_mean_c"", ""hi_summer_median_c""]],
+0095:     on=""GEOID"",
+0096:     how=""left""
+0097: ).copy()
+0098: 
+0099: # ---------- anomalies ----------
+0100: houston_cmp[""lst_anomaly""] = houston_cmp[houston_lst_col] - houston_cmp[houston_lst_col].median()
+0101: phoenix_cmp[""lst_anomaly""] = phoenix_cmp[phoenix_lst_col] - phoenix_cmp[phoenix_lst_col].median()
+0102: 
+0103: houston_cmp[""hi_anomaly""] = houston_cmp[""hi_summer_median_c""] - houston_cmp[""hi_summer_median_c""].median()
+0104: phoenix_cmp[""hi_anomaly""] = phoenix_cmp[""hi_summer_median_c""] - phoenix_cmp[""hi_summer_median_c""].median()
+0105: 
+0106: comparison_qc = pd.DataFrame([
+0107:     {
+0108:         ""city"": ""Houston"",
+0109:         ""tract_rows"": len(houston_cmp),
+0110:         ""missing_hi_after_merge"": int(houston_cmp[""hi_summer_median_c""].isna().sum()),
+0111:         ""median_lst_c"": float(houston_cmp[houston_lst_col].median()),
+0112:         ""median_hi_c"": float(houston_cmp[""hi_summer_median_c""].median()),
+0113:     },
+0114:     {
+0115:         ""city"": ""Phoenix"",
+0116:         ""tract_rows"": len(phoenix_cmp),
+0117:         ""missing_hi_after_merge"": int(phoenix_cmp[""hi_summer_median_c""].isna().sum()),
+0118:         ""median_lst_c"": float(phoenix_cmp[phoenix_lst_col].median()),
+0119:         ""median_hi_c"": float(phoenix_cmp[""hi_summer_median_c""].median()),
+0120:     }
+0121: ])
+0122: 
+0123: print(""Comparison QC:"")
+0124: display(comparison_qc)
+0125: 
+0126: # ---------- common bins across all valid anomaly values ----------
+0127: all_abs = pd.concat([
+0128:     houston_cmp[""lst_anomaly""].abs(),
+0129:     phoenix_cmp[""lst_anomaly""].abs(),
+0130:     houston_cmp[""hi_anomaly""].abs(),
+0131:     phoenix_cmp[""hi_anomaly""].abs()"
+33,context_window,174,222,"hi_c, heat index","0174:         if len(sub) > 0:
+0175:             sub.plot(ax=ax, color=colors[lab], edgecolor=""white"", linewidth=0.18)
+0176: 
+0177:     ax.set_title(title, fontsize=13, pad=8)
+0178:     ax.set_axis_off()
+0179:     add_north_arrow(ax)
+0180:     add_scalebar(ax, length_km=10)
+0181: 
+0182: # ---------- figure ----------
+0183: fig, axes = plt.subplots(2, 2, figsize=(14, 13))
+0184: 
+0185: plot_class_map(axes[0, 0], houston_cmp, ""lst_anom_class"", ""A. Houston LST anomaly"")
+0186: plot_class_map(axes[0, 1], houston_cmp, ""hi_anom_class"", ""B. Houston Heat Index anomaly"")
+0187: plot_class_map(axes[1, 0], phoenix_cmp, ""lst_anom_class"", ""C. Phoenix LST anomaly"")
+0188: plot_class_map(axes[1, 1], phoenix_cmp, ""hi_anom_class"", ""D. Phoenix Heat Index anomaly"")
+0189: 
+0190: handles = [Patch(facecolor=""#d9d9d9"", edgecolor=""none"", label=""Missing / no data"")]
+0191: handles += [Patch(facecolor=colors[l], edgecolor=""none"", label=l) for l in labels]
+0192: 
+0193: fig.legend(
+0194:     handles=handles,
+0195:     title=""Anomaly from city median (°C)"",
+0196:     loc=""lower center"",
+0197:     bbox_to_anchor=(0.5, 0.02),
+0198:     ncol=4,
+0199:     frameon=False,
+0200:     fontsize=10,
+0201:     title_fontsize=11
+0202: )
+0203: 
+0204: fig.suptitle(""RQ1 comparison figure: LST vs Heat Index within-city anomaly"", fontsize=18, y=0.98)
+0205: plt.tight_layout(rect=[0, 0.08, 1, 0.96])
+0206: 
+0207: lst_hi_compare_out = figure_dir / ""rq1_lst_vs_hi_anomaly_panel_fixed.png""
+0208: plt.savefig(lst_hi_compare_out, dpi=300, bbox_inches=""tight"")
+0209: plt.show()
+0210: 
+0211: # ---------- save ----------
+0212: comparison_qc_out = output_dir / ""rq1_lst_vs_hi_comparison_qc_fixed.csv""
+0213: comparison_qc.to_csv(comparison_qc_out, index=False)
+0214: 
+0215: houston_cmp_out = data_processed / ""houston"" / ""houston_master_with_lst_hi_fixed.gpkg""
+0216: phoenix_cmp_out = data_processed / ""phoenix"" / ""phoenix_master_with_lst_hi_fixed.gpkg""
+0217: houston_cmp.to_file(houston_cmp_out, driver=""GPKG"")
+0218: phoenix_cmp.to_file(phoenix_cmp_out, driver=""GPKG"")
+0219: 
+0220: print(""\nBlock B2 file check:"")
+0221: for p in [lst_hi_compare_out, comparison_qc_out, houston_cmp_out, phoenix_cmp_out]:
+0222:     print(p, ""->"", p.exists())"
+34,line_hit,3,3,heat index,# Teacher-ready LST vs Heat Index comparison for RQ1
+34,line_hit,173,173,lst_c,houston_lst_csv = find_existing([
+34,line_hit,177,177,lst_c,phoenix_lst_csv = find_existing([
+34,line_hit,181,181,hi_c,houston_hi_csv = find_existing([
+34,line_hit,185,185,hi_c,phoenix_hi_csv = find_existing([
+34,line_hit,191,191,lst_c,"print(""Houston LST csv:"", houston_lst_csv)"
+34,line_hit,192,192,lst_c,"print(""Phoenix LST csv:"", phoenix_lst_csv)"
+34,line_hit,193,193,hi_c,"print(""Houston HI csv:"", houston_hi_csv)"
+34,line_hit,194,194,hi_c,"print(""Phoenix HI csv:"", phoenix_hi_csv)"
+34,line_hit,199,199,"hi_c, lst_c","def build_city_gdf(city_name, base_path, lst_csv_path, hi_csv_path):"
+34,line_hit,205,205,lst_c,"    lst_df = pd.read_csv(lst_csv_path, dtype={""GEOID"": str}, low_memory=False)"
+34,line_hit,206,206,lst_c,"    geoid_lst_col = first_existing_col(lst_df, [""GEOID"", ""geoid""], f""{city_name} LST GEOID"")"
+34,line_hit,207,207,lst_c,"    lst_df[""GEOID""] = std_geoid(lst_df[geoid_lst_col])"
+34,line_hit,213,213,lst_c,"            ""median_lst_c"","
+34,line_hit,220,220,lst_c,"    lst_keep = lst_keep.rename(columns={lst_value_col: ""lst_c""})"
+34,line_hit,221,221,lst_c,"    lst_keep[""lst_c""] = pd.to_numeric(lst_keep[""lst_c""], errors=""coerce"")"
+34,line_hit,223,223,hi_c,"    hi_df = pd.read_csv(hi_csv_path, dtype={""GEOID"": str}, low_memory=False)"
+34,line_hit,224,224,hi_c,"    geoid_hi_col = first_existing_col(hi_df, [""GEOID"", ""geoid""], f""{city_name} HI GEOID"")"
+34,line_hit,225,225,hi_c,"    hi_df[""GEOID""] = std_geoid(hi_df[geoid_hi_col])"
+34,line_hit,231,231,hi_c,"            ""median_hi_c"","
+34,line_hit,233,233,heat_index,"            ""median_heat_index_c"","
+34,line_hit,234,234,heat_index,"            ""heat_index_median_c"""
+34,line_hit,239,239,hi_c,"    hi_keep = hi_keep.rename(columns={hi_value_col: ""hi_c""})"
+34,line_hit,240,240,hi_c,"    hi_keep[""hi_c""] = pd.to_numeric(hi_keep[""hi_c""], errors=""coerce"")"
+34,line_hit,246,246,lst_c,"    out[""lst_c""] = pd.to_numeric(out[""lst_c""], errors=""coerce"")"
+34,line_hit,247,247,hi_c,"    out[""hi_c""] = pd.to_numeric(out[""hi_c""], errors=""coerce"")"
+34,line_hit,251,251,"hi_c, lst_c","houston = build_city_gdf(""Houston"", houston_base, houston_lst_csv, houston_hi_csv)"
+34,line_hit,252,252,"hi_c, lst_c","phoenix = build_city_gdf(""Phoenix"", phoenix_base, phoenix_lst_csv, phoenix_hi_csv)"
+34,line_hit,268,268,lst_c,"    gdf[""lst_anom""] = gdf[""lst_c""] - gdf[""lst_c""].median()"
+34,line_hit,269,269,hi_c,"    gdf[""hi_anom""] = gdf[""hi_c""] - gdf[""hi_c""].median()"
+34,line_hit,298,298,lst_c,"lst_color_map = {lab: col for lab, col in zip(lst_labels, anomaly_colors)}"
+34,line_hit,299,299,hi_c,"hi_color_map  = {lab: col for lab, col in zip(hi_labels, anomaly_colors)}"
+34,line_hit,309,309,lst_c,"    lst_labels, lst_color_map, missing_color=""#c9c9c9"""
+34,line_hit,313,313,heat index,"    ""B. Houston Heat Index anomaly"","
+34,line_hit,314,314,hi_c,"    hi_labels, hi_color_map, missing_color=""#c9c9c9"""
+34,line_hit,319,319,lst_c,"    lst_labels, lst_color_map, missing_color=""#c9c9c9"""
+34,line_hit,323,323,heat index,"    ""D. Phoenix Heat Index anomaly"","
+34,line_hit,324,324,hi_c,"    hi_labels, hi_color_map, missing_color=""#c9c9c9"""
+34,line_hit,327,327,heat index,"fig.suptitle(""RQ1 comparison figure: LST vs Heat Index within-city anomaly"", fontsize=22, y=0.98)"
+34,line_hit,329,329,lst_c,"lst_handles = [Patch(facecolor=lst_color_map[l], edgecolor=""none"", label=l) for l in lst_labels]"
+34,line_hit,330,330,hi_c,"hi_handles  = [Patch(facecolor=hi_color_map[l], edgecolor=""none"", label=l) for l in hi_labels]"
+34,line_hit,348,348,heat index,"    title=""Heat Index anomaly from city median (°C)"","
+34,line_hit,366,366,lst_c,"    valid_lst = out[""lst_c""].notna()"
+34,line_hit,367,367,hi_c,"    valid_hi = out[""hi_c""].notna()"
+34,line_hit,369,369,lst_c,"    lst_thresh = out.loc[valid_lst, ""lst_c""].quantile(0.80)"
+34,line_hit,370,370,hi_c,"    hi_thresh  = out.loc[valid_hi, ""hi_c""].quantile(0.80)"
+34,line_hit,374,374,lst_c,"    out.loc[valid_lst, ""lst_hot""] = out.loc[valid_lst, ""lst_c""] >= lst_thresh"
+34,line_hit,375,375,hi_c,"    out.loc[valid_hi, ""hi_hot""] = out.loc[valid_hi, ""hi_c""] >= hi_thresh"
+34,line_hit,378,378,"hi_c, lst_c","    out.loc[out[""lst_c""].isna() | out[""hi_c""].isna(), ""cmp_class""] = ""Missing"""
+34,line_hit,380,380,hi_c,"    out.loc[(out[""lst_hot""]) & (~out[""hi_hot""]) & out[""hi_c""].notna(), ""cmp_class""] = ""LST-only hotspot"""
+34,line_hit,381,381,lst_c,"    out.loc[(~out[""lst_hot""]) & (out[""hi_hot""]) & out[""lst_c""].notna(), ""cmp_class""] = ""HI-only hotspot"""
+34,line_hit,386,386,lst_c,"        ""missing_lst"": int(out[""lst_c""].isna().sum()),"
+34,line_hit,387,387,hi_c,"        ""missing_hi"": int(out[""hi_c""].isna().sum()),"
+34,line_hit,414,414,heat index,"    ""Houston: LST vs Heat Index hotspot mismatch"","
+34,line_hit,419,419,heat index,"    ""Phoenix: LST vs Heat Index hotspot mismatch"","
+34,line_hit,423,423,heat index,"fig.suptitle(""RQ1 comparison figure: overlap and mismatch between LST and Heat Index hotspots"", fontsize=22, y=0.98)"
+34,line_hit,453,453,lst_c,"        ""missing_lst"": int(gdf[""lst_c""].isna().sum()),"
+34,line_hit,454,454,hi_c,"        ""missing_hi"": int(gdf[""hi_c""].isna().sum()),"
+34,line_hit,455,455,lst_c,"        ""city_median_lst_c"": round(float(gdf[""lst_c""].median()), 3),"
+34,line_hit,456,456,hi_c,"        ""city_median_hi_c"": round(float(gdf[""hi_c""].median()), 3),"
+34,line_hit,469,469,hi_c,"qc_out = output_dir / ""teacher_ready_lst_hi_compare_qc.csv"""
+34,context_window,1,15,heat index,"0001: # ============================================================
+0002: # FINAL REPLACEMENT CELL
+0003: # Teacher-ready LST vs Heat Index comparison for RQ1
+0004: # ============================================================
+0005: 
+0006: from pathlib import Path
+0007: import numpy as np
+0008: import pandas as pd
+0009: import geopandas as gpd
+0010: import matplotlib.pyplot as plt
+0011: from matplotlib.patches import Patch
+0012: 
+0013: # ----------------------------
+0014: # 0) locate project root
+0015: # ----------------------------"
+34,context_window,161,281,"hi_c, heat_index, lst_c","0161: houston_base = find_existing([
+0162:     data_processed / ""houston"" / ""houston_master_demo_poverty.gpkg"",
+0163:     data_processed / ""houston"" / ""houston_master_with_lst_hotspot.gpkg"",
+0164:     data_processed / ""houston"" / ""houston_master_demo.gpkg"",
+0165: ])
+0166: 
+0167: phoenix_base = find_existing([
+0168:     data_processed / ""phoenix"" / ""phoenix_master_demo_poverty.gpkg"",
+0169:     data_processed / ""phoenix"" / ""phoenix_master_with_lst_hotspot.gpkg"",
+0170:     data_processed / ""phoenix"" / ""phoenix_master_demo.gpkg"",
+0171: ])
+0172: 
+0173: houston_lst_csv = find_existing([
+0174:     output_dir / ""houston_landsat_lst_pilot.csv"",
+0175: ])
+0176: 
+0177: phoenix_lst_csv = find_existing([
+0178:     output_dir / ""phoenix_landsat_lst_pilot.csv"",
+0179: ])
+0180: 
+0181: houston_hi_csv = find_existing([
+0182:     output_dir / ""houston_hi_pilot.csv"",
+0183: ])
+0184: 
+0185: phoenix_hi_csv = find_existing([
+0186:     output_dir / ""phoenix_hi_pilot.csv"",
+0187: ])
+0188: 
+0189: print(""Houston base:"", houston_base)
+0190: print(""Phoenix base:"", phoenix_base)
+0191: print(""Houston LST csv:"", houston_lst_csv)
+0192: print(""Phoenix LST csv:"", phoenix_lst_csv)
+0193: print(""Houston HI csv:"", houston_hi_csv)
+0194: print(""Phoenix HI csv:"", phoenix_hi_csv)
+0195: 
+0196: # ----------------------------
+0197: # 3) rebuild fresh city GeoDataFrames
+0198: # ----------------------------
+0199: def build_city_gdf(city_name, base_path, lst_csv_path, hi_csv_path):
+0200:     gdf = gpd.read_file(base_path).copy()
+0201: 
+0202:     geoid_base_col = first_existing_col(gdf, [""GEOID"", ""geoid""], f""{city_name} base GEOID"")
+0203:     gdf[""GEOID""] = std_geoid(gdf[geoid_base_col])
+0204: 
+0205:     lst_df = pd.read_csv(lst_csv_path, dtype={""GEOID"": str}, low_memory=False)
+0206:     geoid_lst_col = first_existing_col(lst_df, [""GEOID"", ""geoid""], f""{city_name} LST GEOID"")
+0207:     lst_df[""GEOID""] = std_geoid(lst_df[geoid_lst_col])
+0208: 
+0209:     lst_value_col = first_existing_col(
+0210:         lst_df,
+0211:         [
+0212:             ""lst_summer_median_c"",
+0213:             ""median_lst_c"",
+0214:             ""lst_median_c"",
+0215:             ""median_lst""
+0216:         ],
+0217:         f""{city_name} LST median column""
+0218:     )
+0219:     lst_keep = lst_df[[""GEOID"", lst_value_col]].copy()
+0220:     lst_keep = lst_keep.rename(columns={lst_value_col: ""lst_c""})
+0221:     lst_keep[""lst_c""] = pd.to_numeric(lst_keep[""lst_c""], errors=""coerce"")
+0222: 
+0223:     hi_df = pd.read_csv(hi_csv_path, dtype={""GEOID"": str}, low_memory=False)
+0224:     geoid_hi_col = first_existing_col(hi_df, [""GEOID"", ""geoid""], f""{city_name} HI GEOID"")
+0225:     hi_df[""GEOID""] = std_geoid(hi_df[geoid_hi_col])
+0226: 
+0227:     hi_value_col = first_existing_col(
+0228:         hi_df,
+0229:         [
+0230:             ""hi_summer_median_c"",
+0231:             ""median_hi_c"",
+0232:             ""hi_median_c"",
+0233:             ""median_heat_index_c"",
+0234:             ""heat_index_median_c""
+0235:         ],
+0236:         f""{city_name} HI median column""
+0237:     )
+0238:     hi_keep = hi_df[[""GEOID"", hi_value_col]].copy()
+0239:     hi_keep = hi_keep.rename(columns={hi_value_col: ""hi_c""})
+0240:     hi_keep[""hi_c""] = pd.to_numeric(hi_keep[""hi_c""], errors=""coerce"")
+0241: 
+0242:     out = gdf.merge(lst_keep, on=""GEOID"", how=""left"")
+0243:     out = out.merge(hi_keep, on=""GEOID"", how=""left"")
+0244:     out[""city""] = city_name
+0245: 
+0246:     out[""lst_c""] = pd.to_numeric(out[""lst_c""], errors=""coerce"")
+0247:     out[""hi_c""] = pd.to_numeric(out[""hi_c""], errors=""coerce"")
+0248: 
+0249:     return out
+0250: 
+0251: houston = build_city_gdf(""Houston"", houston_base, houston_lst_csv, houston_hi_csv)
+0252: phoenix = build_city_gdf(""Phoenix"", phoenix_base, phoenix_lst_csv, phoenix_hi_csv)
+0253: 
+0254: # save fresh merged files
+0255: houston_fixed_gpkg = data_processed / ""houston"" / ""houston_master_with_lst_hi_fixed.gpkg""
+0256: phoenix_fixed_gpkg = data_processed / ""phoenix"" / ""phoenix_master_with_lst_hi_fixed.gpkg""
+0257: houston.to_file(houston_fixed_gpkg, driver=""GPKG"")
+0258: phoenix.to_file(phoenix_fixed_gpkg, driver=""GPKG"")
+0259: 
+0260: print(""\nFresh fixed gpkg saved:"")
+0261: print(houston_fixed_gpkg, ""->"", houston_fixed_gpkg.exists())
+0262: print(phoenix_fixed_gpkg, ""->"", phoenix_fixed_gpkg.exists())
+0263: 
+0264: # ----------------------------
+0265: # 4) anomaly variables
+0266: # ----------------------------
+0267: for gdf in [houston, phoenix]:
+0268:     gdf[""lst_anom""] = gdf[""lst_c""] - gdf[""lst_c""].median()
+0269:     gdf[""hi_anom""] = gdf[""hi_c""] - gdf[""hi_c""].median()
+0270: 
+0271: # Build bins separately for LST and HI
+0272: all_lst_anom = pd.concat([houston[""lst_anom""], phoenix[""lst_anom""]], ignore_index=True)
+0273: all_hi_anom  = pd.concat([houston[""hi_anom""], phoenix[""hi_anom""]], ignore_index=True)
+0274: 
+0275: lst_bins = robust_symmetric_bins(all_lst_anom, quantiles=(0.25, 0.50, 0.80), min_step=0.2)
+0276: hi_bins  = robust_symmetric_bins(all_hi_anom, quantiles=(0.25, 0.50, 0.80), min_step=0.2)
+0277: 
+0278: houston[""lst_anom_class""], lst_labels = classify_with_bins(houston[""lst_anom""], lst_bins)
+0279: phoenix[""lst_anom_class""], _          = classify_with_bins(phoenix[""lst_anom""], lst_bins)
+0280: 
+0281: houston[""hi_anom_class""], hi_labels = classify_with_bins(houston[""hi_anom""], hi_bins)"
+34,context_window,286,399,"hi_c, heat index, lst_c","0286: 
+0287: # separate color maps
+0288: anomaly_colors = [
+0289:     ""#2166ac"",  # deep blue
+0290:     ""#67a9cf"",  # blue
+0291:     ""#bde2f6"",  # light blue
+0292:     ""#f3eee8"",  # soft neutral center (not white)
+0293:     ""#f4b183"",  # light orange
+0294:     ""#e07a5f"",  # orange-red
+0295:     ""#b2182b"",  # deep red
+0296: ]
+0297: 
+0298: lst_color_map = {lab: col for lab, col in zip(lst_labels, anomaly_colors)}
+0299: hi_color_map  = {lab: col for lab, col in zip(hi_labels, anomaly_colors)}
+0300: 
+0301: # ----------------------------
+0302: # 5) Figure 1: anomaly comparison
+0303: # ----------------------------
+0304: fig, axes = plt.subplots(2, 2, figsize=(16, 13))
+0305: 
+0306: plot_class_map(
+0307:     axes[0, 0], houston, ""lst_anom_class"",
+0308:     ""A. Houston LST anomaly"",
+0309:     lst_labels, lst_color_map, missing_color=""#c9c9c9""
+0310: )
+0311: plot_class_map(
+0312:     axes[0, 1], houston, ""hi_anom_class"",
+0313:     ""B. Houston Heat Index anomaly"",
+0314:     hi_labels, hi_color_map, missing_color=""#c9c9c9""
+0315: )
+0316: plot_class_map(
+0317:     axes[1, 0], phoenix, ""lst_anom_class"",
+0318:     ""C. Phoenix LST anomaly"",
+0319:     lst_labels, lst_color_map, missing_color=""#c9c9c9""
+0320: )
+0321: plot_class_map(
+0322:     axes[1, 1], phoenix, ""hi_anom_class"",
+0323:     ""D. Phoenix Heat Index anomaly"",
+0324:     hi_labels, hi_color_map, missing_color=""#c9c9c9""
+0325: )
+0326: 
+0327: fig.suptitle(""RQ1 comparison figure: LST vs Heat Index within-city anomaly"", fontsize=22, y=0.98)
+0328: 
+0329: lst_handles = [Patch(facecolor=lst_color_map[l], edgecolor=""none"", label=l) for l in lst_labels]
+0330: hi_handles  = [Patch(facecolor=hi_color_map[l], edgecolor=""none"", label=l) for l in hi_labels]
+0331: missing_handle = Patch(facecolor=""#c9c9c9"", edgecolor=""none"", label=""Missing / no data"")
+0332: 
+0333: fig.legend(
+0334:     handles=lst_handles + [missing_handle],
+0335:     loc=""lower center"",
+0336:     bbox_to_anchor=(0.26, 0.02),
+0337:     ncol=4,
+0338:     title=""LST anomaly from city median (°C)"",
+0339:     frameon=False,
+0340:     fontsize=10,
+0341:     title_fontsize=11
+0342: )
+0343: fig.legend(
+0344:     handles=hi_handles + [missing_handle],
+0345:     loc=""lower center"",
+0346:     bbox_to_anchor=(0.74, 0.02),
+0347:     ncol=4,
+0348:     title=""Heat Index anomaly from city median (°C)"",
+0349:     frameon=False,
+0350:     fontsize=10,
+0351:     title_fontsize=11
+0352: )
+0353: 
+0354: plt.tight_layout(rect=[0, 0.10, 1, 0.95])
+0355: 
+0356: fig1_out = figure_dir / ""teacher_ready_lst_vs_hi_anomaly.png""
+0357: plt.savefig(fig1_out, dpi=300, bbox_inches=""tight"")
+0358: plt.show()
+0359: 
+0360: # ----------------------------
+0361: # 6) hotspot overlap / mismatch
+0362: # ----------------------------
+0363: def build_hotspot_compare(gdf):
+0364:     out = gdf.copy()
+0365: 
+0366:     valid_lst = out[""lst_c""].notna()
+0367:     valid_hi = out[""hi_c""].notna()
+0368: 
+0369:     lst_thresh = out.loc[valid_lst, ""lst_c""].quantile(0.80)
+0370:     hi_thresh  = out.loc[valid_hi, ""hi_c""].quantile(0.80)
+0371: 
+0372:     out[""lst_hot""] = False
+0373:     out[""hi_hot""] = False
+0374:     out.loc[valid_lst, ""lst_hot""] = out.loc[valid_lst, ""lst_c""] >= lst_thresh
+0375:     out.loc[valid_hi, ""hi_hot""] = out.loc[valid_hi, ""hi_c""] >= hi_thresh
+0376: 
+0377:     out[""cmp_class""] = ""Neither""
+0378:     out.loc[out[""lst_c""].isna() | out[""hi_c""].isna(), ""cmp_class""] = ""Missing""
+0379:     out.loc[(out[""lst_hot""]) & (out[""hi_hot""]), ""cmp_class""] = ""Overlap hotspot""
+0380:     out.loc[(out[""lst_hot""]) & (~out[""hi_hot""]) & out[""hi_c""].notna(), ""cmp_class""] = ""LST-only hotspot""
+0381:     out.loc[(~out[""lst_hot""]) & (out[""hi_hot""]) & out[""lst_c""].notna(), ""cmp_class""] = ""HI-only hotspot""
+0382: 
+0383:     qc = {
+0384:         ""city"": out[""city""].iloc[0],
+0385:         ""tract_rows"": len(out),
+0386:         ""missing_lst"": int(out[""lst_c""].isna().sum()),
+0387:         ""missing_hi"": int(out[""hi_c""].isna().sum()),
+0388:         ""lst_hotspot_threshold_c"": round(float(lst_thresh), 3),
+0389:         ""hi_hotspot_threshold_c"": round(float(hi_thresh), 3),
+0390:         ""overlap_hotspot_count"": int((out[""cmp_class""] == ""Overlap hotspot"").sum()),
+0391:         ""lst_only_hotspot_count"": int((out[""cmp_class""] == ""LST-only hotspot"").sum()),
+0392:         ""hi_only_hotspot_count"": int((out[""cmp_class""] == ""HI-only hotspot"").sum()),
+0393:         ""neither_count"": int((out[""cmp_class""] == ""Neither"").sum()),
+0394:         ""missing_count"": int((out[""cmp_class""] == ""Missing"").sum()),
+0395:     }
+0396:     return out, qc
+0397: 
+0398: houston_cmp, houston_cmp_qc = build_hotspot_compare(houston)
+0399: phoenix_cmp, phoenix_cmp_qc = build_hotspot_compare(phoenix)"
+34,context_window,402,435,heat index,"0402: cmp_colors = {
+0403:     ""Overlap hotspot"": ""#b2182b"",
+0404:     ""LST-only hotspot"": ""#ef8a62"",
+0405:     ""HI-only hotspot"": ""#67a9cf"",
+0406:     ""Neither"": ""#e0e0e0"",
+0407:     ""Missing"": ""#9e9e9e"",
+0408: }
+0409: 
+0410: fig, axes = plt.subplots(1, 2, figsize=(16, 8))
+0411: 
+0412: plot_class_map(
+0413:     axes[0], houston_cmp, ""cmp_class"",
+0414:     ""Houston: LST vs Heat Index hotspot mismatch"",
+0415:     cmp_order, cmp_colors, missing_color=""#9e9e9e""
+0416: )
+0417: plot_class_map(
+0418:     axes[1], phoenix_cmp, ""cmp_class"",
+0419:     ""Phoenix: LST vs Heat Index hotspot mismatch"",
+0420:     cmp_order, cmp_colors, missing_color=""#9e9e9e""
+0421: )
+0422: 
+0423: fig.suptitle(""RQ1 comparison figure: overlap and mismatch between LST and Heat Index hotspots"", fontsize=22, y=0.98)
+0424: 
+0425: cmp_handles = [Patch(facecolor=cmp_colors[c], edgecolor=""none"", label=c) for c in cmp_order]
+0426: fig.legend(
+0427:     handles=cmp_handles,
+0428:     loc=""lower center"",
+0429:     bbox_to_anchor=(0.5, 0.03),
+0430:     ncol=5,
+0431:     title=""Hotspot comparison (city-specific hotspots = top 20% of tracts for each measure)"",
+0432:     frameon=False,
+0433:     fontsize=11,
+0434:     title_fontsize=12
+0435: )"
+34,context_window,441,477,"hi_c, lst_c","0441: plt.show()
+0442: 
+0443: # ----------------------------
+0444: # 7) QC table
+0445: # ----------------------------
+0446: qc_rows = []
+0447: 
+0448: for gdf in [houston, phoenix]:
+0449:     qc_rows.append({
+0450:         ""section"": ""anomaly_base"",
+0451:         ""city"": gdf[""city""].iloc[0],
+0452:         ""tract_rows"": len(gdf),
+0453:         ""missing_lst"": int(gdf[""lst_c""].isna().sum()),
+0454:         ""missing_hi"": int(gdf[""hi_c""].isna().sum()),
+0455:         ""city_median_lst_c"": round(float(gdf[""lst_c""].median()), 3),
+0456:         ""city_median_hi_c"": round(float(gdf[""hi_c""].median()), 3),
+0457:         ""lst_anomaly_min"": round(float(gdf[""lst_anom""].min()), 3),
+0458:         ""lst_anomaly_max"": round(float(gdf[""lst_anom""].max()), 3),
+0459:         ""hi_anomaly_min"": round(float(gdf[""hi_anom""].min()), 3),
+0460:         ""hi_anomaly_max"": round(float(gdf[""hi_anom""].max()), 3),
+0461:     })
+0462: 
+0463: for row in [houston_cmp_qc, phoenix_cmp_qc]:
+0464:     row = row.copy()
+0465:     row[""section""] = ""hotspot_compare""
+0466:     qc_rows.append(row)
+0467: 
+0468: qc_df = pd.DataFrame(qc_rows)
+0469: qc_out = output_dir / ""teacher_ready_lst_hi_compare_qc.csv""
+0470: qc_df.to_csv(qc_out, index=False)
+0471: 
+0472: print(""\n================ FINAL OUTPUT FILE CHECK ================"")
+0473: for p in [fig1_out, fig2_out, qc_out, houston_fixed_gpkg, phoenix_fixed_gpkg]:
+0474:     print(p, ""->"", p.exists())
+0475: 
+0476: print(""\nQC preview:"")
+0477: display(qc_df)"
+35,line_hit,49,49,lst_c,    lst_col = pick_first_column(
+35,line_hit,51,51,lst_c,"        [""lst_c"", ""lst_value"", ""lst_summer_median_c"", ""median_lst_c"", ""median_lst"", ""lst_median_c""],"
+35,line_hit,54,54,hi_c,    hi_col = pick_first_column(
+35,line_hit,56,56,"hi_c, heat_index","        [""hi_c"", ""hi_value"", ""hi_summer_median_c"", ""median_hi_c"", ""hi_median_c"", ""median_heat_index_c"", ""heat_index_median_c""],"
+35,line_hit,57,57,heat index,"        ""Heat Index"""
+35,line_hit,61,61,lst_c,"    gdf[""lst_value""] = pd.to_numeric(gdf[lst_col], errors=""coerce"")"
+35,line_hit,62,62,hi_c,"    gdf[""hi_value""] = pd.to_numeric(gdf[hi_col], errors=""coerce"")"
+35,line_hit,65,65,"hi_c, lst_c","    return gdf, lst_col, hi_col"
+35,line_hit,171,171,"hi_c, lst_c","houston, houston_lst_col, houston_hi_col = load_city_gdf(houston_path, ""Houston"")"
+35,line_hit,172,172,"hi_c, lst_c","phoenix, phoenix_lst_col, phoenix_hi_col = load_city_gdf(phoenix_path, ""Phoenix"")"
+35,line_hit,174,174,lst_c,"print(""Houston LST column:"", houston_lst_col)"
+35,line_hit,175,175,hi_c,"print(""Houston HI column:"", houston_hi_col)"
+35,line_hit,176,176,lst_c,"print(""Phoenix LST column:"", phoenix_lst_col)"
+35,line_hit,177,177,hi_c,"print(""Phoenix HI column:"", phoenix_hi_col)"
+35,line_hit,191,191,lst_c,"houston = classify_values(houston, ""lst_value"", lst_bins, lst_labels, ""lst_class"")"
+35,line_hit,192,192,lst_c,"phoenix = classify_values(phoenix, ""lst_value"", lst_bins, lst_labels, ""lst_class"")"
+35,line_hit,193,193,hi_c,"houston = classify_values(houston, ""hi_value"", hi_bins, hi_labels, ""hi_class"")"
+35,line_hit,194,194,hi_c,"phoenix = classify_values(phoenix, ""hi_value"", hi_bins, hi_labels, ""hi_class"")"
+35,line_hit,199,199,lst_c,"lst_cmap = plt.get_cmap(""OrRd"", len(lst_labels) + 1)"
+35,line_hit,200,200,hi_c,"hi_cmap = plt.get_cmap(""RdPu"", len(hi_labels) + 1)"
+35,line_hit,203,203,lst_c,"lst_colors = [lst_cmap(i) for i in range(1, len(lst_labels) + 1)]"
+35,line_hit,204,204,hi_c,"hi_colors = [hi_cmap(i) for i in range(1, len(hi_labels) + 1)]"
+35,line_hit,212,212,lst_c,"    axes[0, 0], houston, ""lst_class"", lst_labels, lst_colors,"
+35,line_hit,216,216,hi_c,"    axes[0, 1], houston, ""hi_class"", hi_labels, hi_colors,"
+35,line_hit,217,217,heat index,"    ""B. Houston Heat Index (summer median, °C)"""
+35,line_hit,220,220,lst_c,"    axes[1, 0], phoenix, ""lst_class"", lst_labels, lst_colors,"
+35,line_hit,224,224,hi_c,"    axes[1, 1], phoenix, ""hi_class"", hi_labels, hi_colors,"
+35,line_hit,225,225,heat index,"    ""D. Phoenix Heat Index (summer median, °C)"""
+35,line_hit,229,229,heat index,"    ""RQ1 comparison figure: original values of LST vs Heat Index"","
+35,line_hit,233,233,lst_c,"lst_handles = [Patch(facecolor=c, edgecolor=""none"", label=l) for c, l in zip(lst_colors, lst_labels)]"
+35,line_hit,236,236,hi_c,"hi_handles = [Patch(facecolor=c, edgecolor=""none"", label=l) for c, l in zip(hi_colors, hi_labels)]"
+35,line_hit,251,251,heat index,"    title=""Heat Index (°C)"","
+35,context_window,37,77,"hi_c, heat index, heat_index, lst_c","0037: def pick_first_column(gdf, candidates, label):
+0038:     for c in candidates:
+0039:         if c in gdf.columns:
+0040:             return c
+0041:     raise ValueError(
+0042:         f""Could not find a valid {label} column. Tried: {candidates}\n""
+0043:         f""Available columns are:\n{list(gdf.columns)}""
+0044:     )
+0045: 
+0046: def load_city_gdf(path, city_name):
+0047:     gdf = gpd.read_file(path).copy()
+0048: 
+0049:     lst_col = pick_first_column(
+0050:         gdf,
+0051:         [""lst_c"", ""lst_value"", ""lst_summer_median_c"", ""median_lst_c"", ""median_lst"", ""lst_median_c""],
+0052:         ""LST""
+0053:     )
+0054:     hi_col = pick_first_column(
+0055:         gdf,
+0056:         [""hi_c"", ""hi_value"", ""hi_summer_median_c"", ""median_hi_c"", ""hi_median_c"", ""median_heat_index_c"", ""heat_index_median_c""],
+0057:         ""Heat Index""
+0058:     )
+0059: 
+0060:     gdf[""city""] = city_name
+0061:     gdf[""lst_value""] = pd.to_numeric(gdf[lst_col], errors=""coerce"")
+0062:     gdf[""hi_value""] = pd.to_numeric(gdf[hi_col], errors=""coerce"")
+0063:     gdf = gdf.loc[gdf.geometry.notna()].copy()
+0064: 
+0065:     return gdf, lst_col, hi_col
+0066: 
+0067: def make_common_bins(series, q=5, decimals=1):
+0068:     s = pd.Series(series).dropna().astype(float)
+0069:     if len(s) == 0:
+0070:         raise ValueError(""Series is empty after dropping NA."")
+0071: 
+0072:     _, bins = pd.qcut(s, q=q, retbins=True, duplicates=""drop"")
+0073:     bins = np.array(bins, dtype=float)
+0074:     bins = np.round(bins, decimals)
+0075:     bins = np.unique(bins)
+0076: 
+0077:     if len(bins) < 3:"
+35,context_window,159,263,"hi_c, heat index, lst_c","0159:     project_root / ""data_processed"" / ""houston"" / ""houston_master_with_lst_hi.gpkg"",
+0160:     project_root / ""data_processed"" / ""houston"" / ""houston_master_demo_poverty.gpkg"",
+0161:     project_root / ""data_processed"" / ""houston"" / ""houston_master_demo.gpkg"",
+0162: ])
+0163: 
+0164: phoenix_path = first_existing([
+0165:     project_root / ""data_processed"" / ""phoenix"" / ""phoenix_master_with_lst_hi_fixed.gpkg"",
+0166:     project_root / ""data_processed"" / ""phoenix"" / ""phoenix_master_with_lst_hi.gpkg"",
+0167:     project_root / ""data_processed"" / ""phoenix"" / ""phoenix_master_demo_poverty.gpkg"",
+0168:     project_root / ""data_processed"" / ""phoenix"" / ""phoenix_master_demo.gpkg"",
+0169: ])
+0170: 
+0171: houston, houston_lst_col, houston_hi_col = load_city_gdf(houston_path, ""Houston"")
+0172: phoenix, phoenix_lst_col, phoenix_hi_col = load_city_gdf(phoenix_path, ""Phoenix"")
+0173: 
+0174: print(""Houston LST column:"", houston_lst_col)
+0175: print(""Houston HI column:"", houston_hi_col)
+0176: print(""Phoenix LST column:"", phoenix_lst_col)
+0177: print(""Phoenix HI column:"", phoenix_hi_col)
+0178: 
+0179: # -----------------------------
+0180: # common bins
+0181: # -----------------------------
+0182: lst_all = pd.concat([houston[""lst_value""], phoenix[""lst_value""]], ignore_index=True)
+0183: hi_all = pd.concat([houston[""hi_value""], phoenix[""hi_value""]], ignore_index=True)
+0184: 
+0185: lst_bins, lst_labels = make_common_bins(lst_all, q=5, decimals=1)
+0186: hi_bins, hi_labels = make_common_bins(hi_all, q=5, decimals=1)
+0187: 
+0188: print(""LST bins:"", lst_bins)
+0189: print(""HI bins:"", hi_bins)
+0190: 
+0191: houston = classify_values(houston, ""lst_value"", lst_bins, lst_labels, ""lst_class"")
+0192: phoenix = classify_values(phoenix, ""lst_value"", lst_bins, lst_labels, ""lst_class"")
+0193: houston = classify_values(houston, ""hi_value"", hi_bins, hi_labels, ""hi_class"")
+0194: phoenix = classify_values(phoenix, ""hi_value"", hi_bins, hi_labels, ""hi_class"")
+0195: 
+0196: # -----------------------------
+0197: # stronger colors
+0198: # -----------------------------
+0199: lst_cmap = plt.get_cmap(""OrRd"", len(lst_labels) + 1)
+0200: hi_cmap = plt.get_cmap(""RdPu"", len(hi_labels) + 1)
+0201: 
+0202: # skip the palest color to make Houston clearer
+0203: lst_colors = [lst_cmap(i) for i in range(1, len(lst_labels) + 1)]
+0204: hi_colors = [hi_cmap(i) for i in range(1, len(hi_labels) + 1)]
+0205: 
+0206: # -----------------------------
+0207: # plot
+0208: # -----------------------------
+0209: fig, axes = plt.subplots(2, 2, figsize=(16, 13))
+0210: 
+0211: plot_panel(
+0212:     axes[0, 0], houston, ""lst_class"", lst_labels, lst_colors,
+0213:     ""A. Houston LST (summer median, °C)""
+0214: )
+0215: plot_panel(
+0216:     axes[0, 1], houston, ""hi_class"", hi_labels, hi_colors,
+0217:     ""B. Houston Heat Index (summer median, °C)""
+0218: )
+0219: plot_panel(
+0220:     axes[1, 0], phoenix, ""lst_class"", lst_labels, lst_colors,
+0221:     ""C. Phoenix LST (summer median, °C)""
+0222: )
+0223: plot_panel(
+0224:     axes[1, 1], phoenix, ""hi_class"", hi_labels, hi_colors,
+0225:     ""D. Phoenix Heat Index (summer median, °C)""
+0226: )
+0227: 
+0228: fig.suptitle(
+0229:     ""RQ1 comparison figure: original values of LST vs Heat Index"",
+0230:     fontsize=20, y=0.98
+0231: )
+0232: 
+0233: lst_handles = [Patch(facecolor=c, edgecolor=""none"", label=l) for c, l in zip(lst_colors, lst_labels)]
+0234: lst_handles.append(Patch(facecolor=""#bfbfbf"", edgecolor=""none"", label=""Missing / no data""))
+0235: 
+0236: hi_handles = [Patch(facecolor=c, edgecolor=""none"", label=l) for c, l in zip(hi_colors, hi_labels)]
+0237: hi_handles.append(Patch(facecolor=""#bfbfbf"", edgecolor=""none"", label=""Missing / no data""))
+0238: 
+0239: leg1 = fig.legend(
+0240:     handles=lst_handles,
+0241:     title=""LST (°C)"",
+0242:     loc=""lower center"",
+0243:     bbox_to_anchor=(0.28, 0.03),
+0244:     ncol=3,
+0245:     frameon=False,
+0246:     fontsize=9.5,
+0247:     title_fontsize=10.5
+0248: )
+0249: leg2 = fig.legend(
+0250:     handles=hi_handles,
+0251:     title=""Heat Index (°C)"",
+0252:     loc=""lower center"",
+0253:     bbox_to_anchor=(0.74, 0.03),
+0254:     ncol=3,
+0255:     frameon=False,
+0256:     fontsize=9.5,
+0257:     title_fontsize=10.5
+0258: )
+0259: fig.add_artist(leg1)
+0260: 
+0261: plt.tight_layout(rect=[0, 0.10, 1, 0.95])
+0262: 
+0263: teacher_original_out = figure_dir / ""teacher_ready_original_values_choropleth_polished.png"""

@@ -1,0 +1,6 @@
+- Houston (Coastal / humid) is classified as Mixed / transitional. HI-only hotspot share = 16.2%, LST-only hotspot share = 15.8%, both-hotspot share = 9.3%, priority tract share = 28.1%, LST-HI correlation = 0.34.
+- Phoenix (Inland / desert) is classified as Mixed / transitional. HI-only hotspot share = 18.4%, LST-only hotspot share = 14.2%, both-hotspot share = 10.8%, priority tract share = 31.9%, LST-HI correlation = 0.29.
+- Las Vegas (Inland / desert) is classified as Coupled LST-HI. HI-only hotspot share = 9.0%, LST-only hotspot share = 9.0%, both-hotspot share = 16.2%, priority tract share = 26.2%, LST-HI correlation = 0.75.
+- Los Angeles (Coastal / dry) is classified as Moderate HI-dominant. HI-only hotspot share = 25.9%, LST-only hotspot share = 17.8%, both-hotspot share = 7.2%, priority tract share = 31.6%, LST-HI correlation = 0.35.
+- Miami (Coastal / humid) is classified as Strong HI-dominant. HI-only hotspot share = 52.0%, LST-only hotspot share = 2.4%, both-hotspot share = 23.2%, priority tract share = 50.4%, LST-HI correlation = 0.21.
+- Boston (Coastal / temperate) is classified as Strong HI-dominant. HI-only hotspot share = 47.6%, LST-only hotspot share = 11.5%, both-hotspot share = 13.6%, priority tract share = 44.0%, LST-HI correlation = 0.00.

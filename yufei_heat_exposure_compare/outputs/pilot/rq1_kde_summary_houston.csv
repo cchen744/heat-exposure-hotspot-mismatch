@@ -1,0 +1,2 @@
+city,n_valid,hi_q_threshold,lst_q_threshold,n_hi_tail,n_lst_tail,bw_method,grid_size,figure_out
+Houston,549,0.473,-0.65,138,138,0.2,240,/Users/yufeizhou/Desktop/heat-exposure-compare/figures/pilot/rq1_kde_hotspot_houston.png

@@ -1,0 +1,7 @@
+file_name,caption
+01_six_city_mismatch_class_maps.png,Six-city spatial distribution of LST-HI hotspot mismatch. Purple shows tracts that are both LST and Heat Index hotspots; orange shows LST-only hotspots; green shows Heat-Index-only hotspots. This is the main map for showing that LST and Heat Index identify different risk areas across cities.
+02_six_city_relative_dominance_maps.png,Relative dominance map showing where Heat Index ranks higher than LST and where LST ranks higher than Heat Index. This helps move beyond hotspot counts by showing within-city spatial gradients.
+03_six_city_priority_tract_maps.png,Priority tracts based on HI-only hotspots and high apparent-vs-surface heat contrast. This figure identifies candidate areas where LST alone may underestimate apparent heat risk.
+04_six_city_mechanism_typology_maps.png,Mechanism typology maps linking spatial patterns to city-level interpretation. Miami and Boston are classified as strong HI-dominant; Las Vegas is more coupled; Los Angeles is moderate HI-dominant; Houston and Phoenix are mixed/transitional.
+05_six_city_mechanism_space.png,"Mechanism space comparing LST-only and Heat-Index-only hotspot shares. Cities above the diagonal are more Heat-Index-dominant, while cities near the diagonal show stronger LST-HI coupling."
+06_six_city_heat_risk_signature_matrix.png,"Heat-risk signature matrix summarizing each city across mean LST, mean Heat Index, LST-HI correlation, hotspot mismatch shares, and priority tract share."

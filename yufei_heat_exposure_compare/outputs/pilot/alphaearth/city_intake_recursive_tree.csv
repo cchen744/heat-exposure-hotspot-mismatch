@@ -1,0 +1,7 @@
+city,relative_path,name,is_file,is_dir,suffix,size_mb
+las_vegas,city_intake/las_vegas/final,final,False,True,,
+las_vegas,city_intake/las_vegas/raw,raw,False,True,,
+las_vegas,city_intake/las_vegas/working,working,False,True,,
+miami,city_intake/miami/final,final,False,True,,
+miami,city_intake/miami/raw,raw,False,True,,
+miami,city_intake/miami/working,working,False,True,,

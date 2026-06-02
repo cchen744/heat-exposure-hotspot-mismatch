@@ -1,0 +1,3 @@
+city,climate_type,pilot_start,pilot_end,tract_count,unique_geoids,missing_income_clean,missing_poverty_rate,boundary_minx,boundary_miny,boundary_maxx,boundary_maxy,lst_source,hi_source,notes
+Houston,humid subtropical,2023-06-01,2023-08-31,654,654,9,3,-95.909743,29.516282,-95.012637,30.155908000000004,LANDSAT/LC08/C02/T1_L2 + LANDSAT/LC09/C02/T1_L2,ECMWF/ERA5_LAND/HOURLY,pilot summer window for workflow validation; not final heat-wave window
+Phoenix,arid,2023-06-01,2023-08-31,373,373,5,3,-112.324065,33.29026,-111.925521,33.918391,LANDSAT/LC08/C02/T1_L2 + LANDSAT/LC09/C02/T1_L2,ECMWF/ERA5_LAND/HOURLY,pilot summer window for workflow validation; not final heat-wave window

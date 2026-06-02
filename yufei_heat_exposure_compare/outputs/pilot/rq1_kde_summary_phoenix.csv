@@ -1,0 +1,2 @@
+city,n_valid,hi_q_threshold,lst_q_threshold,n_hi_tail,n_lst_tail,bw_method,grid_size,figure_out
+Phoenix,332,0.727,-0.764,83,83,0.24,220,/Users/yufeizhou/Desktop/heat-exposure-compare/figures/pilot/rq1_kde_hotspot_phoenix.png

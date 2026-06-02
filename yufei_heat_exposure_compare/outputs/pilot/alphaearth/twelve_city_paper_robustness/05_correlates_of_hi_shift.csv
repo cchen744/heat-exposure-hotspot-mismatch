@@ -1,0 +1,14 @@
+metric,spearman_corr_with_HI_shift
+hi_minus_lst_hotspot_pct,1.0
+hi_dominance_ratio,1.0
+priority_pct,0.9440559440559441
+hi_only_pct,0.8741258741258742
+total_detected_hotspot_pct,0.8741258741258742
+mismatch_pct,0.7482517482517482
+mean_hi_minus_lst,0.46153846153846156
+both_pct,0.3776223776223776
+lst_only_pct,-0.3776223776223776
+lst_hi_corr,-0.42657342657342656
+ready_pct,-0.46654134353832605
+mean_hi_c,-0.5524475524475524
+mean_lst_c,-0.6433566433566433

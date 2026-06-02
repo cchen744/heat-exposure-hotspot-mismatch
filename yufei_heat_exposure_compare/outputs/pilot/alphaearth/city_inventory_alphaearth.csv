@@ -1,0 +1,4 @@
+city,has_heat_file,heat_file,has_embed_file,embed_file,has_pc_file,pc_file,ready_for_full_workflow,ready_if_we_recompute_pc,is_anchor_city,priority_score
+houston,True,/Users/yufeizhou/Desktop/heat-exposure-compare/data_processed/houston/houston_master_with_lst_hi_fixed.gpkg,True,/Users/yufeizhou/Desktop/heat-exposure-compare/outputs/pilot/alphaearth/houston_alphaearth_2024_tract_mean_mosaic_clean.csv,True,/Users/yufeizhou/Desktop/heat-exposure-compare/outputs/pilot/alphaearth/houston_alphaearth_pc7_scores_corrected.csv,True,True,True,5
+phoenix,True,/Users/yufeizhou/Desktop/heat-exposure-compare/data_processed/phoenix/phoenix_master_with_lst_hi_fixed.gpkg,True,/Users/yufeizhou/Desktop/heat-exposure-compare/outputs/pilot/alphaearth/phoenix_alphaearth_2024_tract_mean_mosaic_clean.csv,True,/Users/yufeizhou/Desktop/heat-exposure-compare/outputs/pilot/alphaearth/phoenix_alphaearth_pc7_scores_corrected.csv,True,True,True,5
+city,False,,False,,False,,False,False,False,1

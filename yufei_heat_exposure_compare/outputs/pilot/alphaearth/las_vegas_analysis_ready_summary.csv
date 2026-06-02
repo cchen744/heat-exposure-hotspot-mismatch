@@ -1,0 +1,2 @@
+city,rows_total,rows_analysis_ready,rows_missing_climate,analysis_ready_pct,q75_lst_c,q75_hi_c,q75_hi_minus_lst_c,mean_lst_c,mean_air_temp_c,mean_rh_pct,mean_hi_c,mean_hi_minus_lst_c,min_hi_minus_lst_c,max_hi_minus_lst_c
+las_vegas,535,458,77,85.61,48.00162733296009,31.98997567412149,-15.24775252094602,47.00292475936593,32.97696430760559,17.499972285422384,31.09656820069598,-15.906356558669954,-18.367947225998872,-13.657273804795157

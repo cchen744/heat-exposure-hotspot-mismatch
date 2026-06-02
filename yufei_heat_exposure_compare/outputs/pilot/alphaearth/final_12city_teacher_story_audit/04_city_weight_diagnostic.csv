@@ -1,0 +1,13 @@
+city_label_clean,broad_context_final,story_group_final,n_ready,hi_minus_lst_hotspot_pct,city_weight_among_all_ready_tracts,weighted_gap_contribution_all
+New York,Coastal / water-influenced,Mixed / transitional,2088,0.3352490421455911,0.3096544564733798,0.10381135992881421
+Los Angeles,Coastal / water-influenced,Moderate HI-shift,1080,8.148148148148145,0.16016609817588612,1.3050570962479604
+Chicago,Great Lakes,Moderate HI-shift,872,11.009174311926609,0.12931929408275247,1.4236986504523212
+Houston,Coastal / water-influenced,Mixed / transitional,549,0.3642987249544624,0.0814177665727421,0.02966038855109
+Las Vegas,Inland desert,Coupled LST-HI,458,0.0,0.06792228978199615,0.0
+Dallas,Inland Sun Belt,Mixed / transitional,449,6.013363028953231,0.0665875722971971,0.4004152454397154
+Phoenix,Inland desert,Mixed / transitional,332,4.216867469879515,0.049236244994809435,0.20762271985763
+Atlanta,Inland Sun Belt,Moderate HI-shift,223,13.90134529147982,0.03307133323446537,0.45973602254189533
+Boston,Coastal / water-influenced,Strong HI-shift,191,36.12565445026178,0.02832567106629097,1.0232834050126056
+Seattle,Coastal / water-influenced,Moderate HI-shift,188,11.170212765957444,0.02788076523802462,0.31143407978644516
+San Francisco,Coastal / water-influenced,Strong HI-shift,188,53.191489361702125,0.02788076523802462,1.483019427554501
+Miami,Coastal / water-influenced,Strong HI-shift,125,49.6,0.01853774284443126,0.9194720450837905

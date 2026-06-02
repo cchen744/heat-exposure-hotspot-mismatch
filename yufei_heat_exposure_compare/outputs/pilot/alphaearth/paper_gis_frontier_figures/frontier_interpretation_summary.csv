@@ -1,0 +1,4 @@
+city,n_adjacency_edges,same_class_adjacency_pct,direct_LST_only_HI_only_frontier_length_km,most_common_neighbor_pair,most_common_neighbor_pair_edges
+houston,1441,69.18806384455239,14.93398624749716,Neither | Neither,706
+phoenix,949,76.92307692307693,18.83944745874077,Neither | Neither,500
+las_vegas,1373,83.46686088856518,30.58109291740396,Neither | Neither,848

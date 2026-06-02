@@ -1,0 +1,15 @@
+city,metric,value
+Houston,Median LST,48.531293320761506
+Phoenix,Median LST,57.21703991853516
+Houston,IQR,2.827227065261681
+Phoenix,IQR,2.480727198102805
+Houston,P90 - P10,6.143831421552697
+Phoenix,P90 - P10,4.533896639577584
+Houston,P95 - P50,3.2901676508886837
+Phoenix,P95 - P50,2.345349782930228
+Houston,CV,0.05783632202304031
+Phoenix,CV,0.030463983688821025
+Houston,Hotspot area share (%),7.153203384898231
+Phoenix,Hotspot area share (%),34.181578709739
+Houston,Hotspot population share (%),17.259310014697636
+Phoenix,Hotspot population share (%),19.47039938517986

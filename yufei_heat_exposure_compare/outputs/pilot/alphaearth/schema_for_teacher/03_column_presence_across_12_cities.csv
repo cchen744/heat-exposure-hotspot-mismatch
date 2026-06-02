@@ -1,0 +1,53 @@
+column_name,n_cities_with_column,cities_with_column
+ALAND,9,Los Angeles; Miami; Boston; New York; Chicago; Atlanta; Dallas; Seattle; San Francisco
+AWATER,9,Los Angeles; Miami; Boston; New York; Chicago; Atlanta; Dallas; Seattle; San Francisco
+COUNTYFP,9,Los Angeles; Miami; Boston; New York; Chicago; Atlanta; Dallas; Seattle; San Francisco
+FUNCSTAT,9,Los Angeles; Miami; Boston; New York; Chicago; Atlanta; Dallas; Seattle; San Francisco
+GEOID,9,Los Angeles; Miami; Boston; New York; Chicago; Atlanta; Dallas; Seattle; San Francisco
+GEOIDFQ,9,Los Angeles; Miami; Boston; New York; Chicago; Atlanta; Dallas; Seattle; San Francisco
+INTPTLAT,9,Los Angeles; Miami; Boston; New York; Chicago; Atlanta; Dallas; Seattle; San Francisco
+INTPTLON,9,Los Angeles; Miami; Boston; New York; Chicago; Atlanta; Dallas; Seattle; San Francisco
+MTFCC,9,Los Angeles; Miami; Boston; New York; Chicago; Atlanta; Dallas; Seattle; San Francisco
+NAME,9,Los Angeles; Miami; Boston; New York; Chicago; Atlanta; Dallas; Seattle; San Francisco
+NAMELSAD,9,Los Angeles; Miami; Boston; New York; Chicago; Atlanta; Dallas; Seattle; San Francisco
+STATEFP,9,Los Angeles; Miami; Boston; New York; Chicago; Atlanta; Dallas; Seattle; San Francisco
+TRACTCE,9,Los Angeles; Miami; Boston; New York; Chicago; Atlanta; Dallas; Seattle; San Francisco
+analysis_ready,9,Los Angeles; Miami; Boston; New York; Chicago; Atlanta; Dallas; Seattle; San Francisco
+city,9,Los Angeles; Miami; Boston; New York; Chicago; Atlanta; Dallas; Seattle; San Francisco
+geometry,9,Los Angeles; Miami; Boston; New York; Chicago; Atlanta; Dallas; Seattle; San Francisco
+hi_c,9,Los Angeles; Miami; Boston; New York; Chicago; Atlanta; Dallas; Seattle; San Francisco
+lst_c,9,Los Angeles; Miami; Boston; New York; Chicago; Atlanta; Dallas; Seattle; San Francisco
+mismatch_class,9,Los Angeles; Miami; Boston; New York; Chicago; Atlanta; Dallas; Seattle; San Francisco
+priority_flag,9,Los Angeles; Miami; Boston; New York; Chicago; Atlanta; Dallas; Seattle; San Francisco
+centroid_in_city,6,New York; Chicago; Atlanta; Dallas; Seattle; San Francisco
+city_context,6,New York; Chicago; Atlanta; Dallas; Seattle; San Francisco
+city_label,6,New York; Chicago; Atlanta; Dallas; Seattle; San Francisco
+hi_hot,6,New York; Chicago; Atlanta; Dallas; Seattle; San Francisco
+hi_minus_lst_pct,6,New York; Chicago; Atlanta; Dallas; Seattle; San Francisco
+hi_pct,6,New York; Chicago; Atlanta; Dallas; Seattle; San Francisco
+intersects_city,6,New York; Chicago; Atlanta; Dallas; Seattle; San Francisco
+lst_hot,6,New York; Chicago; Atlanta; Dallas; Seattle; San Francisco
+lst_pct,6,New York; Chicago; Atlanta; Dallas; Seattle; San Francisco
+q75_hi_c,6,New York; Chicago; Atlanta; Dallas; Seattle; San Francisco
+q75_hi_minus_lst_pct,6,New York; Chicago; Atlanta; Dallas; Seattle; San Francisco
+q75_lst_c,6,New York; Chicago; Atlanta; Dallas; Seattle; San Francisco
+state_fips,6,New York; Chicago; Atlanta; Dallas; Seattle; San Francisco
+state_name,6,New York; Chicago; Atlanta; Dallas; Seattle; San Francisco
+NAME_acs,3,Los Angeles; Miami; Boston
+acs_year,3,Los Angeles; Miami; Boston
+air_temp_c,3,Los Angeles; Miami; Boston
+city_name,3,Los Angeles; Miami; Boston
+county,3,Los Angeles; Miami; Boston
+hi_hot_q75,3,Los Angeles; Miami; Boston
+hi_minus_lst,3,Los Angeles; Miami; Boston
+hi_summer_mean_c,3,Los Angeles; Miami; Boston
+lst_hot_q75,3,Los Angeles; Miami; Boston
+lst_summer_mean_c,3,Los Angeles; Miami; Boston
+population,3,Los Angeles; Miami; Boston
+poverty_below,3,Los Angeles; Miami; Boston
+poverty_rate,3,Los Angeles; Miami; Boston
+poverty_universe,3,Los Angeles; Miami; Boston
+rh_pct,3,Los Angeles; Miami; Boston
+state,3,Los Angeles; Miami; Boston
+tract,3,Los Angeles; Miami; Boston
+tract_area_km2,3,Los Angeles; Miami; Boston

@@ -1,0 +1,6 @@
+column_name,present_in_ready_cities_n,cities,target_role
+GEOID,2,"Houston, Phoenix",tract join key
+lst_c,2,"Houston, Phoenix",tract-level summer LST in Celsius
+hi_c,2,"Houston, Phoenix",tract-level summer Heat Index in Celsius
+total_population,2,"Houston, Phoenix",tract population for weighted summaries
+geometry,2,"Houston, Phoenix",tract polygon geometry

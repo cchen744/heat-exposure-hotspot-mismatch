@@ -1,0 +1,5 @@
+City,LST_threshold_C,HI_threshold_C,LST_only_hotspot_km2,HI_only_hotspot_km2,Overlap_hotspot_km2,LST_hotspot_total_km2,HI_hotspot_total_km2,Union_hotspot_km2,Jaccard_Index
+Phoenix,51.47,32.42,252.5,258.42,14.98,267.48,273.4,525.9,0.03
+Miami,38.07,31.66,0.14,72.35,18.87,19.01,91.22,91.36,0.21
+Las Vegas,48.53,29.58,36.13,4.26,33.65,69.78,37.91,74.04,0.45
+Houston,38.21,32.16,221.29,297.18,132.01,353.3,429.19,650.48,0.2

@@ -1,0 +1,5 @@
+- Figure A (phase space) should be used to show that tract-level surface heat and apparent heat do not occupy the same distribution across cities. Phoenix is expected to sit further toward high LST, while Houston retains relatively high Heat Index despite lower mean LST.
+- Figure B (mismatch triangle) reframes the result as a mechanism comparison rather than a count comparison. Las Vegas appears more overlap-dominated, while Houston and Phoenix retain stronger LST-only / HI-only separation.
+- Figure C (relative extremeness ECDF) is the strongest non-map diagnostic figure. It compares whether tracts become more extreme under Heat Index than under LST after standardizing within each city.
+- Figure D (radar profile) can be used as a compact city typology figure. It helps motivate categories such as surface-heat dominated, apparent-heat sensitive, and overlap-dominated cities.
+- These figures should not replace maps. They should come before maps: first establish cross-city mechanisms, then use maps to show where those mechanisms occur spatially.

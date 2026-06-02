@@ -1,0 +1,3 @@
+city,slug,is_active,readiness,next_step,merged_candidate_gpkg_exists,boundary_file_exists,tract_geometry_file_exists,lst_table_file_exists,hi_table_file_exists,population_file_exists
+Miami,miami,False,missing_inputs,"Missing: merged_candidate_gpkg, boundary_file, tract_geometry_file, lst_table_file, hi_table_file",False,False,False,False,False,False
+Las Vegas,las_vegas,False,missing_inputs,"Missing: merged_candidate_gpkg, boundary_file, tract_geometry_file, lst_table_file, hi_table_file",False,False,False,False,False,False

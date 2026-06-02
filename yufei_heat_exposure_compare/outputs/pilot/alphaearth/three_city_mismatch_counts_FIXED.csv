@@ -1,0 +1,5 @@
+city,mismatch_class,n,pct
+nan,Both LST and HI hotspot,27,2.0164301717699775
+nan,LST-only hotspot,308,23.002240477968634
+nan,HI-only hotspot,331,24.719940253920836
+nan,Neither hotspot,673,50.26138909634055

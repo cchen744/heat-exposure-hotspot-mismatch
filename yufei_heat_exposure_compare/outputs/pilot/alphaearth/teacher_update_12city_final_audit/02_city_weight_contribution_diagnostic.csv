@@ -1,0 +1,13 @@
+city_label,broad_context,city_context,story_group,n_ready,ready_pct,hi_minus_lst_hotspot_pct,city_weight_among_all_ready_tracts,weighted_gap_contribution_all,city_weight_within_coastal_ready_tracts,weighted_gap_contribution_within_coastal
+New York,Coastal / water-influenced,Coastal / megacity / dense core,Mixed / transitional,2088,88.28752642706131,0.3352490421455911,0.3096544564733798,0.10381135992881421,0.4735767747788614,0.1587661601270116
+Los Angeles,Coastal / water-influenced,Coastal / dry,Moderate HI-shift,1080,97.47292418772562,8.148148148148145,0.16016609817588612,1.3050570962479604,0.2449535041959628,1.9959174415967331
+Chicago,Great Lakes,Great Lakes / large grid city,Moderate HI-shift,872,100.0,11.009174311926609,0.12931929408275247,1.4236986504523212,,
+Houston,Coastal / water-influenced,Coastal / humid,Mixed / transitional,549,100.0,0.3642987249544624,0.0814177665727421,0.02966038855109,0.12451803129961443,0.04536176003628938
+Las Vegas,Inland desert,Inland / desert,Coupled LST-HI,458,100.0,0.0,0.06792228978199615,0.0,,
+Dallas,Inland Sun Belt,Inland / large Sun Belt / car-oriented,LST-shift,449,100.0,6.013363028953231,0.0665875722971971,0.4004152454397154,,
+Phoenix,Inland desert,Inland / desert,Mixed / transitional,332,100.0,4.216867469879515,0.049236244994809435,0.20762271985763,,
+Atlanta,Inland Sun Belt,Inland / humid / sprawling Sun Belt,Moderate HI-shift,223,100.0,13.90134529147982,0.03307133323446537,0.45973602254189533,,
+Boston,Coastal / water-influenced,Coastal / temperate,Strong HI-shift,191,92.27053140096618,36.12565445026178,0.02832567106629097,1.0232834050126056,0.04332048083465639,1.5649807212519846
+Seattle,Coastal / water-influenced,Coastal / Pacific Northwest / water-constrained,Moderate HI-shift,188,94.47236180904522,11.170212765957444,0.02788076523802462,0.31143407978644516,0.04264005443411204,0.47629848038103867
+San Francisco,Coastal / water-influenced,Coastal / compact / bay-influenced,Strong HI-shift,188,72.3076923076923,53.191489361702125,0.02788076523802462,1.483019427554501,0.04264005443411204,2.26808800181447
+Miami,Coastal / water-influenced,Coastal / humid,Strong HI-shift,125,96.89922480620154,49.6,0.01853774284443126,0.9194720450837905,0.02835110002268088,1.4062145611249717

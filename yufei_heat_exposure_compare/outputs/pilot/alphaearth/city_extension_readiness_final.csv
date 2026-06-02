@@ -1,0 +1,3 @@
+city,heat_master_table_found,alphaearth_embedding_found,pc_scores_found,city_folder_exists,ready_to_run,conclusion
+las_vegas,False,False,False,True,False,"Preferred next city conceptually, but not runnable yet because required source files are missing locally."
+miami,False,False,False,True,False,Backup candidate only; also not runnable yet because required source files are missing locally.

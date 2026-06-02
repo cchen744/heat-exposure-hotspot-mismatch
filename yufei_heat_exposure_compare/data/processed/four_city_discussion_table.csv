@@ -1,0 +1,5 @@
+City,Main_pattern,Interpretation,Priority_for_followup
+Phoenix,Strong LST-HI mismatch,LST alone may miss important heat exposure areas,High
+Miami,HI-dominant hotspot pattern,Humidity likely plays a major role,High
+Las Vegas,Strong LST-HI agreement,LST may work better as a proxy in this climate context,Medium
+Houston,Mixed hotspot structure,Both surface heat and humidity appear important,High

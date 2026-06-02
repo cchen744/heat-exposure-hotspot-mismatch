@@ -1,0 +1,159 @@
+city,path,rows,geoid_col,overlap,reason
+houston,/Users/yufeizhou/Desktop/heat-exposure-compare/data_raw/houston/tract_2025/tl_2025_48_tract.shp,6896,GEOID,549,ok
+houston,/Users/yufeizhou/Desktop/heat-exposure-compare/data_processed/houston/houston_master_lst_hi_hotcompare.gpkg,654,GEOID,549,ok
+houston,/Users/yufeizhou/Desktop/heat-exposure-compare/data_processed/houston/houston_master_with_lst_hotspot.gpkg,654,GEOID,549,ok
+houston,/Users/yufeizhou/Desktop/heat-exposure-compare/data_processed/houston/houston_master_gistar.gpkg,654,GEOID,549,ok
+houston,/Users/yufeizhou/Desktop/heat-exposure-compare/data_processed/houston/houston_master_demo_poverty.gpkg,654,GEOID,549,ok
+houston,/Users/yufeizhou/Desktop/heat-exposure-compare/data_processed/houston/houston_city_tracts.gpkg,654,GEOID,549,ok
+houston,/Users/yufeizhou/Desktop/heat-exposure-compare/data_processed/houston/houston_master_with_lst.gpkg,654,GEOID,549,ok
+houston,/Users/yufeizhou/Desktop/heat-exposure-compare/data_processed/houston/houston_master_demo_clean.gpkg,654,GEOID,549,ok
+houston,/Users/yufeizhou/Desktop/heat-exposure-compare/data_processed/houston/houston_rq1_compare.gpkg,654,GEOID,549,ok
+houston,/Users/yufeizhou/Desktop/heat-exposure-compare/data_processed/houston/houston_master_demo.gpkg,654,GEOID,549,ok
+houston,/Users/yufeizhou/Desktop/heat-exposure-compare/data_processed/houston/houston_master_with_lst_hi_fixed.gpkg,654,GEOID,549,ok
+houston,/Users/yufeizhou/Desktop/heat-exposure-compare/data_processed/houston/houston_master_with_lst_hi.gpkg,654,GEOID,549,ok
+houston,/Users/yufeizhou/Desktop/heat-exposure-compare/outputs/pilot/rq1_threshold_stability_houston.gpkg,654,GEOID,549,ok
+houston,/Users/yufeizhou/Desktop/heat-exposure-compare/outputs/pilot/alphaearth/houston_tracts_heat_ready_with_alphaearth.geojson,654,GEOID,549,ok
+houston,/Users/yufeizhou/Desktop/heat-exposure-compare/outputs/pilot/alphaearth/houston_tracts_with_alphaearth_pc5.geojson,654,GEOID,549,ok
+houston,/Users/yufeizhou/Desktop/heat-exposure-compare/outputs/pilot/alphaearth/houston_tracts_with_alphaearth_pc7_corrected.geojson,654,GEOID,549,ok
+houston,/Users/yufeizhou/Desktop/heat-exposure-compare/outputs/pilot/alphaearth/houston_tracts_with_alphaearth_pc7.geojson,654,GEOID,549,ok
+houston,/Users/yufeizhou/Desktop/heat-exposure-compare/outputs/pilot/alphaearth/houston_tracts_with_alphaearth_pc5_corrected.geojson,654,GEOID,549,ok
+houston,/Users/yufeizhou/Desktop/heat-exposure-compare/outputs/pilot/heat_ready/houston/houston_tracts_heat_ready.geojson,654,GEOID,549,ok
+houston,/Users/yufeizhou/Desktop/heat-exposure-compare/data_processed/houston/houston_tracts_projected.gpkg,1115,GEOID,538,ok
+houston,/Users/yufeizhou/Desktop/heat-exposure-compare/data_processed/houston/houston_tracts_clean.geojson,1115,GEOID,538,ok
+houston,/Users/yufeizhou/Desktop/heat-exposure-compare/data_raw/houston/place_2025/tl_2025_48_place.shp,1863,GEOID,0,"geometry + geoid found, but no overlap"
+houston,/Users/yufeizhou/Desktop/heat-exposure-compare/data_processed/houston/houston_city_boundary.gpkg,1,GEOID,0,"geometry + geoid found, but no overlap"
+houston,/Users/yufeizhou/Desktop/heat-exposure-compare/outputs/pilot/heat_ready/houston/houston_boundary_heat_ready.geojson,1,GEOID,0,"geometry + geoid found, but no overlap"
+houston,/Users/yufeizhou/Desktop/heat-exposure-compare/outputs/pilot/rq1_kde_summary_houston.csv,0,,0,no readable geometry
+houston,/Users/yufeizhou/Desktop/heat-exposure-compare/outputs/pilot/houston_hi_pilot.csv,0,,0,no readable geometry
+houston,/Users/yufeizhou/Desktop/heat-exposure-compare/outputs/pilot/rq1_threshold_stability_thresholds_houston.csv,0,,0,no readable geometry
+houston,/Users/yufeizhou/Desktop/heat-exposure-compare/outputs/pilot/houston_acs_2023.csv,0,,0,no readable geometry
+houston,/Users/yufeizhou/Desktop/heat-exposure-compare/outputs/pilot/houston_poverty_acs_2023.csv,0,,0,no readable geometry
+houston,/Users/yufeizhou/Desktop/heat-exposure-compare/outputs/pilot/houston_landsat_lst_pilot.csv,0,,0,no readable geometry
+houston,/Users/yufeizhou/Desktop/heat-exposure-compare/outputs/pilot/alphaearth/houston_alphaearth_pc5_loadings.csv,0,,0,no readable geometry
+houston,/Users/yufeizhou/Desktop/heat-exposure-compare/outputs/pilot/alphaearth/houston_gap_model_baseline_vs_pc5_rf_cv_folds_corrected.csv,0,,0,no readable geometry
+houston,/Users/yufeizhou/Desktop/heat-exposure-compare/outputs/pilot/alphaearth/houston_pc123_factor_spearman_correlations.csv,0,,0,no readable geometry
+houston,/Users/yufeizhou/Desktop/heat-exposure-compare/outputs/pilot/alphaearth/houston_alphaearth_pca_explained_variance.csv,0,,0,no readable geometry
+houston,/Users/yufeizhou/Desktop/heat-exposure-compare/outputs/pilot/alphaearth/houston_gap_model_baseline_vs_pc7_rf_cv_corrected.csv,0,,0,no readable geometry
+houston,/Users/yufeizhou/Desktop/heat-exposure-compare/outputs/pilot/alphaearth/houston_gap_model_baseline_vs_pc5_rf_cv_corrected.csv,0,,0,no readable geometry
+houston,/Users/yufeizhou/Desktop/heat-exposure-compare/outputs/pilot/alphaearth/houston_alphaearth_pc7_explained_variance.csv,0,,0,no readable geometry
+houston,/Users/yufeizhou/Desktop/heat-exposure-compare/outputs/pilot/alphaearth/houston_alphaearth_pc5_explained_variance_corrected.csv,0,,0,no readable geometry
+houston,/Users/yufeizhou/Desktop/heat-exposure-compare/outputs/pilot/alphaearth/houston_alphaearth_top4_explained_variance_summary.csv,0,,0,no readable geometry
+houston,/Users/yufeizhou/Desktop/heat-exposure-compare/outputs/pilot/alphaearth/houston_gap_model_baseline_vs_pc7_rf_cv_folds_corrected.csv,0,,0,no readable geometry
+houston,/Users/yufeizhou/Desktop/heat-exposure-compare/outputs/pilot/alphaearth/houston_alphaearth_2024_tract_mean_mosaic.csv,0,,0,no readable geometry
+houston,/Users/yufeizhou/Desktop/heat-exposure-compare/outputs/pilot/alphaearth/houston_alphaearth_pc5_scores_corrected.csv,0,,0,no readable geometry
+houston,/Users/yufeizhou/Desktop/heat-exposure-compare/outputs/pilot/alphaearth/houston_alphaearth_pc123_spatial_summary.csv,0,,0,no readable geometry
+houston,/Users/yufeizhou/Desktop/heat-exposure-compare/outputs/pilot/alphaearth/houston_alphaearth_pc5_explained_variance.csv,0,,0,no readable geometry
+houston,/Users/yufeizhou/Desktop/heat-exposure-compare/outputs/pilot/alphaearth/houston_alphaearth_pc7_loadings_corrected.csv,0,,0,no readable geometry
+houston,/Users/yufeizhou/Desktop/heat-exposure-compare/outputs/pilot/alphaearth/houston_alphaearth_2024_tract_mean_mosaic_clean.csv,0,,0,no readable geometry
+houston,/Users/yufeizhou/Desktop/heat-exposure-compare/outputs/pilot/alphaearth/houston_alphaearth_top4_loadings_full.csv,0,,0,no readable geometry
+houston,/Users/yufeizhou/Desktop/heat-exposure-compare/outputs/pilot/alphaearth/houston_pc123_top3_factor_links.csv,0,,0,no readable geometry
+houston,/Users/yufeizhou/Desktop/heat-exposure-compare/outputs/pilot/alphaearth/houston_tracts_heat_ready_with_alphaearth.csv,0,,0,no readable geometry
+houston,/Users/yufeizhou/Desktop/heat-exposure-compare/outputs/pilot/alphaearth/houston_alphaearth_pc7_explained_variance_corrected.csv,0,,0,no readable geometry
+houston,/Users/yufeizhou/Desktop/heat-exposure-compare/outputs/pilot/alphaearth/houston_gap_extended_rf_shap_importance.csv,0,,0,no readable geometry
+houston,/Users/yufeizhou/Desktop/heat-exposure-compare/outputs/pilot/alphaearth/houston_alphaearth_2024_tract_mean.csv,0,,0,no readable geometry
+houston,/Users/yufeizhou/Desktop/heat-exposure-compare/outputs/pilot/alphaearth/houston_alphaearth_pc5_scores.csv,0,,0,no readable geometry
+houston,/Users/yufeizhou/Desktop/heat-exposure-compare/outputs/pilot/alphaearth/houston_alphaearth_pc7_scores_corrected.csv,0,,0,no readable geometry
+houston,/Users/yufeizhou/Desktop/heat-exposure-compare/outputs/pilot/alphaearth/houston_alphaearth_pc5_loadings_corrected.csv,0,,0,no readable geometry
+houston,/Users/yufeizhou/Desktop/heat-exposure-compare/outputs/pilot/alphaearth/houston_alphaearth_pc7_loadings.csv,0,,0,no readable geometry
+houston,/Users/yufeizhou/Desktop/heat-exposure-compare/outputs/pilot/alphaearth/houston_alphaearth_pc7_scores.csv,0,,0,no readable geometry
+houston,/Users/yufeizhou/Desktop/heat-exposure-compare/outputs/pilot/heat_ready/houston/houston_tract_lookup.csv,0,,0,no readable geometry
+phoenix,/Users/yufeizhou/Desktop/heat-exposure-compare/data_raw/phoenix/tract_2025/tl_2025_04_tract.shp,1765,GEOID,332,ok
+phoenix,/Users/yufeizhou/Desktop/heat-exposure-compare/data_processed/phoenix/phoenix_tracts_projected.gpkg,1009,GEOID,332,ok
+phoenix,/Users/yufeizhou/Desktop/heat-exposure-compare/data_processed/phoenix/phoenix_tracts_clean.geojson,1009,GEOID,332,ok
+phoenix,/Users/yufeizhou/Desktop/heat-exposure-compare/data_processed/phoenix/phoenix_master_with_lst_hi_fixed.gpkg,373,GEOID,332,ok
+phoenix,/Users/yufeizhou/Desktop/heat-exposure-compare/data_processed/phoenix/phoenix_rq1_compare.gpkg,373,GEOID,332,ok
+phoenix,/Users/yufeizhou/Desktop/heat-exposure-compare/data_processed/phoenix/phoenix_master_with_lst_hi.gpkg,373,GEOID,332,ok
+phoenix,/Users/yufeizhou/Desktop/heat-exposure-compare/data_processed/phoenix/phoenix_master_with_lst.gpkg,373,GEOID,332,ok
+phoenix,/Users/yufeizhou/Desktop/heat-exposure-compare/data_processed/phoenix/phoenix_master_demo.gpkg,373,GEOID,332,ok
+phoenix,/Users/yufeizhou/Desktop/heat-exposure-compare/data_processed/phoenix/phoenix_master_with_lst_hotspot.gpkg,373,GEOID,332,ok
+phoenix,/Users/yufeizhou/Desktop/heat-exposure-compare/data_processed/phoenix/phoenix_master_demo_poverty.gpkg,373,GEOID,332,ok
+phoenix,/Users/yufeizhou/Desktop/heat-exposure-compare/data_processed/phoenix/phoenix_master_gistar.gpkg,373,GEOID,332,ok
+phoenix,/Users/yufeizhou/Desktop/heat-exposure-compare/data_processed/phoenix/phoenix_master_demo_clean.gpkg,373,GEOID,332,ok
+phoenix,/Users/yufeizhou/Desktop/heat-exposure-compare/data_processed/phoenix/phoenix_master_lst_hi_hotcompare.gpkg,373,GEOID,332,ok
+phoenix,/Users/yufeizhou/Desktop/heat-exposure-compare/data_processed/phoenix/phoenix_city_tracts.gpkg,373,GEOID,332,ok
+phoenix,/Users/yufeizhou/Desktop/heat-exposure-compare/outputs/pilot/rq1_threshold_stability_phoenix.gpkg,373,GEOID,332,ok
+phoenix,/Users/yufeizhou/Desktop/heat-exposure-compare/outputs/pilot/alphaearth/phoenix_tracts_with_alphaearth_pc5_corrected.geojson,373,GEOID,332,ok
+phoenix,/Users/yufeizhou/Desktop/heat-exposure-compare/outputs/pilot/alphaearth/phoenix_tracts_heat_ready_with_alphaearth.geojson,373,GEOID,332,ok
+phoenix,/Users/yufeizhou/Desktop/heat-exposure-compare/outputs/pilot/alphaearth/phoenix_tracts_with_alphaearth_pc7_corrected.geojson,373,GEOID,332,ok
+phoenix,/Users/yufeizhou/Desktop/heat-exposure-compare/outputs/pilot/alphaearth/phoenix_tracts_heat_ready_with_alphaearth_fixed.geojson,373,GEOID,332,ok
+phoenix,/Users/yufeizhou/Desktop/heat-exposure-compare/outputs/pilot/heat_ready/phoenix/phoenix_tracts_heat_ready.geojson,373,GEOID,332,ok
+phoenix,/Users/yufeizhou/Desktop/heat-exposure-compare/data_raw/phoenix/place_2025/tl_2025_04_place.shp,467,GEOID,0,"geometry + geoid found, but no overlap"
+phoenix,/Users/yufeizhou/Desktop/heat-exposure-compare/data_processed/phoenix/phoenix_city_boundary.gpkg,1,GEOID,0,"geometry + geoid found, but no overlap"
+phoenix,/Users/yufeizhou/Desktop/heat-exposure-compare/outputs/pilot/heat_ready/phoenix/phoenix_boundary_heat_ready.geojson,1,GEOID,0,"geometry + geoid found, but no overlap"
+phoenix,/Users/yufeizhou/Desktop/heat-exposure-compare/outputs/pilot/rq1_phoenix_hexbin_redraw_summary.csv,0,,0,no readable geometry
+phoenix,/Users/yufeizhou/Desktop/heat-exposure-compare/outputs/pilot/phoenix_landsat_lst_pilot.csv,0,,0,no readable geometry
+phoenix,/Users/yufeizhou/Desktop/heat-exposure-compare/outputs/pilot/rq1_threshold_stability_thresholds_phoenix.csv,0,,0,no readable geometry
+phoenix,/Users/yufeizhou/Desktop/heat-exposure-compare/outputs/pilot/phoenix_acs_2023.csv,0,,0,no readable geometry
+phoenix,/Users/yufeizhou/Desktop/heat-exposure-compare/outputs/pilot/phoenix_hi_pilot.csv,0,,0,no readable geometry
+phoenix,/Users/yufeizhou/Desktop/heat-exposure-compare/outputs/pilot/rq1_kde_summary_phoenix.csv,0,,0,no readable geometry
+phoenix,/Users/yufeizhou/Desktop/heat-exposure-compare/outputs/pilot/phoenix_poverty_acs_2023.csv,0,,0,no readable geometry
+phoenix,/Users/yufeizhou/Desktop/heat-exposure-compare/outputs/pilot/alphaearth/phoenix_gap_extended_rf_shap_importance.csv,0,,0,no readable geometry
+phoenix,/Users/yufeizhou/Desktop/heat-exposure-compare/outputs/pilot/alphaearth/phoenix_alphaearth_2024_tract_mean_mosaic.csv,0,,0,no readable geometry
+phoenix,/Users/yufeizhou/Desktop/heat-exposure-compare/outputs/pilot/alphaearth/phoenix_alphaearth_top4_loadings_full.csv,0,,0,no readable geometry
+phoenix,/Users/yufeizhou/Desktop/heat-exposure-compare/outputs/pilot/alphaearth/phoenix_gap_model_baseline_vs_pc5_rf_cv_folds_corrected.csv,0,,0,no readable geometry
+phoenix,/Users/yufeizhou/Desktop/heat-exposure-compare/outputs/pilot/alphaearth/phoenix_alphaearth_top4_explained_variance_summary.csv,0,,0,no readable geometry
+phoenix,/Users/yufeizhou/Desktop/heat-exposure-compare/outputs/pilot/alphaearth/phoenix_alphaearth_pc7_explained_variance_corrected.csv,0,,0,no readable geometry
+phoenix,/Users/yufeizhou/Desktop/heat-exposure-compare/outputs/pilot/alphaearth/phoenix_alphaearth_pca_explained_variance.csv,0,,0,no readable geometry
+phoenix,/Users/yufeizhou/Desktop/heat-exposure-compare/outputs/pilot/alphaearth/phoenix_gap_model_baseline_vs_pc7_rf_cv_folds_corrected.csv,0,,0,no readable geometry
+phoenix,/Users/yufeizhou/Desktop/heat-exposure-compare/outputs/pilot/alphaearth/phoenix_alphaearth_pc7_scores_corrected.csv,0,,0,no readable geometry
+phoenix,/Users/yufeizhou/Desktop/heat-exposure-compare/outputs/pilot/alphaearth/phoenix_gap_model_baseline_vs_pc7_rf_cv_corrected.csv,0,,0,no readable geometry
+phoenix,/Users/yufeizhou/Desktop/heat-exposure-compare/outputs/pilot/alphaearth/phoenix_gap_model_baseline_vs_pc5_rf_cv_corrected.csv,0,,0,no readable geometry
+phoenix,/Users/yufeizhou/Desktop/heat-exposure-compare/outputs/pilot/alphaearth/phoenix_alphaearth_pc5_loadings_corrected.csv,0,,0,no readable geometry
+phoenix,/Users/yufeizhou/Desktop/heat-exposure-compare/outputs/pilot/alphaearth/phoenix_tracts_heat_ready_with_alphaearth.csv,0,,0,no readable geometry
+phoenix,/Users/yufeizhou/Desktop/heat-exposure-compare/outputs/pilot/alphaearth/phoenix_alphaearth_pc5_scores_corrected.csv,0,,0,no readable geometry
+phoenix,/Users/yufeizhou/Desktop/heat-exposure-compare/outputs/pilot/alphaearth/phoenix_alphaearth_2024_tract_mean_mosaic_clean.csv,0,,0,no readable geometry
+phoenix,/Users/yufeizhou/Desktop/heat-exposure-compare/outputs/pilot/alphaearth/phoenix_alphaearth_pc7_loadings_corrected.csv,0,,0,no readable geometry
+phoenix,/Users/yufeizhou/Desktop/heat-exposure-compare/outputs/pilot/alphaearth/phoenix_alphaearth_pc5_explained_variance_corrected.csv,0,,0,no readable geometry
+phoenix,/Users/yufeizhou/Desktop/heat-exposure-compare/outputs/pilot/alphaearth/phoenix_tracts_heat_ready_with_alphaearth_fixed.csv,0,,0,no readable geometry
+phoenix,/Users/yufeizhou/Desktop/heat-exposure-compare/outputs/pilot/heat_ready/phoenix/phoenix_tract_lookup.csv,0,,0,no readable geometry
+las_vegas,/Users/yufeizhou/Desktop/heat-exposure-compare/city_intake/las_vegas/raw/tract_2025/tl_2025_32_tract.shp,779,GEOID,458,ok
+las_vegas,/Users/yufeizhou/Desktop/heat-exposure-compare/data_processed/las_vegas/las_vegas_tracts_projected_statewide_backup.gpkg,779,GEOID,458,ok
+las_vegas,/Users/yufeizhou/Desktop/heat-exposure-compare/data_processed/las_vegas/las_vegas_tracts_clean_statewide_backup.geojson,779,GEOID,458,ok
+las_vegas,/Users/yufeizhou/Desktop/heat-exposure-compare/city_intake/las_vegas/working/las_vegas_heat_extraction_input.gpkg,535,GEOID,458,ok
+las_vegas,/Users/yufeizhou/Desktop/heat-exposure-compare/city_intake/las_vegas/working/las_vegas_heat_ready_input.gpkg,535,GEOID,458,ok
+las_vegas,/Users/yufeizhou/Desktop/heat-exposure-compare/city_intake/las_vegas/working/las_vegas_analysis_ready.gpkg,535,GEOID,458,ok
+las_vegas,/Users/yufeizhou/Desktop/heat-exposure-compare/city_intake/las_vegas/working/las_vegas_heat_ready_input.geojson,535,GEOID,458,ok
+las_vegas,/Users/yufeizhou/Desktop/heat-exposure-compare/city_intake/las_vegas/working/las_vegas_heat_extraction_input.geojson,535,GEOID,458,ok
+las_vegas,/Users/yufeizhou/Desktop/heat-exposure-compare/city_intake/las_vegas/working/las_vegas_master_scaffold.csv,535,GEOID,458,ok
+las_vegas,/Users/yufeizhou/Desktop/heat-exposure-compare/data_processed/las_vegas/las_vegas_tracts_projected.gpkg,535,GEOID,458,ok
+las_vegas,/Users/yufeizhou/Desktop/heat-exposure-compare/data_processed/las_vegas/las_vegas_tracts_clean.geojson,535,GEOID,458,ok
+las_vegas,/Users/yufeizhou/Desktop/heat-exposure-compare/city_intake/las_vegas/working/las_vegas_missing_climate_tracts.gpkg,77,GEOID,0,"geometry + geoid found, but no overlap"
+las_vegas,/Users/yufeizhou/Desktop/heat-exposure-compare/city_intake/las_vegas/working/las_vegas_heat_master_template.csv,0,,0,no readable geometry
+las_vegas,/Users/yufeizhou/Desktop/heat-exposure-compare/city_intake/las_vegas/working/las_vegas_lst_modis_summer2024_summary.csv,0,,0,no readable geometry
+las_vegas,/Users/yufeizhou/Desktop/heat-exposure-compare/city_intake/las_vegas/working/las_vegas_master_scaffold_summary.csv,0,,0,no readable geometry
+las_vegas,/Users/yufeizhou/Desktop/heat-exposure-compare/city_intake/las_vegas/working/las_vegas_acs_baseline.csv,0,,0,no readable geometry
+las_vegas,/Users/yufeizhou/Desktop/heat-exposure-compare/city_intake/las_vegas/working/las_vegas_heat_master_template_before_lst_backup.csv,0,,0,no readable geometry
+las_vegas,/Users/yufeizhou/Desktop/heat-exposure-compare/city_intake/las_vegas/working/las_vegas_lst_modis_summer2024.csv,0,,0,no readable geometry
+las_vegas,/Users/yufeizhou/Desktop/heat-exposure-compare/city_intake/las_vegas/working/las_vegas_heat_master_template_summary.csv,0,,0,no readable geometry
+las_vegas,/Users/yufeizhou/Desktop/heat-exposure-compare/city_intake/las_vegas/working/las_vegas_heat_master_template_before_era5_backup.csv,0,,0,no readable geometry
+las_vegas,/Users/yufeizhou/Desktop/heat-exposure-compare/city_intake/las_vegas/working/las_vegas_heat_extraction_input_summary.csv,0,,0,no readable geometry
+las_vegas,/Users/yufeizhou/Desktop/heat-exposure-compare/city_intake/las_vegas/working/las_vegas_acs_baseline_summary.csv,0,,0,no readable geometry
+las_vegas,/Users/yufeizhou/Desktop/heat-exposure-compare/city_intake/las_vegas/working/las_vegas_heat_extraction_input.csv,0,,0,no readable geometry
+las_vegas,/Users/yufeizhou/Desktop/heat-exposure-compare/city_intake/las_vegas/working/las_vegas_era5_heat_tracts_summer2024.csv,0,,0,no readable geometry
+las_vegas,/Users/yufeizhou/Desktop/heat-exposure-compare/city_intake/las_vegas/working/las_vegas_missing_climate_tracts.csv,0,,0,no readable geometry
+las_vegas,/Users/yufeizhou/Desktop/heat-exposure-compare/city_intake/las_vegas/working/las_vegas_heat_ready_input.csv,0,,0,no readable geometry
+las_vegas,/Users/yufeizhou/Desktop/heat-exposure-compare/city_intake/las_vegas/working/las_vegas_analysis_ready.csv,0,,0,no readable geometry
+las_vegas,/Users/yufeizhou/Desktop/heat-exposure-compare/city_intake/las_vegas/final/las_vegas_tract_inventory.csv,0,,0,no readable geometry
+las_vegas,/Users/yufeizhou/Desktop/heat-exposure-compare/outputs/pilot/alphaearth/las_vegas_old_heat_workflow_snippet_index.csv,0,,0,no readable geometry
+las_vegas,/Users/yufeizhou/Desktop/heat-exposure-compare/outputs/pilot/alphaearth/las_vegas_heat_formula_cell_summary.csv,0,,0,no readable geometry
+las_vegas,/Users/yufeizhou/Desktop/heat-exposure-compare/outputs/pilot/alphaearth/las_vegas_tract_summary.csv,0,,0,no readable geometry
+las_vegas,/Users/yufeizhou/Desktop/heat-exposure-compare/outputs/pilot/alphaearth/las_vegas_era5_heat_tracts_summer2024_summary.csv,0,,0,no readable geometry
+las_vegas,/Users/yufeizhou/Desktop/heat-exposure-compare/outputs/pilot/alphaearth/las_vegas_heat_candidates_top.csv,0,,0,no readable geometry
+las_vegas,/Users/yufeizhou/Desktop/heat-exposure-compare/outputs/pilot/alphaearth/las_vegas_county_filter_summary.csv,0,,0,no readable geometry
+las_vegas,/Users/yufeizhou/Desktop/heat-exposure-compare/outputs/pilot/alphaearth/las_vegas_heat_master_template_summary.csv,0,,0,no readable geometry
+las_vegas,/Users/yufeizhou/Desktop/heat-exposure-compare/outputs/pilot/alphaearth/las_vegas_candidate_files_scored.csv,0,,0,no readable geometry
+las_vegas,/Users/yufeizhou/Desktop/heat-exposure-compare/outputs/pilot/alphaearth/las_vegas_mismatch_class_counts.csv,0,,0,no readable geometry
+las_vegas,/Users/yufeizhou/Desktop/heat-exposure-compare/outputs/pilot/alphaearth/las_vegas_heat_source_inventory.csv,0,,0,no readable geometry
+las_vegas,/Users/yufeizhou/Desktop/heat-exposure-compare/outputs/pilot/alphaearth/las_vegas_embed_candidates_top.csv,0,,0,no readable geometry
+las_vegas,/Users/yufeizhou/Desktop/heat-exposure-compare/outputs/pilot/alphaearth/las_vegas_heat_master_template_after_era5_summary.csv,0,,0,no readable geometry
+las_vegas,/Users/yufeizhou/Desktop/heat-exposure-compare/outputs/pilot/alphaearth/las_vegas_priority_heat_cells_index.csv,0,,0,no readable geometry
+las_vegas,/Users/yufeizhou/Desktop/heat-exposure-compare/outputs/pilot/alphaearth/las_vegas_pc_candidates_top.csv,0,,0,no readable geometry
+las_vegas,/Users/yufeizhou/Desktop/heat-exposure-compare/outputs/pilot/alphaearth/las_vegas_heat_master_template_preview.csv,0,,0,no readable geometry
+las_vegas,/Users/yufeizhou/Desktop/heat-exposure-compare/outputs/pilot/alphaearth/las_vegas_heat_master_template_after_lst_summary.csv,0,,0,no readable geometry
+las_vegas,/Users/yufeizhou/Desktop/heat-exposure-compare/outputs/pilot/alphaearth/las_vegas_heat_source_top_candidates.csv,0,,0,no readable geometry
+las_vegas,/Users/yufeizhou/Desktop/heat-exposure-compare/outputs/pilot/alphaearth/las_vegas_heat_workflow_text_hits.csv,0,,0,no readable geometry
+las_vegas,/Users/yufeizhou/Desktop/heat-exposure-compare/outputs/pilot/alphaearth/las_vegas_heat_formula_snippets_index.csv,0,,0,no readable geometry
+las_vegas,/Users/yufeizhou/Desktop/heat-exposure-compare/outputs/pilot/alphaearth/las_vegas_intake_recursive_inventory.csv,0,,0,no readable geometry
+las_vegas,/Users/yufeizhou/Desktop/heat-exposure-compare/outputs/pilot/alphaearth/las_vegas_existing_climate_table_candidates.csv,0,,0,no readable geometry
+las_vegas,/Users/yufeizhou/Desktop/heat-exposure-compare/outputs/pilot/alphaearth/las_vegas_recommended_input_slots.csv,0,,0,no readable geometry
+las_vegas,/Users/yufeizhou/Desktop/heat-exposure-compare/outputs/pilot/alphaearth/las_vegas_analysis_ready_summary.csv,0,,0,no readable geometry

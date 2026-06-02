@@ -1,0 +1,13 @@
+city,mismatch_class,n,pct
+houston,Both LST and HI hotspot,51,9.289617486338798
+houston,LST-only hotspot,87,15.846994535519126
+houston,HI-only hotspot,89,16.21129326047359
+houston,Neither hotspot,322,58.65209471766849
+phoenix,Both LST and HI hotspot,36,10.843373493975903
+phoenix,LST-only hotspot,47,14.156626506024098
+phoenix,HI-only hotspot,61,18.373493975903614
+phoenix,Neither hotspot,188,56.62650602409639
+las_vegas,Both LST and HI hotspot,74,16.157205240174672
+las_vegas,LST-only hotspot,41,8.951965065502183
+las_vegas,HI-only hotspot,41,8.951965065502183
+las_vegas,Neither hotspot,302,65.93886462882097

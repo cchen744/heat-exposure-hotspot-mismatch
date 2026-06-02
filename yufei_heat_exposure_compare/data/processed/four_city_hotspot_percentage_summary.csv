@@ -1,0 +1,5 @@
+City,LST_only_percent,HI_only_percent,Overlap_percent,Jaccard_Index
+Phoenix,48.01,49.14,2.85,0.03
+Miami,0.15,79.19,20.65,0.21
+Las Vegas,48.8,5.75,45.45,0.45
+Houston,34.02,45.69,20.29,0.2

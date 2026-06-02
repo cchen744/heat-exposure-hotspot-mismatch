@@ -1,0 +1,3 @@
+city,n_valid,global_moran_I_gap_z,global_moran_p_gap_z,HH_n,HH_pct_valid,LL_n,LL_pct_valid,HL_n,HL_pct_valid,LH_n,LH_pct_valid,not_sig_n,not_sig_pct_valid
+Houston,549,0.5817,0.001,58,10.56,75,13.66,4,0.73,4,0.73,408,74.32
+Phoenix,332,0.7,0.001,65,19.58,67,20.18,2,0.6,2,0.6,196,59.04

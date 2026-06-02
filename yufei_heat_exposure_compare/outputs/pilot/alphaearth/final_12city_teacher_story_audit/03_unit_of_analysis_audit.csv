@@ -1,0 +1,3 @@
+analysis,question_answered,coastal_mean_gap,noncoastal_mean_gap,coastal_minus_noncoastal,interpretation
+Equal-city weighting,Do city types differ when each city counts equally?,22.705007499024223,7.028150020447835,15.676857478576387,City-level typology pattern
+Tract-weighted by n_ready,Do coastal tracts dominate after large cities get more weight?,7.915627126332498,7.197943444730079,0.717683681602419,Pooled tract-level pattern; large cities dominate

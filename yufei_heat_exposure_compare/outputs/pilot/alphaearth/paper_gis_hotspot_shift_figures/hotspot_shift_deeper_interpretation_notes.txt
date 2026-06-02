@@ -1,0 +1,3 @@
+- Houston: HI hotspot center shifts 8.2 km toward SE relative to LST hotspot center; Jaccard overlap = 0.22; corridor mean HI-LST percentile balance = 0.15.
+- Phoenix: HI hotspot center shifts 35.2 km toward S relative to LST hotspot center; Jaccard overlap = 0.25; corridor mean HI-LST percentile balance = -0.15.
+- Las Vegas: HI hotspot center shifts 50.9 km toward NE relative to LST hotspot center; Jaccard overlap = 0.47; corridor mean HI-LST percentile balance = -0.05.

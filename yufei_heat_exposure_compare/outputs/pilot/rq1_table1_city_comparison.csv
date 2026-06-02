@@ -1,0 +1,3 @@
+City,Valid tracts (both measures),Missing LST tracts,Missing HI tracts,Median LST (°C),Median HI (°C),LST hotspot threshold (top 20%),HI hotspot threshold (top 20%),LST hotspot count,HI hotspot count,Overlap hotspot count,LST-only hotspot count,HI-only hotspot count,Overlap share (%),LST-only share (%),HI-only share (%),Overlap population share (%),Jaccard index
+Houston,549,0,105,48.531,34.182,50.315,34.198,83,146,38,45,108,6.922,8.197,19.672,6.188,0.199
+Phoenix,332,0,41,57.217,33.308,58.607,33.694,66,73,29,37,44,8.735,11.145,13.253,9.344,0.264

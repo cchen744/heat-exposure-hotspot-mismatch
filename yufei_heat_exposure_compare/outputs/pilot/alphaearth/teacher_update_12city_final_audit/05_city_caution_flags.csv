@@ -1,0 +1,13 @@
+city_label,city_context,broad_context,story_group,ready_pct,n_ready,hi_only_pct,lst_only_pct,hi_minus_lst_hotspot_pct,data_readiness_flag,story_caution
+San Francisco,Coastal / compact / bay-influenced,Coastal / water-influenced,Strong HI-shift,72.3076923076923,188,53.191489361702125,0.0,53.191489361702125,Caution: ready_pct < 80,Strong result but lower data readiness
+Miami,Coastal / humid,Coastal / water-influenced,Strong HI-shift,96.89922480620154,125,52.0,2.4,49.6,High completeness,Strong apparent-heat case
+Boston,Coastal / temperate,Coastal / water-influenced,Strong HI-shift,92.27053140096618,191,47.64397905759162,11.518324607329845,36.12565445026178,Moderate caution: ready_pct < 95,Strong apparent-heat case
+Atlanta,Inland / humid / sprawling Sun Belt,Inland Sun Belt,Moderate HI-shift,100.0,223,32.28699551569507,18.385650224215247,13.90134529147982,High completeness,Standard
+Seattle,Coastal / Pacific Northwest / water-constrained,Coastal / water-influenced,Moderate HI-shift,94.47236180904522,188,32.97872340425532,21.808510638297875,11.170212765957444,Moderate caution: ready_pct < 95,Standard
+Chicago,Great Lakes / large grid city,Great Lakes,Moderate HI-shift,100.0,872,17.545871559633028,6.536697247706422,11.009174311926609,High completeness,Standard
+Los Angeles,Coastal / dry,Coastal / water-influenced,Moderate HI-shift,97.47292418772562,1080,25.925925925925924,17.77777777777778,8.148148148148145,High completeness,Standard
+Dallas,Inland / large Sun Belt / car-oriented,Inland Sun Belt,LST-shift,100.0,449,18.70824053452116,12.694877505567929,6.013363028953231,High completeness,Standard
+Phoenix,Inland / desert,Inland desert,Mixed / transitional,100.0,332,18.373493975903617,14.156626506024098,4.216867469879515,High completeness,Standard
+Houston,Coastal / humid,Coastal / water-influenced,Mixed / transitional,100.0,549,16.21129326047359,15.846994535519126,0.3642987249544624,High completeness,Standard
+New York,Coastal / megacity / dense core,Coastal / water-influenced,Mixed / transitional,88.28752642706131,2088,19.54022988505747,19.20498084291188,0.3352490421455911,Moderate caution: ready_pct < 95,Standard
+Las Vegas,Inland / desert,Inland desert,Coupled LST-HI,100.0,458,8.951965065502183,8.951965065502183,0.0,High completeness,Standard

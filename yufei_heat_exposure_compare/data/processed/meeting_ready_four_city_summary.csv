@@ -1,0 +1,5 @@
+City,Heat Index,LST,LST_minus_HI,Jaccard_80,Jaccard_85,Jaccard_90,LST_only_percent,HI_only_percent,Overlap_percent
+Phoenix,32.04,50.41,18.37,0.03,0.0,0.0,48.01,49.14,2.85
+Miami,31.5,36.68,5.18,0.21,0.16,0.1,0.15,79.19,20.65
+Las Vegas,28.87,46.84,17.97,0.45,0.48,0.5,48.8,5.75,45.45
+Houston,31.99,36.2,4.21,0.2,0.2,0.06,34.02,45.69,20.29
