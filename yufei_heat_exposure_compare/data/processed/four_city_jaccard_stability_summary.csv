@@ -1,0 +1,5 @@
+City,Jaccard_min,Jaccard_max,Jaccard_mean,Jaccard_std,Jaccard_range
+Phoenix,0.0,0.03,0.01,0.017,0.03
+Miami,0.1,0.21,0.157,0.055,0.11
+Las Vegas,0.45,0.5,0.477,0.025,0.05
+Houston,0.06,0.2,0.153,0.081,0.14

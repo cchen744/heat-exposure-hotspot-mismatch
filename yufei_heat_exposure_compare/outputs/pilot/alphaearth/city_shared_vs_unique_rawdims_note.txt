@@ -1,0 +1,8 @@
+# Cross-city shared vs city-specific raw dimensions
+
+Only a small number of shared stable raw dimensions were found (3), suggesting strong city-specificity.
+- Houston selected stable dims: 15
+- Phoenix selected stable dims: 16
+- Shared dims: 3 -> A04, A22, A59
+- Houston-only dims: 12
+- Phoenix-only dims: 13

@@ -1,0 +1,31 @@
+city,city_label,mismatch_class,n,pct
+houston,Houston,Both LST and HI hotspot,51,9.289617486338798
+houston,Houston,LST-only hotspot,87,15.846994535519126
+houston,Houston,HI-only hotspot,89,16.21129326047359
+houston,Houston,Neither hotspot,322,58.65209471766849
+houston,Houston,Missing,0,0.0
+phoenix,Phoenix,Both LST and HI hotspot,36,10.843373493975903
+phoenix,Phoenix,LST-only hotspot,47,14.156626506024098
+phoenix,Phoenix,HI-only hotspot,61,18.373493975903614
+phoenix,Phoenix,Neither hotspot,188,56.62650602409639
+phoenix,Phoenix,Missing,0,0.0
+las_vegas,Las Vegas,Both LST and HI hotspot,74,16.157205240174672
+las_vegas,Las Vegas,LST-only hotspot,41,8.951965065502183
+las_vegas,Las Vegas,HI-only hotspot,41,8.951965065502183
+las_vegas,Las Vegas,Neither hotspot,302,65.93886462882097
+las_vegas,Las Vegas,Missing,0,0.0
+los_angeles,Los Angeles,Both LST and HI hotspot,78,7.222222222222221
+los_angeles,Los Angeles,LST-only hotspot,192,17.77777777777778
+los_angeles,Los Angeles,HI-only hotspot,280,25.925925925925924
+los_angeles,Los Angeles,Neither hotspot,530,49.074074074074076
+los_angeles,Los Angeles,Missing,28,2.527075812274368
+miami,Miami,Both LST and HI hotspot,29,23.200000000000003
+miami,Miami,LST-only hotspot,3,2.4
+miami,Miami,HI-only hotspot,65,52.0
+miami,Miami,Neither hotspot,28,22.400000000000002
+miami,Miami,Missing,4,3.10077519379845
+boston,Boston,Both LST and HI hotspot,26,13.612565445026178
+boston,Boston,LST-only hotspot,22,11.518324607329843
+boston,Boston,HI-only hotspot,91,47.64397905759162
+boston,Boston,Neither hotspot,52,27.225130890052355
+boston,Boston,Missing,16,7.729468599033816

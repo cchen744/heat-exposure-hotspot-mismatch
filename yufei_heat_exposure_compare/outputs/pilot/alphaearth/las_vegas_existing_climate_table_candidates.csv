@@ -1,0 +1,8 @@
+path,name,matched_cols,n_matched,n_cols
+/Users/yufeizhou/Desktop/heat-exposure-compare/city_intake/las_vegas/working/las_vegas_heat_extraction_input.csv,las_vegas_heat_extraction_input.csv,"lst_c, air_temp_c, rh_pct, hi_c, hi_minus_lst",5,31
+/Users/yufeizhou/Desktop/heat-exposure-compare/city_intake/las_vegas/working/las_vegas_heat_master_template.csv,las_vegas_heat_master_template.csv,"lst_c, air_temp_c, rh_pct, hi_c, hi_minus_lst",5,23
+/Users/yufeizhou/Desktop/heat-exposure-compare/city_intake/las_vegas/working/las_vegas_heat_master_template_before_lst_backup.csv,las_vegas_heat_master_template_before_lst_backup.csv,"lst_c, air_temp_c, rh_pct, hi_c, hi_minus_lst",5,23
+/Users/yufeizhou/Desktop/heat-exposure-compare/outputs/pilot/alphaearth/las_vegas_heat_master_template_preview.csv,las_vegas_heat_master_template_preview.csv,"lst_c, air_temp_c, rh_pct, hi_c, hi_minus_lst",5,19
+/Users/yufeizhou/Desktop/heat-exposure-compare/city_intake/las_vegas/working/las_vegas_master_scaffold.csv,las_vegas_master_scaffold.csv,"lst_c, air_temp_c, rh_pct, hi_c, hi_minus_lst",5,25
+/Users/yufeizhou/Desktop/heat-exposure-compare/outputs/pilot/rq1_scatter_quadrant_data.csv,rq1_scatter_quadrant_data.csv,"lst_c, hi_c",2,8
+/Users/yufeizhou/Desktop/heat-exposure-compare/city_intake/las_vegas/working/las_vegas_lst_modis_summer2024.csv,las_vegas_lst_modis_summer2024.csv,lst_c,1,2

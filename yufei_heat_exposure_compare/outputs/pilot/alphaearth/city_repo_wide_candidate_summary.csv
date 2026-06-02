@@ -1,0 +1,5 @@
+candidate_city,n_evidence_rows,max_score,sample_paths
+tract_2025,2,6,/Users/yufeizhou/Desktop/heat-exposure-compare/data_raw/phoenix/tract_2025/tl_2025_04_tract.shp | /Users/yufeizhou/Desktop/heat-exposure-compare/data_raw/houston/tract_2025/tl_2025_48_tract.shp
+las_vegas,1,5,/Users/yufeizhou/Desktop/heat-exposure-compare/city_intake/las_vegas
+miami,1,5,/Users/yufeizhou/Desktop/heat-exposure-compare/city_intake/miami
+poverty,2,2,/Users/yufeizhou/Desktop/heat-exposure-compare/data_processed/phoenix/phoenix_master_demo_poverty.gpkg | /Users/yufeizhou/Desktop/heat-exposure-compare/data_processed/houston/houston_master_demo_poverty.gpkg

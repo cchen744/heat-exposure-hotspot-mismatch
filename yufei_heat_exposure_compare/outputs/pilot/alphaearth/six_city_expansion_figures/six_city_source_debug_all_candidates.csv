@@ -1,0 +1,53 @@
+city,path,status,reason,n_total,n_ready,score,lst_col,hi_col,geoid_col,selected
+houston,/Users/yufeizhou/Desktop/heat-exposure-compare/outputs/pilot/alphaearth/city_expansion/step3_new_city_lst_hi_combined_FIXED.gpkg,wrong_city,city column exists but no rows for houston,1444,0,-999999,,,,False
+houston,/Users/yufeizhou/Desktop/heat-exposure-compare/outputs/pilot/alphaearth/paper_gis_figures/three_city_lstadaptive_heat_index_mismatch_GIS_READY.gpkg,ok,ok,549,549,559549,lst_c,hi_c,GEOID,True
+houston,/Users/yufeizhou/Desktop/heat-exposure-compare/outputs/pilot/alphaearth/paper_gis_advanced_figures/three_city_GIS_ADVANCED.gpkg,ok,ok,549,549,554549,lst_c,hi_c,GEOID,False
+houston,/Users/yufeizhou/Desktop/heat-exposure-compare/outputs/pilot/alphaearth/city_expansion/step2_new_city_boundary_acs_all_FIXED.gpkg,wrong_city,city column exists but no rows for houston,3771,0,-999999,,,,False
+houston,/Users/yufeizhou/Desktop/heat-exposure-compare/outputs/pilot/alphaearth/paper_gis_hotspot_shift_figures/hotspot_shift_deeper_GIS_READY.gpkg,missing_columns,"missing GEOID, LST, HI",2,0,-999999,,,,False
+houston,/Users/yufeizhou/Desktop/heat-exposure-compare/outputs/pilot/alphaearth/paper_gis_hotspot_shift_figures/hotspot_centroid_displacement_GIS_READY.gpkg,missing_columns,"missing GEOID, LST, HI",2,0,-999999,,,,False
+phoenix,/Users/yufeizhou/Desktop/heat-exposure-compare/outputs/pilot/alphaearth/city_expansion/step3_new_city_lst_hi_combined_FIXED.gpkg,wrong_city,city column exists but no rows for phoenix,1444,0,-999999,,,,False
+phoenix,/Users/yufeizhou/Desktop/heat-exposure-compare/outputs/pilot/alphaearth/paper_gis_figures/three_city_lstadaptive_heat_index_mismatch_GIS_READY.gpkg,wrong_city,city column exists but no rows for phoenix,549,0,-999999,,,,False
+phoenix,/Users/yufeizhou/Desktop/heat-exposure-compare/outputs/pilot/alphaearth/paper_gis_advanced_figures/three_city_GIS_ADVANCED.gpkg,ok,ok,332,332,337332,lst_c,hi_c,GEOID,True
+phoenix,/Users/yufeizhou/Desktop/heat-exposure-compare/outputs/pilot/alphaearth/city_expansion/step2_new_city_boundary_acs_all_FIXED.gpkg,wrong_city,city column exists but no rows for phoenix,3771,0,-999999,,,,False
+phoenix,/Users/yufeizhou/Desktop/heat-exposure-compare/outputs/pilot/alphaearth/paper_gis_hotspot_shift_figures/hotspot_shift_deeper_GIS_READY.gpkg,missing_columns,"missing GEOID, LST, HI",2,0,-999999,,,,False
+phoenix,/Users/yufeizhou/Desktop/heat-exposure-compare/outputs/pilot/alphaearth/paper_gis_hotspot_shift_figures/hotspot_centroid_displacement_GIS_READY.gpkg,missing_columns,"missing GEOID, LST, HI",2,0,-999999,,,,False
+las_vegas,/Users/yufeizhou/Desktop/heat-exposure-compare/outputs/pilot/alphaearth/city_expansion/step3_new_city_lst_hi_combined_FIXED.gpkg,wrong_city,city column exists but no rows for las_vegas,1444,0,-999999,,,,False
+las_vegas,/Users/yufeizhou/Desktop/heat-exposure-compare/outputs/pilot/alphaearth/paper_gis_figures/three_city_lstadaptive_heat_index_mismatch_GIS_READY.gpkg,wrong_city,city column exists but no rows for las_vegas,549,0,-999999,,,,False
+las_vegas,/Users/yufeizhou/Desktop/heat-exposure-compare/outputs/pilot/alphaearth/paper_gis_advanced_figures/three_city_GIS_ADVANCED.gpkg,ok,ok,458,458,463458,lst_c,hi_c,GEOID,True
+las_vegas,/Users/yufeizhou/Desktop/heat-exposure-compare/city_intake/las_vegas/working/las_vegas_heat_extraction_input.gpkg,ok,ok,535,0,535,lst_c,hi_c,GEOID,False
+las_vegas,/Users/yufeizhou/Desktop/heat-exposure-compare/city_intake/las_vegas/working/las_vegas_heat_ready_input.gpkg,ok,ok,535,0,535,lst_c,hi_c,GEOID,False
+las_vegas,/Users/yufeizhou/Desktop/heat-exposure-compare/city_intake/las_vegas/working/las_vegas_missing_climate_tracts.gpkg,ok,ok,77,0,77,lst_c,hi_c,GEOID,False
+las_vegas,/Users/yufeizhou/Desktop/heat-exposure-compare/city_intake/las_vegas/working/las_vegas_analysis_ready.gpkg,ok,ok,535,458,458535,lst_c,hi_c,GEOID,False
+las_vegas,/Users/yufeizhou/Desktop/heat-exposure-compare/outputs/pilot/alphaearth/city_expansion/step2_new_city_boundary_acs_all_FIXED.gpkg,wrong_city,city column exists but no rows for las_vegas,3771,0,-999999,,,,False
+las_vegas,/Users/yufeizhou/Desktop/heat-exposure-compare/outputs/pilot/alphaearth/paper_gis_hotspot_shift_figures/hotspot_shift_deeper_GIS_READY.gpkg,missing_columns,"missing GEOID, LST, HI",2,0,-999999,,,,False
+las_vegas,/Users/yufeizhou/Desktop/heat-exposure-compare/outputs/pilot/alphaearth/paper_gis_hotspot_shift_figures/hotspot_centroid_displacement_GIS_READY.gpkg,missing_columns,"missing GEOID, LST, HI",2,0,-999999,,,,False
+los_angeles,/Users/yufeizhou/Desktop/heat-exposure-compare/data/processed/los_angeles/los_angeles_master_lst_hi_hotcompare.gpkg,ok,ok,1108,1080,1131108,lst_c,hi_c,GEOID,True
+los_angeles,/Users/yufeizhou/Desktop/heat-exposure-compare/city_intake/los_angeles/working/los_angeles_heat_master_template.gpkg,ok,ok,1108,1080,1111108,lst_c,hi_c,GEOID,False
+los_angeles,/Users/yufeizhou/Desktop/heat-exposure-compare/outputs/pilot/alphaearth/city_expansion/step3_new_city_lst_hi_combined_FIXED.gpkg,ok,ok,1108,1080,1081108,lst_c,hi_c,GEOID,False
+los_angeles,/Users/yufeizhou/Desktop/heat-exposure-compare/outputs/pilot/alphaearth/paper_gis_figures/three_city_lstadaptive_heat_index_mismatch_GIS_READY.gpkg,wrong_city,city column exists but no rows for los_angeles,549,0,-999999,,,,False
+los_angeles,/Users/yufeizhou/Desktop/heat-exposure-compare/outputs/pilot/alphaearth/paper_gis_advanced_figures/three_city_GIS_ADVANCED.gpkg,wrong_city,city column exists but no rows for los_angeles,1339,0,-999999,,,,False
+los_angeles,/Users/yufeizhou/Desktop/heat-exposure-compare/data/processed/los_angeles/los_angeles_tracts_boundary_acs.gpkg,missing_columns,"missing LST, HI",1108,0,-999999,,,,False
+los_angeles,/Users/yufeizhou/Desktop/heat-exposure-compare/city_intake/los_angeles/working/los_angeles_tracts_boundary_acs.gpkg,missing_columns,"missing LST, HI",1108,0,-999999,,,,False
+los_angeles,/Users/yufeizhou/Desktop/heat-exposure-compare/outputs/pilot/alphaearth/city_expansion/step2_new_city_boundary_acs_all_FIXED.gpkg,missing_columns,"missing LST, HI",1108,0,-999999,,,,False
+los_angeles,/Users/yufeizhou/Desktop/heat-exposure-compare/outputs/pilot/alphaearth/paper_gis_hotspot_shift_figures/hotspot_shift_deeper_GIS_READY.gpkg,wrong_city,city column exists but no rows for los_angeles,6,0,-999999,,,,False
+los_angeles,/Users/yufeizhou/Desktop/heat-exposure-compare/outputs/pilot/alphaearth/paper_gis_hotspot_shift_figures/hotspot_centroid_displacement_GIS_READY.gpkg,wrong_city,city column exists but no rows for los_angeles,6,0,-999999,,,,False
+miami,/Users/yufeizhou/Desktop/heat-exposure-compare/data/processed/miami/miami_master_lst_hi_hotcompare.gpkg,ok,ok,129,125,175129,lst_c,hi_c,GEOID,True
+miami,/Users/yufeizhou/Desktop/heat-exposure-compare/city_intake/miami/working/miami_heat_master_template.gpkg,ok,ok,129,125,155129,lst_c,hi_c,GEOID,False
+miami,/Users/yufeizhou/Desktop/heat-exposure-compare/outputs/pilot/alphaearth/city_expansion/step3_new_city_lst_hi_combined_FIXED.gpkg,ok,ok,129,125,125129,lst_c,hi_c,GEOID,False
+miami,/Users/yufeizhou/Desktop/heat-exposure-compare/outputs/pilot/alphaearth/paper_gis_figures/three_city_lstadaptive_heat_index_mismatch_GIS_READY.gpkg,wrong_city,city column exists but no rows for miami,549,0,-999999,,,,False
+miami,/Users/yufeizhou/Desktop/heat-exposure-compare/outputs/pilot/alphaearth/paper_gis_advanced_figures/three_city_GIS_ADVANCED.gpkg,wrong_city,city column exists but no rows for miami,1339,0,-999999,,,,False
+miami,/Users/yufeizhou/Desktop/heat-exposure-compare/data/processed/miami/miami_tracts_boundary_acs.gpkg,missing_columns,"missing LST, HI",129,0,-999999,,,,False
+miami,/Users/yufeizhou/Desktop/heat-exposure-compare/city_intake/miami/working/miami_tracts_boundary_acs.gpkg,missing_columns,"missing LST, HI",129,0,-999999,,,,False
+miami,/Users/yufeizhou/Desktop/heat-exposure-compare/outputs/pilot/alphaearth/city_expansion/step2_new_city_boundary_acs_all_FIXED.gpkg,missing_columns,"missing LST, HI",129,0,-999999,,,,False
+miami,/Users/yufeizhou/Desktop/heat-exposure-compare/outputs/pilot/alphaearth/paper_gis_hotspot_shift_figures/hotspot_shift_deeper_GIS_READY.gpkg,wrong_city,city column exists but no rows for miami,6,0,-999999,,,,False
+miami,/Users/yufeizhou/Desktop/heat-exposure-compare/outputs/pilot/alphaearth/paper_gis_hotspot_shift_figures/hotspot_centroid_displacement_GIS_READY.gpkg,wrong_city,city column exists but no rows for miami,6,0,-999999,,,,False
+boston,/Users/yufeizhou/Desktop/heat-exposure-compare/data/processed/boston/boston_master_lst_hi_hotcompare.gpkg,ok,ok,207,191,241207,lst_c,hi_c,GEOID,True
+boston,/Users/yufeizhou/Desktop/heat-exposure-compare/city_intake/boston/working/boston_heat_master_template.gpkg,ok,ok,207,191,221207,lst_c,hi_c,GEOID,False
+boston,/Users/yufeizhou/Desktop/heat-exposure-compare/outputs/pilot/alphaearth/city_expansion/step3_new_city_lst_hi_combined_FIXED.gpkg,ok,ok,207,191,191207,lst_c,hi_c,GEOID,False
+boston,/Users/yufeizhou/Desktop/heat-exposure-compare/outputs/pilot/alphaearth/paper_gis_figures/three_city_lstadaptive_heat_index_mismatch_GIS_READY.gpkg,wrong_city,city column exists but no rows for boston,549,0,-999999,,,,False
+boston,/Users/yufeizhou/Desktop/heat-exposure-compare/outputs/pilot/alphaearth/paper_gis_advanced_figures/three_city_GIS_ADVANCED.gpkg,wrong_city,city column exists but no rows for boston,1339,0,-999999,,,,False
+boston,/Users/yufeizhou/Desktop/heat-exposure-compare/data/processed/boston/boston_tracts_boundary_acs.gpkg,missing_columns,"missing LST, HI",207,0,-999999,,,,False
+boston,/Users/yufeizhou/Desktop/heat-exposure-compare/city_intake/boston/working/boston_tracts_boundary_acs.gpkg,missing_columns,"missing LST, HI",207,0,-999999,,,,False
+boston,/Users/yufeizhou/Desktop/heat-exposure-compare/outputs/pilot/alphaearth/city_expansion/step2_new_city_boundary_acs_all_FIXED.gpkg,missing_columns,"missing LST, HI",207,0,-999999,,,,False
+boston,/Users/yufeizhou/Desktop/heat-exposure-compare/outputs/pilot/alphaearth/paper_gis_hotspot_shift_figures/hotspot_shift_deeper_GIS_READY.gpkg,wrong_city,city column exists but no rows for boston,6,0,-999999,,,,False
+boston,/Users/yufeizhou/Desktop/heat-exposure-compare/outputs/pilot/alphaearth/paper_gis_hotspot_shift_figures/hotspot_centroid_displacement_GIS_READY.gpkg,wrong_city,city column exists but no rows for boston,6,0,-999999,,,,False

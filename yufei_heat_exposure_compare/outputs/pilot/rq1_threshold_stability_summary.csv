@@ -1,0 +1,3 @@
+city,n_total,n_valid,top_pcts_tested,min_stable_count,stable_lst_only_n,stable_hi_only_n,stable_overlap_n,mixed_unstable_n,never_hotspot_n,missing_n
+Houston,654,549,"10,15,20,25,30",3,64,92,46,79,268,105
+Phoenix,373,332,"10,15,20,25,30",3,34,43,30,53,172,41

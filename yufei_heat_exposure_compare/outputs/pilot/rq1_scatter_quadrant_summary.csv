@@ -1,0 +1,9 @@
+city,quadrant,n_tracts,pop_sum,tract_share_pct,pop_share_pct
+Houston,High LST + High HI,161,577360,29.33,28.48
+Houston,High LST + Low HI,114,394815,20.77,19.47
+Houston,Low LST + High HI,118,445655,21.49,21.98
+Houston,Low LST + Low HI,156,609724,28.42,30.07
+Phoenix,High LST + High HI,105,438385,31.63,29.91
+Phoenix,High LST + Low HI,61,303995,18.37,20.74
+Phoenix,Low LST + High HI,93,401602,28.01,27.4
+Phoenix,Low LST + Low HI,73,321725,21.99,21.95

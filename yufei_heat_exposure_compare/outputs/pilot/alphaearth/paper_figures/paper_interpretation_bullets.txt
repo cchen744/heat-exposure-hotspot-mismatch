@@ -1,0 +1,4 @@
+- Phoenix shows the highest mean LST (57.06 °C), while Houston shows the highest mean Heat Index (34.15 °C). This suggests that surface heat intensity and apparent heat exposure do not rank cities in the same way.
+- Phoenix has the highest share of priority tracts (38.86%), followed by Houston (36.25%) and Las Vegas (27.95%). This indicates that the strongest mismatch or high Heat Index concern is not evenly distributed across the three cities.
+- Las Vegas has the largest overlap between LST and Heat Index hotspots (16.16% Both-hotspot tracts), while Houston and Phoenix show higher HI-only hotspot shares (16.21% and 18.37%). This may indicate different city-specific mechanisms of heat exposure.
+- For the next step, the most important task is to map these mismatch classes spatially. The table-level results show city-level differences, but maps are needed to identify whether HI-only or LST-only tracts cluster in specific urban zones.

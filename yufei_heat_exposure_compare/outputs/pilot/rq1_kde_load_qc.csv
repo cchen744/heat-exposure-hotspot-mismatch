@@ -1,0 +1,3 @@
+city,file,lst_col,hi_col,geoid_col,pop_col,n_total,n_valid,missing_n,lst_median,hi_median,gap_z_min,gap_z_max
+Houston,/Users/yufeizhou/Desktop/heat-exposure-compare/data_processed/houston/houston_master_with_lst_hi_fixed.gpkg,lst_c,hi_c,GEOID,total_population,654,549,105,48.352,34.182,-4.743,5.815
+Phoenix,/Users/yufeizhou/Desktop/heat-exposure-compare/data_processed/phoenix/phoenix_master_with_lst_hi_fixed.gpkg,lst_c,hi_c,GEOID,total_population,373,332,41,57.179,33.308,-4.283,3.587

@@ -1,0 +1,7 @@
+city,city_label,state_name,city_context,n_tracts,boundary_gpkg,intake_gpkg,intake_csv
+new_york,New York,New York,Coastal / megacity / dense urban core,2365,data/processed/new_york/new_york_tracts_boundary.gpkg,city_intake/new_york/working/new_york_tracts_boundary.gpkg,city_intake/new_york/working/new_york_tracts_boundary.csv
+chicago,Chicago,Illinois,Great Lakes / large grid city,872,data/processed/chicago/chicago_tracts_boundary.gpkg,city_intake/chicago/working/chicago_tracts_boundary.gpkg,city_intake/chicago/working/chicago_tracts_boundary.csv
+atlanta,Atlanta,Georgia,Inland / humid / sprawling Sun Belt,223,data/processed/atlanta/atlanta_tracts_boundary.gpkg,city_intake/atlanta/working/atlanta_tracts_boundary.gpkg,city_intake/atlanta/working/atlanta_tracts_boundary.csv
+dallas,Dallas,Texas,Inland / large Sun Belt / car-oriented,449,data/processed/dallas/dallas_tracts_boundary.gpkg,city_intake/dallas/working/dallas_tracts_boundary.gpkg,city_intake/dallas/working/dallas_tracts_boundary.csv
+seattle,Seattle,Washington,Coastal / Pacific Northwest / water-constrained,199,data/processed/seattle/seattle_tracts_boundary.gpkg,city_intake/seattle/working/seattle_tracts_boundary.gpkg,city_intake/seattle/working/seattle_tracts_boundary.csv
+san_francisco,San Francisco,California,Coastal / compact / bay-influenced,260,data/processed/san_francisco/san_francisco_tracts_boundary.gpkg,city_intake/san_francisco/working/san_francisco_tracts_boundary.gpkg,city_intake/san_francisco/working/san_francisco_tracts_boundary.csv

@@ -1,0 +1,16 @@
+column_name,dtype,non_null_n,missing_n
+GEOID,object,779,0
+STATEFP,object,779,0
+COUNTYFP,object,779,0
+TRACTCE,object,779,0
+NAME,object,779,0
+NAMELSAD,object,779,0
+area_km2,float64,779,0
+GEOIDFQ,object,779,0
+MTFCC,object,779,0
+FUNCSTAT,object,779,0
+ALAND,int64,779,0
+AWATER,int64,779,0
+INTPTLAT,object,779,0
+INTPTLON,object,779,0
+geometry,geometry,779,0

@@ -1,0 +1,2 @@
+city,rows,unique_geoid_n,missing_total_population_n,missing_income_n,missing_poverty_rate_n,output_csv
+las_vegas,535,535,0,1,0,/Users/yufeizhou/Desktop/heat-exposure-compare/city_intake/las_vegas/working/las_vegas_acs_baseline.csv

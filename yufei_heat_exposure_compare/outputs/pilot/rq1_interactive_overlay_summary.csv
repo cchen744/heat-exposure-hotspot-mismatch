@@ -1,0 +1,3 @@
+city,html_out,lst_hotspot_threshold,hi_hotspot_threshold,n_tracts,n_valid
+Houston,/Users/yufeizhou/Desktop/heat-exposure-compare/figures/pilot/houston_interactive_lst_hi_overlay.html,49.72,34.2,654,549
+Phoenix,/Users/yufeizhou/Desktop/heat-exposure-compare/figures/pilot/phoenix_interactive_lst_hi_overlay.html,58.37,33.69,373,332

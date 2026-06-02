@@ -1,0 +1,319 @@
+city_id,city_label,selected_file,column_name,dtype,example_values,is_geometry
+los_angeles,Los Angeles,data/processed/los_angeles/los_angeles_master_lst_hi_hotcompare.gpkg,STATEFP,object,06,False
+los_angeles,Los Angeles,data/processed/los_angeles/los_angeles_master_lst_hi_hotcompare.gpkg,COUNTYFP,object,037,False
+los_angeles,Los Angeles,data/processed/los_angeles/los_angeles_master_lst_hi_hotcompare.gpkg,TRACTCE,object,204920 | 205110 | 205120,False
+los_angeles,Los Angeles,data/processed/los_angeles/los_angeles_master_lst_hi_hotcompare.gpkg,GEOID,object,06037204920 | 06037205110 | 06037205120,False
+los_angeles,Los Angeles,data/processed/los_angeles/los_angeles_master_lst_hi_hotcompare.gpkg,GEOIDFQ,object,1400000US06037204920 | 1400000US06037205110 | 1400000US06037205120,False
+los_angeles,Los Angeles,data/processed/los_angeles/los_angeles_master_lst_hi_hotcompare.gpkg,NAME,object,2049.20 | 2051.10 | 2051.20,False
+los_angeles,Los Angeles,data/processed/los_angeles/los_angeles_master_lst_hi_hotcompare.gpkg,NAMELSAD,object,Census Tract 2049.20 | Census Tract 2051.10 | Census Tract 2051.20,False
+los_angeles,Los Angeles,data/processed/los_angeles/los_angeles_master_lst_hi_hotcompare.gpkg,MTFCC,object,G5020,False
+los_angeles,Los Angeles,data/processed/los_angeles/los_angeles_master_lst_hi_hotcompare.gpkg,FUNCSTAT,object,S,False
+los_angeles,Los Angeles,data/processed/los_angeles/los_angeles_master_lst_hi_hotcompare.gpkg,ALAND,int64,909972 | 286962 | 1466242,False
+los_angeles,Los Angeles,data/processed/los_angeles/los_angeles_master_lst_hi_hotcompare.gpkg,AWATER,int64,0 | 20551 | 30290,False
+los_angeles,Los Angeles,data/processed/los_angeles/los_angeles_master_lst_hi_hotcompare.gpkg,INTPTLAT,object,+34.0175004 | +34.0245059 | +34.0187542,False
+los_angeles,Los Angeles,data/processed/los_angeles/los_angeles_master_lst_hi_hotcompare.gpkg,INTPTLON,object,-118.1974975 | -118.2142985 | -118.2117951,False
+los_angeles,Los Angeles,data/processed/los_angeles/los_angeles_master_lst_hi_hotcompare.gpkg,city,object,los_angeles,False
+los_angeles,Los Angeles,data/processed/los_angeles/los_angeles_master_lst_hi_hotcompare.gpkg,city_name,object,Los Angeles,False
+los_angeles,Los Angeles,data/processed/los_angeles/los_angeles_master_lst_hi_hotcompare.gpkg,NAME_acs,float64,,False
+los_angeles,Los Angeles,data/processed/los_angeles/los_angeles_master_lst_hi_hotcompare.gpkg,population,float64,,False
+los_angeles,Los Angeles,data/processed/los_angeles/los_angeles_master_lst_hi_hotcompare.gpkg,poverty_universe,float64,,False
+los_angeles,Los Angeles,data/processed/los_angeles/los_angeles_master_lst_hi_hotcompare.gpkg,poverty_below,float64,,False
+los_angeles,Los Angeles,data/processed/los_angeles/los_angeles_master_lst_hi_hotcompare.gpkg,poverty_rate,float64,,False
+los_angeles,Los Angeles,data/processed/los_angeles/los_angeles_master_lst_hi_hotcompare.gpkg,acs_year,float64,,False
+los_angeles,Los Angeles,data/processed/los_angeles/los_angeles_master_lst_hi_hotcompare.gpkg,state,float64,,False
+los_angeles,Los Angeles,data/processed/los_angeles/los_angeles_master_lst_hi_hotcompare.gpkg,county,float64,,False
+los_angeles,Los Angeles,data/processed/los_angeles/los_angeles_master_lst_hi_hotcompare.gpkg,tract,float64,,False
+los_angeles,Los Angeles,data/processed/los_angeles/los_angeles_master_lst_hi_hotcompare.gpkg,tract_area_km2,float64,0.9095216419332146 | 0.2868201284321896 | 1.465519779546506,False
+los_angeles,Los Angeles,data/processed/los_angeles/los_angeles_master_lst_hi_hotcompare.gpkg,lst_c,float64,43.08022538552791 | 42.82480392156865 | 43.220317982456166,False
+los_angeles,Los Angeles,data/processed/los_angeles/los_angeles_master_lst_hi_hotcompare.gpkg,hi_c,float64,22.416491735154356 | 22.835774952432423 | 22.60031635726711,False
+los_angeles,Los Angeles,data/processed/los_angeles/los_angeles_master_lst_hi_hotcompare.gpkg,hi_minus_lst,float64,-20.663733650373555 | -20.408312186414303 | -20.803826247301814,False
+los_angeles,Los Angeles,data/processed/los_angeles/los_angeles_master_lst_hi_hotcompare.gpkg,air_temp_c,float64,22.416491735154352 | 22.835774952432416 | 22.600316357267104,False
+los_angeles,Los Angeles,data/processed/los_angeles/los_angeles_master_lst_hi_hotcompare.gpkg,rh_pct,float64,61.01142526452512 | 55.77099040687782 | 55.76673160950213,False
+los_angeles,Los Angeles,data/processed/los_angeles/los_angeles_master_lst_hi_hotcompare.gpkg,analysis_ready,bool,True | False,False
+los_angeles,Los Angeles,data/processed/los_angeles/los_angeles_master_lst_hi_hotcompare.gpkg,lst_hot_q75,bool,True | False,False
+los_angeles,Los Angeles,data/processed/los_angeles/los_angeles_master_lst_hi_hotcompare.gpkg,hi_hot_q75,bool,False | True,False
+los_angeles,Los Angeles,data/processed/los_angeles/los_angeles_master_lst_hi_hotcompare.gpkg,mismatch_class,object,LST-only hotspot | HI-only hotspot | Neither hotspot,False
+los_angeles,Los Angeles,data/processed/los_angeles/los_angeles_master_lst_hi_hotcompare.gpkg,priority_flag,bool,False | True,False
+los_angeles,Los Angeles,data/processed/los_angeles/los_angeles_master_lst_hi_hotcompare.gpkg,lst_summer_mean_c,float64,43.08022538552791 | 42.82480392156865 | 43.220317982456166,False
+los_angeles,Los Angeles,data/processed/los_angeles/los_angeles_master_lst_hi_hotcompare.gpkg,hi_summer_mean_c,float64,22.416491735154356 | 22.835774952432423 | 22.60031635726711,False
+los_angeles,Los Angeles,data/processed/los_angeles/los_angeles_master_lst_hi_hotcompare.gpkg,geometry,geometry,[geometry],True
+miami,Miami,data/processed/miami/miami_master_lst_hi_hotcompare.gpkg,STATEFP,object,12,False
+miami,Miami,data/processed/miami/miami_master_lst_hi_hotcompare.gpkg,COUNTYFP,object,086,False
+miami,Miami,data/processed/miami/miami_master_lst_hi_hotcompare.gpkg,TRACTCE,object,007101 | 001401 | 001402,False
+miami,Miami,data/processed/miami/miami_master_lst_hi_hotcompare.gpkg,GEOID,object,12086007101 | 12086001401 | 12086001402,False
+miami,Miami,data/processed/miami/miami_master_lst_hi_hotcompare.gpkg,GEOIDFQ,object,1400000US12086007101 | 1400000US12086001401 | 1400000US12086001402,False
+miami,Miami,data/processed/miami/miami_master_lst_hi_hotcompare.gpkg,NAME,object,71.01 | 14.01 | 14.02,False
+miami,Miami,data/processed/miami/miami_master_lst_hi_hotcompare.gpkg,NAMELSAD,object,Census Tract 71.01 | Census Tract 14.01 | Census Tract 14.02,False
+miami,Miami,data/processed/miami/miami_master_lst_hi_hotcompare.gpkg,MTFCC,object,G5020,False
+miami,Miami,data/processed/miami/miami_master_lst_hi_hotcompare.gpkg,FUNCSTAT,object,S,False
+miami,Miami,data/processed/miami/miami_master_lst_hi_hotcompare.gpkg,ALAND,int64,610328 | 1227177 | 1182337,False
+miami,Miami,data/processed/miami/miami_master_lst_hi_hotcompare.gpkg,AWATER,int64,0 | 11685 | 1407017,False
+miami,Miami,data/processed/miami/miami_master_lst_hi_hotcompare.gpkg,INTPTLAT,object,+25.7319460 | +25.8418481 | +25.8470344,False
+miami,Miami,data/processed/miami/miami_master_lst_hi_hotcompare.gpkg,INTPTLON,object,-080.2491168 | -080.2016338 | -080.1915947,False
+miami,Miami,data/processed/miami/miami_master_lst_hi_hotcompare.gpkg,city,object,miami,False
+miami,Miami,data/processed/miami/miami_master_lst_hi_hotcompare.gpkg,city_name,object,Miami,False
+miami,Miami,data/processed/miami/miami_master_lst_hi_hotcompare.gpkg,NAME_acs,float64,,False
+miami,Miami,data/processed/miami/miami_master_lst_hi_hotcompare.gpkg,population,float64,,False
+miami,Miami,data/processed/miami/miami_master_lst_hi_hotcompare.gpkg,poverty_universe,float64,,False
+miami,Miami,data/processed/miami/miami_master_lst_hi_hotcompare.gpkg,poverty_below,float64,,False
+miami,Miami,data/processed/miami/miami_master_lst_hi_hotcompare.gpkg,poverty_rate,float64,,False
+miami,Miami,data/processed/miami/miami_master_lst_hi_hotcompare.gpkg,acs_year,float64,,False
+miami,Miami,data/processed/miami/miami_master_lst_hi_hotcompare.gpkg,state,float64,,False
+miami,Miami,data/processed/miami/miami_master_lst_hi_hotcompare.gpkg,county,float64,,False
+miami,Miami,data/processed/miami/miami_master_lst_hi_hotcompare.gpkg,tract,float64,,False
+miami,Miami,data/processed/miami/miami_master_lst_hi_hotcompare.gpkg,tract_area_km2,float64,0.6099251661387507 | 1.2263910028499387 | 1.193263173405461,False
+miami,Miami,data/processed/miami/miami_master_lst_hi_hotcompare.gpkg,lst_c,float64,32.73819238900638 | 35.723202416918454 | 34.81861428571431,False
+miami,Miami,data/processed/miami/miami_master_lst_hi_hotcompare.gpkg,hi_c,float64,32.34852560823783 | 32.61858411931805 | 32.3737803422065,False
+miami,Miami,data/processed/miami/miami_master_lst_hi_hotcompare.gpkg,hi_minus_lst,float64,-0.28147439176220956 | -3.1046182976004073 | -2.2000301663962603,False
+miami,Miami,data/processed/miami/miami_master_lst_hi_hotcompare.gpkg,air_temp_c,float64,28.011778228870355 | 28.164466075620794 | 28.050320028076186,False
+miami,Miami,data/processed/miami/miami_master_lst_hi_hotcompare.gpkg,rh_pct,float64,81.40729811266588 | 80.63287745717956 | 80.93975239776367,False
+miami,Miami,data/processed/miami/miami_master_lst_hi_hotcompare.gpkg,analysis_ready,bool,True | False,False
+miami,Miami,data/processed/miami/miami_master_lst_hi_hotcompare.gpkg,lst_hot_q75,bool,False | True,False
+miami,Miami,data/processed/miami/miami_master_lst_hi_hotcompare.gpkg,hi_hot_q75,bool,False | True,False
+miami,Miami,data/processed/miami/miami_master_lst_hi_hotcompare.gpkg,mismatch_class,object,Neither hotspot | HI-only hotspot | Both LST and HI hotspot,False
+miami,Miami,data/processed/miami/miami_master_lst_hi_hotcompare.gpkg,priority_flag,bool,True | False,False
+miami,Miami,data/processed/miami/miami_master_lst_hi_hotcompare.gpkg,lst_summer_mean_c,float64,32.73819238900638 | 35.723202416918454 | 34.81861428571431,False
+miami,Miami,data/processed/miami/miami_master_lst_hi_hotcompare.gpkg,hi_summer_mean_c,float64,32.34852560823783 | 32.61858411931805 | 32.3737803422065,False
+miami,Miami,data/processed/miami/miami_master_lst_hi_hotcompare.gpkg,geometry,geometry,[geometry],True
+boston,Boston,data/processed/boston/boston_master_lst_hi_hotcompare.gpkg,STATEFP,object,25,False
+boston,Boston,data/processed/boston/boston_master_lst_hi_hotcompare.gpkg,COUNTYFP,object,025,False
+boston,Boston,data/processed/boston/boston_master_lst_hi_hotcompare.gpkg,TRACTCE,object,091300 | 110501 | 030500,False
+boston,Boston,data/processed/boston/boston_master_lst_hi_hotcompare.gpkg,GEOID,object,25025091300 | 25025110501 | 25025030500,False
+boston,Boston,data/processed/boston/boston_master_lst_hi_hotcompare.gpkg,GEOIDFQ,object,1400000US25025091300 | 1400000US25025110501 | 1400000US25025030500,False
+boston,Boston,data/processed/boston/boston_master_lst_hi_hotcompare.gpkg,NAME,object,913 | 1105.01 | 305,False
+boston,Boston,data/processed/boston/boston_master_lst_hi_hotcompare.gpkg,NAMELSAD,object,Census Tract 913 | Census Tract 1105.01 | Census Tract 305,False
+boston,Boston,data/processed/boston/boston_master_lst_hi_hotcompare.gpkg,MTFCC,object,G5020,False
+boston,Boston,data/processed/boston/boston_master_lst_hi_hotcompare.gpkg,FUNCSTAT,object,S,False
+boston,Boston,data/processed/boston/boston_master_lst_hi_hotcompare.gpkg,ALAND,int64,262560 | 647837 | 191230,False
+boston,Boston,data/processed/boston/boston_master_lst_hi_hotcompare.gpkg,AWATER,int64,0 | 294934 | 6725,False
+boston,Boston,data/processed/boston/boston_master_lst_hi_hotcompare.gpkg,INTPTLAT,object,+42.3199357 | +42.2821618 | +42.3675671,False
+boston,Boston,data/processed/boston/boston_master_lst_hi_hotcompare.gpkg,INTPTLON,object,-071.0668701 | -071.1414485 | -071.0515811,False
+boston,Boston,data/processed/boston/boston_master_lst_hi_hotcompare.gpkg,city,object,boston,False
+boston,Boston,data/processed/boston/boston_master_lst_hi_hotcompare.gpkg,city_name,object,Boston,False
+boston,Boston,data/processed/boston/boston_master_lst_hi_hotcompare.gpkg,NAME_acs,float64,,False
+boston,Boston,data/processed/boston/boston_master_lst_hi_hotcompare.gpkg,population,float64,,False
+boston,Boston,data/processed/boston/boston_master_lst_hi_hotcompare.gpkg,poverty_universe,float64,,False
+boston,Boston,data/processed/boston/boston_master_lst_hi_hotcompare.gpkg,poverty_below,float64,,False
+boston,Boston,data/processed/boston/boston_master_lst_hi_hotcompare.gpkg,poverty_rate,float64,,False
+boston,Boston,data/processed/boston/boston_master_lst_hi_hotcompare.gpkg,acs_year,float64,,False
+boston,Boston,data/processed/boston/boston_master_lst_hi_hotcompare.gpkg,state,float64,,False
+boston,Boston,data/processed/boston/boston_master_lst_hi_hotcompare.gpkg,county,float64,,False
+boston,Boston,data/processed/boston/boston_master_lst_hi_hotcompare.gpkg,tract,float64,,False
+boston,Boston,data/processed/boston/boston_master_lst_hi_hotcompare.gpkg,tract_area_km2,float64,0.26253811363091706 | 0.6478160433420126 | 0.48611286902514544,False
+boston,Boston,data/processed/boston/boston_master_lst_hi_hotcompare.gpkg,lst_c,float64,33.21751893939397 | 31.27482037570276 | 31.982275449101827,False
+boston,Boston,data/processed/boston/boston_master_lst_hi_hotcompare.gpkg,hi_c,float64,20.903050732267108 | 20.90463058179746 | 20.875672484135297,False
+boston,Boston,data/processed/boston/boston_master_lst_hi_hotcompare.gpkg,hi_minus_lst,float64,-12.314468207126867 | -10.370189793905302 | -11.187295257800217,False
+boston,Boston,data/processed/boston/boston_master_lst_hi_hotcompare.gpkg,air_temp_c,float64,20.903050732267104 | 20.904630581797456 | 20.875672484135293,False
+boston,Boston,data/processed/boston/boston_master_lst_hi_hotcompare.gpkg,rh_pct,float64,78.3041104861369 | 78.29240799026775 | 78.21445793342082,False
+boston,Boston,data/processed/boston/boston_master_lst_hi_hotcompare.gpkg,analysis_ready,bool,True | False,False
+boston,Boston,data/processed/boston/boston_master_lst_hi_hotcompare.gpkg,lst_hot_q75,bool,True | False,False
+boston,Boston,data/processed/boston/boston_master_lst_hi_hotcompare.gpkg,hi_hot_q75,bool,True | False,False
+boston,Boston,data/processed/boston/boston_master_lst_hi_hotcompare.gpkg,mismatch_class,object,Both LST and HI hotspot | HI-only hotspot | Neither hotspot,False
+boston,Boston,data/processed/boston/boston_master_lst_hi_hotcompare.gpkg,priority_flag,bool,False | True,False
+boston,Boston,data/processed/boston/boston_master_lst_hi_hotcompare.gpkg,lst_summer_mean_c,float64,33.21751893939397 | 31.27482037570276 | 31.982275449101827,False
+boston,Boston,data/processed/boston/boston_master_lst_hi_hotcompare.gpkg,hi_summer_mean_c,float64,20.903050732267108 | 20.90463058179746 | 20.875672484135297,False
+boston,Boston,data/processed/boston/boston_master_lst_hi_hotcompare.gpkg,geometry,geometry,[geometry],True
+new_york,New York,data/processed/new_york/new_york_master_lst_hi_hotcompare.gpkg,ALAND,int64,213987 | 146970 | 180006,False
+new_york,New York,data/processed/new_york/new_york_master_lst_hi_hotcompare.gpkg,AWATER,int64,0 | 14591 | 361333,False
+new_york,New York,data/processed/new_york/new_york_master_lst_hi_hotcompare.gpkg,COUNTYFP,object,081 | 047 | 059,False
+new_york,New York,data/processed/new_york/new_york_master_lst_hi_hotcompare.gpkg,FUNCSTAT,object,S,False
+new_york,New York,data/processed/new_york/new_york_master_lst_hi_hotcompare.gpkg,GEOID,object,36081003400 | 36081003900 | 36081003600,False
+new_york,New York,data/processed/new_york/new_york_master_lst_hi_hotcompare.gpkg,GEOIDFQ,object,1400000US36081003400 | 1400000US36081003900 | 1400000US36081003600,False
+new_york,New York,data/processed/new_york/new_york_master_lst_hi_hotcompare.gpkg,INTPTLAT,object,+40.6847731 | +40.7627994 | +40.6837714,False
+new_york,New York,data/processed/new_york/new_york_master_lst_hi_hotcompare.gpkg,INTPTLON,object,-073.8581871 | -073.9409316 | -073.8568176,False
+new_york,New York,data/processed/new_york/new_york_master_lst_hi_hotcompare.gpkg,MTFCC,object,G5020,False
+new_york,New York,data/processed/new_york/new_york_master_lst_hi_hotcompare.gpkg,NAME,object,34 | 39 | 36,False
+new_york,New York,data/processed/new_york/new_york_master_lst_hi_hotcompare.gpkg,NAMELSAD,object,Census Tract 34 | Census Tract 39 | Census Tract 36,False
+new_york,New York,data/processed/new_york/new_york_master_lst_hi_hotcompare.gpkg,STATEFP,object,36,False
+new_york,New York,data/processed/new_york/new_york_master_lst_hi_hotcompare.gpkg,TRACTCE,object,003400 | 003900 | 003600,False
+new_york,New York,data/processed/new_york/new_york_master_lst_hi_hotcompare.gpkg,centroid_in_city,bool,True | False,False
+new_york,New York,data/processed/new_york/new_york_master_lst_hi_hotcompare.gpkg,city,object,new_york,False
+new_york,New York,data/processed/new_york/new_york_master_lst_hi_hotcompare.gpkg,city_context,object,Coastal / megacity / dense urban core,False
+new_york,New York,data/processed/new_york/new_york_master_lst_hi_hotcompare.gpkg,city_label,object,New York,False
+new_york,New York,data/processed/new_york/new_york_master_lst_hi_hotcompare.gpkg,hi_c,float64,22.718605371242266 | 22.590481736003547 | 22.71368916749782,False
+new_york,New York,data/processed/new_york/new_york_master_lst_hi_hotcompare.gpkg,intersects_city,bool,True,False
+new_york,New York,data/processed/new_york/new_york_master_lst_hi_hotcompare.gpkg,lst_c,float64,33.2346233766234 | 30.78000000000003 | 33.414468412943,False
+new_york,New York,data/processed/new_york/new_york_master_lst_hi_hotcompare.gpkg,state_fips,object,36,False
+new_york,New York,data/processed/new_york/new_york_master_lst_hi_hotcompare.gpkg,state_name,object,New York,False
+new_york,New York,data/processed/new_york/new_york_master_lst_hi_hotcompare.gpkg,analysis_ready,bool,True | False,False
+new_york,New York,data/processed/new_york/new_york_master_lst_hi_hotcompare.gpkg,lst_pct,float64,0.6920498084291188 | 0.25023946360153254 | 0.7380268199233716,False
+new_york,New York,data/processed/new_york/new_york_master_lst_hi_hotcompare.gpkg,hi_pct,float64,0.5675287356321839 | 0.2921455938697318 | 0.5660919540229885,False
+new_york,New York,data/processed/new_york/new_york_master_lst_hi_hotcompare.gpkg,hi_minus_lst_pct,float64,-0.12452107279693492 | 0.04190613026819928 | -0.1719348659003831,False
+new_york,New York,data/processed/new_york/new_york_master_lst_hi_hotcompare.gpkg,lst_hot,bool,False | True,False
+new_york,New York,data/processed/new_york/new_york_master_lst_hi_hotcompare.gpkg,hi_hot,bool,False | True,False
+new_york,New York,data/processed/new_york/new_york_master_lst_hi_hotcompare.gpkg,mismatch_class,object,Neither hotspot | LST-only hotspot | Missing,False
+new_york,New York,data/processed/new_york/new_york_master_lst_hi_hotcompare.gpkg,priority_flag,bool,False | True,False
+new_york,New York,data/processed/new_york/new_york_master_lst_hi_hotcompare.gpkg,q75_lst_c,float64,33.461953775316275,False
+new_york,New York,data/processed/new_york/new_york_master_lst_hi_hotcompare.gpkg,q75_hi_c,float64,22.880559719472675,False
+new_york,New York,data/processed/new_york/new_york_master_lst_hi_hotcompare.gpkg,q75_hi_minus_lst_pct,float64,0.2017480842911878,False
+new_york,New York,data/processed/new_york/new_york_master_lst_hi_hotcompare.gpkg,geometry,geometry,[geometry],True
+chicago,Chicago,data/processed/chicago/chicago_master_lst_hi_hotcompare.gpkg,ALAND,int64,127283 | 69878 | 69094,False
+chicago,Chicago,data/processed/chicago/chicago_master_lst_hi_hotcompare.gpkg,AWATER,int64,110999 | 0 | 153161,False
+chicago,Chicago,data/processed/chicago/chicago_master_lst_hi_hotcompare.gpkg,COUNTYFP,object,031 | 043,False
+chicago,Chicago,data/processed/chicago/chicago_master_lst_hi_hotcompare.gpkg,FUNCSTAT,object,S,False
+chicago,Chicago,data/processed/chicago/chicago_master_lst_hi_hotcompare.gpkg,GEOID,object,17031030101 | 17031030701 | 17031070103,False
+chicago,Chicago,data/processed/chicago/chicago_master_lst_hi_hotcompare.gpkg,GEOIDFQ,object,1400000US17031030101 | 1400000US17031030701 | 1400000US17031070103,False
+chicago,Chicago,data/processed/chicago/chicago_master_lst_hi_hotcompare.gpkg,INTPTLAT,object,+41.9910538 | +41.9827453 | +41.9268110,False
+chicago,Chicago,data/processed/chicago/chicago_master_lst_hi_hotcompare.gpkg,INTPTLON,object,-087.6548790 | -087.6579659 | -087.6426051,False
+chicago,Chicago,data/processed/chicago/chicago_master_lst_hi_hotcompare.gpkg,MTFCC,object,G5020,False
+chicago,Chicago,data/processed/chicago/chicago_master_lst_hi_hotcompare.gpkg,NAME,object,301.01 | 307.01 | 701.03,False
+chicago,Chicago,data/processed/chicago/chicago_master_lst_hi_hotcompare.gpkg,NAMELSAD,object,Census Tract 301.01 | Census Tract 307.01 | Census Tract 701.03,False
+chicago,Chicago,data/processed/chicago/chicago_master_lst_hi_hotcompare.gpkg,STATEFP,object,17,False
+chicago,Chicago,data/processed/chicago/chicago_master_lst_hi_hotcompare.gpkg,TRACTCE,object,030101 | 030701 | 070103,False
+chicago,Chicago,data/processed/chicago/chicago_master_lst_hi_hotcompare.gpkg,centroid_in_city,bool,True | False,False
+chicago,Chicago,data/processed/chicago/chicago_master_lst_hi_hotcompare.gpkg,city,object,chicago,False
+chicago,Chicago,data/processed/chicago/chicago_master_lst_hi_hotcompare.gpkg,city_context,object,Great Lakes / large grid city,False
+chicago,Chicago,data/processed/chicago/chicago_master_lst_hi_hotcompare.gpkg,city_label,object,Chicago,False
+chicago,Chicago,data/processed/chicago/chicago_master_lst_hi_hotcompare.gpkg,hi_c,float64,21.16446076821592 | 20.855484000496176 | 21.3724741344225,False
+chicago,Chicago,data/processed/chicago/chicago_master_lst_hi_hotcompare.gpkg,intersects_city,bool,True,False
+chicago,Chicago,data/processed/chicago/chicago_master_lst_hi_hotcompare.gpkg,lst_c,float64,29.226031746031794 | 29.31074712643681 | 31.646666666666704,False
+chicago,Chicago,data/processed/chicago/chicago_master_lst_hi_hotcompare.gpkg,state_fips,object,17,False
+chicago,Chicago,data/processed/chicago/chicago_master_lst_hi_hotcompare.gpkg,state_name,object,Illinois,False
+chicago,Chicago,data/processed/chicago/chicago_master_lst_hi_hotcompare.gpkg,analysis_ready,bool,True,False
+chicago,Chicago,data/processed/chicago/chicago_master_lst_hi_hotcompare.gpkg,lst_pct,float64,0.02522935779816514 | 0.03211009174311927 | 0.15711009174311927,False
+chicago,Chicago,data/processed/chicago/chicago_master_lst_hi_hotcompare.gpkg,hi_pct,float64,0.25630733944954126 | 0.03211009174311927 | 0.6261467889908257,False
+chicago,Chicago,data/processed/chicago/chicago_master_lst_hi_hotcompare.gpkg,hi_minus_lst_pct,float64,0.2310779816513761 | 0.224197247706422 | -0.125,False
+chicago,Chicago,data/processed/chicago/chicago_master_lst_hi_hotcompare.gpkg,lst_hot,bool,False | True,False
+chicago,Chicago,data/processed/chicago/chicago_master_lst_hi_hotcompare.gpkg,hi_hot,bool,False | True,False
+chicago,Chicago,data/processed/chicago/chicago_master_lst_hi_hotcompare.gpkg,mismatch_class,object,Neither hotspot | HI-only hotspot | Both LST and HI hotspot,False
+chicago,Chicago,data/processed/chicago/chicago_master_lst_hi_hotcompare.gpkg,priority_flag,bool,True | False,False
+chicago,Chicago,data/processed/chicago/chicago_master_lst_hi_hotcompare.gpkg,q75_lst_c,float64,34.83932926087561,False
+chicago,Chicago,data/processed/chicago/chicago_master_lst_hi_hotcompare.gpkg,q75_hi_c,float64,21.492472543578238,False
+chicago,Chicago,data/processed/chicago/chicago_master_lst_hi_hotcompare.gpkg,q75_hi_minus_lst_pct,float64,0.125,False
+chicago,Chicago,data/processed/chicago/chicago_master_lst_hi_hotcompare.gpkg,geometry,geometry,[geometry],True
+atlanta,Atlanta,data/processed/atlanta/atlanta_master_lst_hi_hotcompare.gpkg,ALAND,int64,1929137 | 2687770 | 2401566,False
+atlanta,Atlanta,data/processed/atlanta/atlanta_master_lst_hi_hotcompare.gpkg,AWATER,int64,0 | 22678 | 4234,False
+atlanta,Atlanta,data/processed/atlanta/atlanta_master_lst_hi_hotcompare.gpkg,COUNTYFP,object,121 | 063 | 089,False
+atlanta,Atlanta,data/processed/atlanta/atlanta_master_lst_hi_hotcompare.gpkg,FUNCSTAT,object,S,False
+atlanta,Atlanta,data/processed/atlanta/atlanta_master_lst_hi_hotcompare.gpkg,GEOID,object,13121006601 | 13063040309 | 13089021405,False
+atlanta,Atlanta,data/processed/atlanta/atlanta_master_lst_hi_hotcompare.gpkg,GEOIDFQ,object,1400000US13121006601 | 1400000US13063040309 | 1400000US13089021405,False
+atlanta,Atlanta,data/processed/atlanta/atlanta_master_lst_hi_hotcompare.gpkg,INTPTLAT,object,+33.7115643 | +33.6436520 | +33.8571530,False
+atlanta,Atlanta,data/processed/atlanta/atlanta_master_lst_hi_hotcompare.gpkg,INTPTLON,object,-084.4223706 | -084.3489428 | -084.3293305,False
+atlanta,Atlanta,data/processed/atlanta/atlanta_master_lst_hi_hotcompare.gpkg,MTFCC,object,G5020,False
+atlanta,Atlanta,data/processed/atlanta/atlanta_master_lst_hi_hotcompare.gpkg,NAME,object,66.01 | 403.09 | 214.05,False
+atlanta,Atlanta,data/processed/atlanta/atlanta_master_lst_hi_hotcompare.gpkg,NAMELSAD,object,Census Tract 66.01 | Census Tract 403.09 | Census Tract 214.05,False
+atlanta,Atlanta,data/processed/atlanta/atlanta_master_lst_hi_hotcompare.gpkg,STATEFP,object,13,False
+atlanta,Atlanta,data/processed/atlanta/atlanta_master_lst_hi_hotcompare.gpkg,TRACTCE,object,006601 | 040309 | 021405,False
+atlanta,Atlanta,data/processed/atlanta/atlanta_master_lst_hi_hotcompare.gpkg,centroid_in_city,bool,True | False,False
+atlanta,Atlanta,data/processed/atlanta/atlanta_master_lst_hi_hotcompare.gpkg,city,object,atlanta,False
+atlanta,Atlanta,data/processed/atlanta/atlanta_master_lst_hi_hotcompare.gpkg,city_context,object,Inland / humid / sprawling Sun Belt,False
+atlanta,Atlanta,data/processed/atlanta/atlanta_master_lst_hi_hotcompare.gpkg,city_label,object,Atlanta,False
+atlanta,Atlanta,data/processed/atlanta/atlanta_master_lst_hi_hotcompare.gpkg,hi_c,float64,25.57905931610986 | 25.653163101635094 | 25.41871111496636,False
+atlanta,Atlanta,data/processed/atlanta/atlanta_master_lst_hi_hotcompare.gpkg,intersects_city,bool,True,False
+atlanta,Atlanta,data/processed/atlanta/atlanta_master_lst_hi_hotcompare.gpkg,lst_c,float64,31.54398615156628 | 32.586348195329116 | 33.32399467376836,False
+atlanta,Atlanta,data/processed/atlanta/atlanta_master_lst_hi_hotcompare.gpkg,state_fips,object,13,False
+atlanta,Atlanta,data/processed/atlanta/atlanta_master_lst_hi_hotcompare.gpkg,state_name,object,Georgia,False
+atlanta,Atlanta,data/processed/atlanta/atlanta_master_lst_hi_hotcompare.gpkg,analysis_ready,bool,True,False
+atlanta,Atlanta,data/processed/atlanta/atlanta_master_lst_hi_hotcompare.gpkg,lst_pct,float64,0.2062780269058296 | 0.4080717488789238 | 0.5515695067264574,False
+atlanta,Atlanta,data/processed/atlanta/atlanta_master_lst_hi_hotcompare.gpkg,hi_pct,float64,0.6928251121076233 | 0.8385650224215246 | 0.008968609865470852,False
+atlanta,Atlanta,data/processed/atlanta/atlanta_master_lst_hi_hotcompare.gpkg,hi_minus_lst_pct,float64,0.4865470852017937 | 0.43049327354260086 | -0.5426008968609866,False
+atlanta,Atlanta,data/processed/atlanta/atlanta_master_lst_hi_hotcompare.gpkg,lst_hot,bool,False | True,False
+atlanta,Atlanta,data/processed/atlanta/atlanta_master_lst_hi_hotcompare.gpkg,hi_hot,bool,True | False,False
+atlanta,Atlanta,data/processed/atlanta/atlanta_master_lst_hi_hotcompare.gpkg,mismatch_class,object,HI-only hotspot | Neither hotspot | LST-only hotspot,False
+atlanta,Atlanta,data/processed/atlanta/atlanta_master_lst_hi_hotcompare.gpkg,priority_flag,bool,True | False,False
+atlanta,Atlanta,data/processed/atlanta/atlanta_master_lst_hi_hotcompare.gpkg,q75_lst_c,float64,34.39689905366018,False
+atlanta,Atlanta,data/processed/atlanta/atlanta_master_lst_hi_hotcompare.gpkg,q75_hi_c,float64,25.57905931610986,False
+atlanta,Atlanta,data/processed/atlanta/atlanta_master_lst_hi_hotcompare.gpkg,q75_hi_minus_lst_pct,float64,0.2959641255605381,False
+atlanta,Atlanta,data/processed/atlanta/atlanta_master_lst_hi_hotcompare.gpkg,geometry,geometry,[geometry],True
+dallas,Dallas,data/processed/dallas/dallas_master_lst_hi_hotcompare.gpkg,ALAND,int64,763967 | 756887 | 3449205,False
+dallas,Dallas,data/processed/dallas/dallas_master_lst_hi_hotcompare.gpkg,AWATER,int64,0 | 650 | 17743,False
+dallas,Dallas,data/processed/dallas/dallas_master_lst_hi_hotcompare.gpkg,COUNTYFP,object,085 | 113 | 397,False
+dallas,Dallas,data/processed/dallas/dallas_master_lst_hi_hotcompare.gpkg,FUNCSTAT,object,S,False
+dallas,Dallas,data/processed/dallas/dallas_master_lst_hi_hotcompare.gpkg,GEOID,object,48085031721 | 48085031723 | 48113016638,False
+dallas,Dallas,data/processed/dallas/dallas_master_lst_hi_hotcompare.gpkg,GEOIDFQ,object,1400000US48085031721 | 1400000US48085031723 | 1400000US48113016638,False
+dallas,Dallas,data/processed/dallas/dallas_master_lst_hi_hotcompare.gpkg,INTPTLAT,object,+33.0082866 | +33.0110872 | +32.6295891,False
+dallas,Dallas,data/processed/dallas/dallas_master_lst_hi_hotcompare.gpkg,INTPTLON,object,-096.8366422 | -096.8218077 | -096.8758118,False
+dallas,Dallas,data/processed/dallas/dallas_master_lst_hi_hotcompare.gpkg,MTFCC,object,G5020,False
+dallas,Dallas,data/processed/dallas/dallas_master_lst_hi_hotcompare.gpkg,NAME,object,317.21 | 317.23 | 166.38,False
+dallas,Dallas,data/processed/dallas/dallas_master_lst_hi_hotcompare.gpkg,NAMELSAD,object,Census Tract 317.21 | Census Tract 317.23 | Census Tract 166.38,False
+dallas,Dallas,data/processed/dallas/dallas_master_lst_hi_hotcompare.gpkg,STATEFP,object,48,False
+dallas,Dallas,data/processed/dallas/dallas_master_lst_hi_hotcompare.gpkg,TRACTCE,object,031721 | 031723 | 016638,False
+dallas,Dallas,data/processed/dallas/dallas_master_lst_hi_hotcompare.gpkg,centroid_in_city,bool,True | False,False
+dallas,Dallas,data/processed/dallas/dallas_master_lst_hi_hotcompare.gpkg,city,object,dallas,False
+dallas,Dallas,data/processed/dallas/dallas_master_lst_hi_hotcompare.gpkg,city_context,object,Inland / large Sun Belt / car-oriented,False
+dallas,Dallas,data/processed/dallas/dallas_master_lst_hi_hotcompare.gpkg,city_label,object,Dallas,False
+dallas,Dallas,data/processed/dallas/dallas_master_lst_hi_hotcompare.gpkg,hi_c,float64,32.82477154795918 | 32.86229681171482 | 33.04186194941381,False
+dallas,Dallas,data/processed/dallas/dallas_master_lst_hi_hotcompare.gpkg,intersects_city,bool,True,False
+dallas,Dallas,data/processed/dallas/dallas_master_lst_hi_hotcompare.gpkg,lst_c,float64,40.81349557522125 | 40.97878582202115 | 38.74002424830265,False
+dallas,Dallas,data/processed/dallas/dallas_master_lst_hi_hotcompare.gpkg,state_fips,object,48,False
+dallas,Dallas,data/processed/dallas/dallas_master_lst_hi_hotcompare.gpkg,state_name,object,Texas,False
+dallas,Dallas,data/processed/dallas/dallas_master_lst_hi_hotcompare.gpkg,analysis_ready,bool,True,False
+dallas,Dallas,data/processed/dallas/dallas_master_lst_hi_hotcompare.gpkg,lst_pct,float64,0.8485523385300668 | 0.8775055679287305 | 0.26280623608017817,False
+dallas,Dallas,data/processed/dallas/dallas_master_lst_hi_hotcompare.gpkg,hi_pct,float64,0.043429844097995544 | 0.09020044543429843 | 0.32516703786191536,False
+dallas,Dallas,data/processed/dallas/dallas_master_lst_hi_hotcompare.gpkg,hi_minus_lst_pct,float64,-0.8051224944320713 | -0.8340757238307349 | -0.17260579064587972,False
+dallas,Dallas,data/processed/dallas/dallas_master_lst_hi_hotcompare.gpkg,lst_hot,bool,True | False,False
+dallas,Dallas,data/processed/dallas/dallas_master_lst_hi_hotcompare.gpkg,hi_hot,bool,False | True,False
+dallas,Dallas,data/processed/dallas/dallas_master_lst_hi_hotcompare.gpkg,mismatch_class,object,LST-only hotspot | Neither hotspot | HI-only hotspot,False
+dallas,Dallas,data/processed/dallas/dallas_master_lst_hi_hotcompare.gpkg,priority_flag,bool,False | True,False
+dallas,Dallas,data/processed/dallas/dallas_master_lst_hi_hotcompare.gpkg,q75_lst_c,float64,40.462154686398904,False
+dallas,Dallas,data/processed/dallas/dallas_master_lst_hi_hotcompare.gpkg,q75_hi_c,float64,33.21039030375678,False
+dallas,Dallas,data/processed/dallas/dallas_master_lst_hi_hotcompare.gpkg,q75_hi_minus_lst_pct,float64,0.2516703786191537,False
+dallas,Dallas,data/processed/dallas/dallas_master_lst_hi_hotcompare.gpkg,geometry,geometry,[geometry],True
+seattle,Seattle,data/processed/seattle/seattle_master_lst_hi_hotcompare.gpkg,ALAND,int64,73030 | 806786 | 755186,False
+seattle,Seattle,data/processed/seattle/seattle_master_lst_hi_hotcompare.gpkg,AWATER,int64,0 | 157022 | 621334,False
+seattle,Seattle,data/processed/seattle/seattle_master_lst_hi_hotcompare.gpkg,COUNTYFP,object,033 | 035,False
+seattle,Seattle,data/processed/seattle/seattle_master_lst_hi_hotcompare.gpkg,FUNCSTAT,object,S,False
+seattle,Seattle,data/processed/seattle/seattle_master_lst_hi_hotcompare.gpkg,GEOID,object,53033005304 | 53033005901 | 53033005401,False
+seattle,Seattle,data/processed/seattle/seattle_master_lst_hi_hotcompare.gpkg,GEOIDFQ,object,1400000US53033005304 | 1400000US53033005901 | 1400000US53033005401,False
+seattle,Seattle,data/processed/seattle/seattle_master_lst_hi_hotcompare.gpkg,INTPTLAT,object,+47.6561001 | +47.6530716 | +47.6475292,False
+seattle,Seattle,data/processed/seattle/seattle_master_lst_hi_hotcompare.gpkg,INTPTLON,object,-122.3150258 | -122.3696366 | -122.3381077,False
+seattle,Seattle,data/processed/seattle/seattle_master_lst_hi_hotcompare.gpkg,MTFCC,object,G5020,False
+seattle,Seattle,data/processed/seattle/seattle_master_lst_hi_hotcompare.gpkg,NAME,object,53.04 | 59.01 | 54.01,False
+seattle,Seattle,data/processed/seattle/seattle_master_lst_hi_hotcompare.gpkg,NAMELSAD,object,Census Tract 53.04 | Census Tract 59.01 | Census Tract 54.01,False
+seattle,Seattle,data/processed/seattle/seattle_master_lst_hi_hotcompare.gpkg,STATEFP,object,53,False
+seattle,Seattle,data/processed/seattle/seattle_master_lst_hi_hotcompare.gpkg,TRACTCE,object,005304 | 005901 | 005401,False
+seattle,Seattle,data/processed/seattle/seattle_master_lst_hi_hotcompare.gpkg,centroid_in_city,bool,True | False,False
+seattle,Seattle,data/processed/seattle/seattle_master_lst_hi_hotcompare.gpkg,city,object,seattle,False
+seattle,Seattle,data/processed/seattle/seattle_master_lst_hi_hotcompare.gpkg,city_context,object,Coastal / Pacific Northwest / water-constrained,False
+seattle,Seattle,data/processed/seattle/seattle_master_lst_hi_hotcompare.gpkg,city_label,object,Seattle,False
+seattle,Seattle,data/processed/seattle/seattle_master_lst_hi_hotcompare.gpkg,hi_c,float64,18.604142996193676 | 18.844775426560606 | 18.838124601750206,False
+seattle,Seattle,data/processed/seattle/seattle_master_lst_hi_hotcompare.gpkg,intersects_city,bool,True,False
+seattle,Seattle,data/processed/seattle/seattle_master_lst_hi_hotcompare.gpkg,lst_c,float64,30.230916666666705 | 27.34556145004424 | 29.479171578258047,False
+seattle,Seattle,data/processed/seattle/seattle_master_lst_hi_hotcompare.gpkg,state_fips,object,53,False
+seattle,Seattle,data/processed/seattle/seattle_master_lst_hi_hotcompare.gpkg,state_name,object,Washington,False
+seattle,Seattle,data/processed/seattle/seattle_master_lst_hi_hotcompare.gpkg,analysis_ready,bool,True | False,False
+seattle,Seattle,data/processed/seattle/seattle_master_lst_hi_hotcompare.gpkg,lst_pct,float64,0.824468085106383 | 0.2978723404255319 | 0.6808510638297872,False
+seattle,Seattle,data/processed/seattle/seattle_master_lst_hi_hotcompare.gpkg,hi_pct,float64,0.1622340425531915 | 0.44148936170212766 | 0.3670212765957447,False
+seattle,Seattle,data/processed/seattle/seattle_master_lst_hi_hotcompare.gpkg,hi_minus_lst_pct,float64,-0.6622340425531915 | 0.14361702127659576 | -0.31382978723404253,False
+seattle,Seattle,data/processed/seattle/seattle_master_lst_hi_hotcompare.gpkg,lst_hot,bool,True | False,False
+seattle,Seattle,data/processed/seattle/seattle_master_lst_hi_hotcompare.gpkg,hi_hot,bool,False | True,False
+seattle,Seattle,data/processed/seattle/seattle_master_lst_hi_hotcompare.gpkg,mismatch_class,object,LST-only hotspot | Neither hotspot | HI-only hotspot,False
+seattle,Seattle,data/processed/seattle/seattle_master_lst_hi_hotcompare.gpkg,priority_flag,bool,False | True,False
+seattle,Seattle,data/processed/seattle/seattle_master_lst_hi_hotcompare.gpkg,q75_lst_c,float64,29.788480731225317,False
+seattle,Seattle,data/processed/seattle/seattle_master_lst_hi_hotcompare.gpkg,q75_hi_c,float64,19.2244379817576,False
+seattle,Seattle,data/processed/seattle/seattle_master_lst_hi_hotcompare.gpkg,q75_hi_minus_lst_pct,float64,0.3603723404255319,False
+seattle,Seattle,data/processed/seattle/seattle_master_lst_hi_hotcompare.gpkg,geometry,geometry,[geometry],True
+san_francisco,San Francisco,data/processed/san_francisco/san_francisco_master_lst_hi_hotcompare.gpkg,ALAND,int64,246264 | 127658592 | 0,False
+san_francisco,San Francisco,data/processed/san_francisco/san_francisco_master_lst_hi_hotcompare.gpkg,AWATER,int64,0 | 8932931 | 655490076,False
+san_francisco,San Francisco,data/processed/san_francisco/san_francisco_master_lst_hi_hotcompare.gpkg,COUNTYFP,object,075 | 041 | 081,False
+san_francisco,San Francisco,data/processed/san_francisco/san_francisco_master_lst_hi_hotcompare.gpkg,FUNCSTAT,object,S,False
+san_francisco,San Francisco,data/processed/san_francisco/san_francisco_master_lst_hi_hotcompare.gpkg,GEOID,object,06075020602 | 06041131100 | 06041990100,False
+san_francisco,San Francisco,data/processed/san_francisco/san_francisco_master_lst_hi_hotcompare.gpkg,GEOIDFQ,object,1400000US06075020602 | 1400000US06041131100 | 1400000US06041990100,False
+san_francisco,San Francisco,data/processed/san_francisco/san_francisco_master_lst_hi_hotcompare.gpkg,INTPTLAT,object,+37.7578121 | +37.9207111 | +37.9956135,False
+san_francisco,San Francisco,data/processed/san_francisco/san_francisco_master_lst_hi_hotcompare.gpkg,INTPTLON,object,-122.4306825 | -122.5974613 | -123.0361398,False
+san_francisco,San Francisco,data/processed/san_francisco/san_francisco_master_lst_hi_hotcompare.gpkg,MTFCC,object,G5020,False
+san_francisco,San Francisco,data/processed/san_francisco/san_francisco_master_lst_hi_hotcompare.gpkg,NAME,object,206.02 | 1311 | 9901,False
+san_francisco,San Francisco,data/processed/san_francisco/san_francisco_master_lst_hi_hotcompare.gpkg,NAMELSAD,object,Census Tract 206.02 | Census Tract 1311 | Census Tract 9901,False
+san_francisco,San Francisco,data/processed/san_francisco/san_francisco_master_lst_hi_hotcompare.gpkg,STATEFP,object,06,False
+san_francisco,San Francisco,data/processed/san_francisco/san_francisco_master_lst_hi_hotcompare.gpkg,TRACTCE,object,020602 | 131100 | 990100,False
+san_francisco,San Francisco,data/processed/san_francisco/san_francisco_master_lst_hi_hotcompare.gpkg,centroid_in_city,bool,True | False,False
+san_francisco,San Francisco,data/processed/san_francisco/san_francisco_master_lst_hi_hotcompare.gpkg,city,object,san_francisco,False
+san_francisco,San Francisco,data/processed/san_francisco/san_francisco_master_lst_hi_hotcompare.gpkg,city_context,object,Coastal / compact / bay-influenced,False
+san_francisco,San Francisco,data/processed/san_francisco/san_francisco_master_lst_hi_hotcompare.gpkg,city_label,object,San Francisco,False
+san_francisco,San Francisco,data/processed/san_francisco/san_francisco_master_lst_hi_hotcompare.gpkg,hi_c,float64,16.363990885969546 | 15.497950415092708 | 16.44582005338145,False
+san_francisco,San Francisco,data/processed/san_francisco/san_francisco_master_lst_hi_hotcompare.gpkg,intersects_city,bool,True,False
+san_francisco,San Francisco,data/processed/san_francisco/san_francisco_master_lst_hi_hotcompare.gpkg,lst_c,float64,28.38164772727277 | 23.4952925983691 | 25.657783408312838,False
+san_francisco,San Francisco,data/processed/san_francisco/san_francisco_master_lst_hi_hotcompare.gpkg,state_fips,object,06,False
+san_francisco,San Francisco,data/processed/san_francisco/san_francisco_master_lst_hi_hotcompare.gpkg,state_name,object,California,False
+san_francisco,San Francisco,data/processed/san_francisco/san_francisco_master_lst_hi_hotcompare.gpkg,analysis_ready,bool,True | False,False
+san_francisco,San Francisco,data/processed/san_francisco/san_francisco_master_lst_hi_hotcompare.gpkg,lst_pct,float64,0.5531914893617021 | 0.06382978723404255 | 0.14361702127659576,False
+san_francisco,San Francisco,data/processed/san_francisco/san_francisco_master_lst_hi_hotcompare.gpkg,hi_pct,float64,0.5877659574468085 | 0.005319148936170213 | 0.9787234042553191,False
+san_francisco,San Francisco,data/processed/san_francisco/san_francisco_master_lst_hi_hotcompare.gpkg,hi_minus_lst_pct,float64,0.034574468085106336 | -0.058510638297872335 | 0.8351063829787233,False
+san_francisco,San Francisco,data/processed/san_francisco/san_francisco_master_lst_hi_hotcompare.gpkg,lst_hot,bool,False | True,False
+san_francisco,San Francisco,data/processed/san_francisco/san_francisco_master_lst_hi_hotcompare.gpkg,hi_hot,bool,True | False,False
+san_francisco,San Francisco,data/processed/san_francisco/san_francisco_master_lst_hi_hotcompare.gpkg,mismatch_class,object,HI-only hotspot | Neither hotspot | Both LST and HI hotspot,False
+san_francisco,San Francisco,data/processed/san_francisco/san_francisco_master_lst_hi_hotcompare.gpkg,priority_flag,bool,True | False,False
+san_francisco,San Francisco,data/processed/san_francisco/san_francisco_master_lst_hi_hotcompare.gpkg,q75_lst_c,float64,29.713333333333367,False
+san_francisco,San Francisco,data/processed/san_francisco/san_francisco_master_lst_hi_hotcompare.gpkg,q75_hi_c,float64,16.363990885969546,False
+san_francisco,San Francisco,data/processed/san_francisco/san_francisco_master_lst_hi_hotcompare.gpkg,q75_hi_minus_lst_pct,float64,0.16888297872340421,False
+san_francisco,San Francisco,data/processed/san_francisco/san_francisco_master_lst_hi_hotcompare.gpkg,geometry,geometry,[geometry],True

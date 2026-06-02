@@ -1,0 +1,10 @@
+city_id,city_label,selected_file,n_rows,n_columns,geometry_column,geometry_types,crs
+los_angeles,Los Angeles,data/processed/los_angeles/los_angeles_master_lst_hi_hotcompare.gpkg,1108,38,geometry,Polygon,EPSG:4326
+miami,Miami,data/processed/miami/miami_master_lst_hi_hotcompare.gpkg,129,38,geometry,Polygon,EPSG:4326
+boston,Boston,data/processed/boston/boston_master_lst_hi_hotcompare.gpkg,207,38,geometry,MultiPolygon,EPSG:4326
+new_york,New York,data/processed/new_york/new_york_master_lst_hi_hotcompare.gpkg,2365,34,geometry,MultiPolygon,EPSG:4326
+chicago,Chicago,data/processed/chicago/chicago_master_lst_hi_hotcompare.gpkg,872,34,geometry,Polygon,EPSG:4326
+atlanta,Atlanta,data/processed/atlanta/atlanta_master_lst_hi_hotcompare.gpkg,223,34,geometry,MultiPolygon,EPSG:4326
+dallas,Dallas,data/processed/dallas/dallas_master_lst_hi_hotcompare.gpkg,449,34,geometry,Polygon,EPSG:4326
+seattle,Seattle,data/processed/seattle/seattle_master_lst_hi_hotcompare.gpkg,199,34,geometry,Polygon,EPSG:4326
+san_francisco,San Francisco,data/processed/san_francisco/san_francisco_master_lst_hi_hotcompare.gpkg,260,34,geometry,MultiPolygon,EPSG:4326

@@ -1,0 +1,10 @@
+city_A,city_B,context_A,context_B,story_A,story_B,HI_shift_A,HI_shift_B,difference_A_minus_B,why_this_pair_matters
+San Francisco,Phoenix,Coastal / compact / bay-influenced,Inland / desert,Strong HI-shift,Mixed / transitional,53.191489361702125,4.216867469879515,48.97462189182261,Strong contrast in apparent-heat shift
+San Francisco,Las Vegas,Coastal / compact / bay-influenced,Inland / desert,Strong HI-shift,Coupled LST-HI,53.191489361702125,0.0,53.191489361702125,Strong contrast in apparent-heat shift
+Miami,Houston,Coastal / humid,Coastal / humid,Strong HI-shift,Mixed / transitional,49.6,0.3642987249544624,49.23570127504554,Strong contrast in apparent-heat shift
+Miami,Phoenix,Coastal / humid,Inland / desert,Strong HI-shift,Mixed / transitional,49.6,4.216867469879515,45.383132530120484,Strong contrast in apparent-heat shift
+Boston,New York,Coastal / temperate,Coastal / megacity / dense core,Strong HI-shift,Mixed / transitional,36.12565445026178,0.3352490421455911,35.790405408116186,Strong contrast in apparent-heat shift
+Atlanta,Dallas,Inland / humid / sprawling Sun Belt,Inland / large Sun Belt / car-oriented,Moderate HI-shift,LST-shift,13.90134529147982,6.013363028953231,7.88798226252659,Moderate contrast / useful comparison
+Seattle,Los Angeles,Coastal / Pacific Northwest / water-constrained,Coastal / dry,Moderate HI-shift,Moderate HI-shift,11.170212765957444,8.148148148148145,3.022064617809299,Moderate contrast / useful comparison
+Chicago,Las Vegas,Great Lakes / large grid city,Inland / desert,Moderate HI-shift,Coupled LST-HI,11.009174311926609,0.0,11.009174311926609,Moderate contrast / useful comparison
+Los Angeles,New York,Coastal / dry,Coastal / megacity / dense core,Moderate HI-shift,Mixed / transitional,8.148148148148145,0.3352490421455911,7.812899106002554,Moderate contrast / useful comparison

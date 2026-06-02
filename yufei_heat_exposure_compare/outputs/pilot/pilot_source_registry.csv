@@ -1,0 +1,3 @@
+city,climate_type,need_tract_boundary,need_lst,need_hi,need_demographic,need_city_boundary,priority,notes
+Phoenix,arid,True,True,True,True,True,1,first pilot city
+Houston,humid subtropical,True,True,True,True,True,1,second pilot city

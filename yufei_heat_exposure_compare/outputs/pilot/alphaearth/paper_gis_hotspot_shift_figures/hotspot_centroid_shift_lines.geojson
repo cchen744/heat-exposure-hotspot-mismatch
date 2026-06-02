@@ -1,0 +1,10 @@
+{
+"type": "FeatureCollection",
+"name": "hotspot_centroid_shift_lines",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "city": "houston", "shift_type": "LST center to HI center", "distance_km": 8.2341430922824124, "direction": "SE" }, "geometry": { "type": "LineString", "coordinates": [ [ -95.47401629160855, 29.74698482410485 ], [ -95.432103662378381, 29.68236119774809 ] ] } },
+{ "type": "Feature", "properties": { "city": "phoenix", "shift_type": "LST center to HI center", "distance_km": 35.199190275162273, "direction": "S" }, "geometry": { "type": "LineString", "coordinates": [ [ -112.121073526606978, 33.716647728719408 ], [ -112.130718683199547, 33.399311752620847 ] ] } },
+{ "type": "Feature", "properties": { "city": "las_vegas", "shift_type": "LST center to HI center", "distance_km": 50.929844332055538, "direction": "NE" }, "geometry": { "type": "LineString", "coordinates": [ [ -114.922591680663501, 35.882556997284425 ], [ -114.666983689724148, 36.291936943689727 ] ] } }
+]
+}

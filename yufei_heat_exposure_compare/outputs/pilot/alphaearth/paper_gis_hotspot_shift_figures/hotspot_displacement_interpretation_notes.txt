@@ -1,0 +1,3 @@
+- Houston: the Heat Index hotspot center is shifted 8.2 km toward SE relative to the LST hotspot center; hotspot Jaccard overlap = 0.22.
+- Phoenix: the Heat Index hotspot center is shifted 35.2 km toward S relative to the LST hotspot center; hotspot Jaccard overlap = 0.25.
+- Las Vegas: the Heat Index hotspot center is shifted 50.9 km toward NE relative to the LST hotspot center; hotspot Jaccard overlap = 0.47.

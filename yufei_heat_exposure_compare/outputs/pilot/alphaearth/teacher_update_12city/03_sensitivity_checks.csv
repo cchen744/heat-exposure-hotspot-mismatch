@@ -1,0 +1,8 @@
+check,weighting,n_cities,coastal_mean_hi_shift,noncoastal_mean_hi_shift,difference_coastal_minus_noncoastal,still_positive
+All 12 cities,equal-city,12,22.705007499024223,7.028150020447835,15.676857478576387,True
+All 12 cities,weighted by n_ready,12,7.915627126332498,7.197943444730079,0.717683681602419,True
+Exclude San Francisco,equal-city,11,17.623927188577905,7.028150020447835,10.59577716813007,True
+Exclude Miami,equal-city,11,18.22250874886159,7.028150020447835,11.194358728413754,True
+Exclude San Francisco + Miami,equal-city,10,11.228712626293483,7.028150020447835,4.200562605845648,True
+Only cities with ready_pct >= 90,equal-city,10,21.081662817864366,7.028150020447835,14.05351279741653,True
+Only cities with ready_pct >= 95,equal-city,8,19.370815624367538,7.028150020447835,12.342665603919702,True

@@ -1,0 +1,67 @@
+city_1,city_2,context_1,context_2,mechanism_1,mechanism_2,signature_distance,similarity_score
+Phoenix,Houston,Inland / desert,Coastal / humid,Mixed / transitional,Mixed / transitional,1.245025655024216,0.44542920824181553
+Dallas,Houston,Inland / large Sun Belt / car-oriented,Coastal / humid,Mixed / transitional,Mixed / transitional,1.5456052256458201,0.392833888744984
+Los Angeles,New York,Coastal / dry,Coastal / megacity / dense core,Moderate HI-dominant,Mixed / transitional,1.6428814652687898,0.378374896165953
+Atlanta,Seattle,Inland / humid / sprawling Sun Belt,Coastal / Pacific Northwest / water-constrained,Moderate HI-dominant,Moderate HI-dominant,1.6947798614084506,0.3710878258817553
+Atlanta,New York,Inland / humid / sprawling Sun Belt,Coastal / megacity / dense core,Moderate HI-dominant,Mixed / transitional,1.8428555199339147,0.3517589947811509
+Seattle,New York,Coastal / Pacific Northwest / water-constrained,Coastal / megacity / dense core,Moderate HI-dominant,Mixed / transitional,1.8931151851621415,0.34564818059394203
+Houston,Las Vegas,Coastal / humid,Inland / desert,Mixed / transitional,Coupled LST-HI,2.210955278662682,0.3114337987343399
+Dallas,Phoenix,Inland / large Sun Belt / car-oriented,Inland / desert,Mixed / transitional,Mixed / transitional,2.239235962199095,0.30871477461651387
+Los Angeles,Dallas,Coastal / dry,Inland / large Sun Belt / car-oriented,Moderate HI-dominant,Mixed / transitional,2.3227366060494696,0.30095674697156893
+Los Angeles,Houston,Coastal / dry,Coastal / humid,Moderate HI-dominant,Mixed / transitional,2.3823787531321843,0.2956499177018452
+Dallas,New York,Inland / large Sun Belt / car-oriented,Coastal / megacity / dense core,Mixed / transitional,Mixed / transitional,2.3824364599532704,0.29564487369965714
+Seattle,Los Angeles,Coastal / Pacific Northwest / water-constrained,Coastal / dry,Moderate HI-dominant,Moderate HI-dominant,2.410051076590897,0.29325073951670017
+Chicago,Las Vegas,Great Lakes / large grid city,Inland / desert,Moderate HI-dominant,Coupled LST-HI,2.493608921980303,0.28623696078528565
+Atlanta,Los Angeles,Inland / humid / sprawling Sun Belt,Coastal / dry,Moderate HI-dominant,Moderate HI-dominant,2.50969936051495,0.284924689348115
+Phoenix,Las Vegas,Inland / desert,Inland / desert,Mixed / transitional,Coupled LST-HI,2.5312960462446936,0.2831821481134202
+Atlanta,Dallas,Inland / humid / sprawling Sun Belt,Inland / large Sun Belt / car-oriented,Moderate HI-dominant,Mixed / transitional,2.5764819934748475,0.27960437150933826
+Chicago,Los Angeles,Great Lakes / large grid city,Coastal / dry,Moderate HI-dominant,Moderate HI-dominant,2.778861959954493,0.2646299363663558
+Dallas,Las Vegas,Inland / large Sun Belt / car-oriented,Inland / desert,Mixed / transitional,Coupled LST-HI,2.78066922332395,0.26450343601358595
+San Francisco,Miami,Coastal / compact / bay-influenced,Coastal / humid,Strong HI-dominant,Strong HI-dominant,2.876807704994121,0.2579441840026771
+Los Angeles,Phoenix,Coastal / dry,Inland / desert,Moderate HI-dominant,Mixed / transitional,2.8859941106564992,0.25733440955500064
+Boston,Atlanta,Coastal / temperate,Inland / humid / sprawling Sun Belt,Strong HI-dominant,Moderate HI-dominant,2.9088592306717533,0.25582911560315924
+Houston,New York,Coastal / humid,Coastal / megacity / dense core,Mixed / transitional,Mixed / transitional,2.9374406296911104,0.25397208340343896
+Boston,Seattle,Coastal / temperate,Coastal / Pacific Northwest / water-constrained,Strong HI-dominant,Moderate HI-dominant,2.9969724255289383,0.25018936673491443
+Miami,Boston,Coastal / humid,Coastal / temperate,Strong HI-dominant,Strong HI-dominant,3.014665589032459,0.24908674902633712
+Chicago,Dallas,Great Lakes / large grid city,Inland / large Sun Belt / car-oriented,Moderate HI-dominant,Mixed / transitional,3.0766316057098453,0.24530055612564344
+San Francisco,Boston,Coastal / compact / bay-influenced,Coastal / temperate,Strong HI-dominant,Strong HI-dominant,3.1422032617749904,0.24141741406757677
+Los Angeles,Las Vegas,Coastal / dry,Inland / desert,Moderate HI-dominant,Coupled LST-HI,3.230652959267468,0.23637013237151663
+Boston,Los Angeles,Coastal / temperate,Coastal / dry,Strong HI-dominant,Moderate HI-dominant,3.389010348273769,0.2278417959058373
+Chicago,New York,Great Lakes / large grid city,Coastal / megacity / dense core,Moderate HI-dominant,Mixed / transitional,3.469736232988162,0.22372684826895659
+Atlanta,Houston,Inland / humid / sprawling Sun Belt,Coastal / humid,Moderate HI-dominant,Mixed / transitional,3.5171188470545984,0.2213800508375052
+Chicago,Houston,Great Lakes / large grid city,Coastal / humid,Moderate HI-dominant,Mixed / transitional,3.528086739020141,0.2208438260209644
+Seattle,Dallas,Coastal / Pacific Northwest / water-constrained,Inland / large Sun Belt / car-oriented,Moderate HI-dominant,Mixed / transitional,3.6186643113886543,0.21651281248871246
+Phoenix,New York,Inland / desert,Coastal / megacity / dense core,Mixed / transitional,Mixed / transitional,3.706219412375637,0.2124847807499934
+Boston,New York,Coastal / temperate,Coastal / megacity / dense core,Strong HI-dominant,Mixed / transitional,3.8624824910662494,0.20565626752122643
+Boston,Dallas,Coastal / temperate,Inland / large Sun Belt / car-oriented,Strong HI-dominant,Mixed / transitional,3.916816183317578,0.2033836455779925
+Atlanta,Phoenix,Inland / humid / sprawling Sun Belt,Inland / desert,Moderate HI-dominant,Mixed / transitional,3.9599727062846783,0.2016140126603763
+Chicago,Phoenix,Great Lakes / large grid city,Inland / desert,Moderate HI-dominant,Mixed / transitional,3.9712536063949564,0.20115650481271222
+New York,Las Vegas,Coastal / megacity / dense core,Inland / desert,Mixed / transitional,Coupled LST-HI,4.087892681502143,0.19654502612361732
+Boston,Chicago,Coastal / temperate,Great Lakes / large grid city,Strong HI-dominant,Moderate HI-dominant,4.091495755219444,0.19640593807328036
+Seattle,Houston,Coastal / Pacific Northwest / water-constrained,Coastal / humid,Moderate HI-dominant,Mixed / transitional,4.269503921494297,0.1897711843274282
+Atlanta,Chicago,Inland / humid / sprawling Sun Belt,Great Lakes / large grid city,Moderate HI-dominant,Moderate HI-dominant,4.3388639410651555,0.18730576599044968
+Seattle,Chicago,Coastal / Pacific Northwest / water-constrained,Great Lakes / large grid city,Moderate HI-dominant,Moderate HI-dominant,4.425371301327956,0.18431918194340585
+Miami,Dallas,Coastal / humid,Inland / large Sun Belt / car-oriented,Strong HI-dominant,Mixed / transitional,4.684301564478247,0.1759231083461682
+Miami,Chicago,Coastal / humid,Great Lakes / large grid city,Strong HI-dominant,Moderate HI-dominant,4.777987641267983,0.173070636714022
+Seattle,Phoenix,Coastal / Pacific Northwest / water-constrained,Inland / desert,Moderate HI-dominant,Mixed / transitional,4.789580799093531,0.17272407704484738
+Boston,Houston,Coastal / temperate,Coastal / humid,Strong HI-dominant,Mixed / transitional,4.841227132474654,0.17119690389035547
+San Francisco,Chicago,Coastal / compact / bay-influenced,Great Lakes / large grid city,Strong HI-dominant,Moderate HI-dominant,4.865219145280686,0.17049661320918028
+Boston,Phoenix,Coastal / temperate,Inland / desert,Strong HI-dominant,Mixed / transitional,4.9170243191299825,0.16900386850987903
+Atlanta,Las Vegas,Inland / humid / sprawling Sun Belt,Inland / desert,Moderate HI-dominant,Coupled LST-HI,5.009776236945517,0.1663955462854724
+Miami,Atlanta,Coastal / humid,Inland / humid / sprawling Sun Belt,Strong HI-dominant,Moderate HI-dominant,5.058316739619414,0.16506235031594277
+Miami,Los Angeles,Coastal / humid,Coastal / dry,Strong HI-dominant,Moderate HI-dominant,5.177672396203829,0.16187326485854098
+Miami,Phoenix,Coastal / humid,Inland / desert,Strong HI-dominant,Mixed / transitional,5.3875530200297295,0.1565544734993598
+Seattle,Las Vegas,Coastal / Pacific Northwest / water-constrained,Inland / desert,Moderate HI-dominant,Coupled LST-HI,5.4663199244450045,0.15464746744429422
+Boston,Las Vegas,Coastal / temperate,Inland / desert,Strong HI-dominant,Coupled LST-HI,5.471338682813646,0.1545275327121674
+Miami,Houston,Coastal / humid,Coastal / humid,Strong HI-dominant,Mixed / transitional,5.523642878094966,0.15328858717232846
+Miami,Las Vegas,Coastal / humid,Inland / desert,Strong HI-dominant,Coupled LST-HI,5.6077054467051894,0.15133846507922527
+Miami,Seattle,Coastal / humid,Coastal / Pacific Northwest / water-constrained,Strong HI-dominant,Moderate HI-dominant,5.667770642959674,0.14997516464605362
+San Francisco,Los Angeles,Coastal / compact / bay-influenced,Coastal / dry,Strong HI-dominant,Moderate HI-dominant,5.734914634573583,0.14847998144869054
+San Francisco,Atlanta,Coastal / compact / bay-influenced,Inland / humid / sprawling Sun Belt,Strong HI-dominant,Moderate HI-dominant,5.834632752672019,0.14631364056964832
+San Francisco,Seattle,Coastal / compact / bay-influenced,Coastal / Pacific Northwest / water-constrained,Strong HI-dominant,Moderate HI-dominant,5.854460442358239,0.1458904035422452
+Miami,New York,Coastal / humid,Coastal / megacity / dense core,Strong HI-dominant,Mixed / transitional,5.917715185044463,0.14455639951206992
+San Francisco,Dallas,Coastal / compact / bay-influenced,Inland / large Sun Belt / car-oriented,Strong HI-dominant,Mixed / transitional,6.044294600797565,0.14195885559453725
+San Francisco,New York,Coastal / compact / bay-influenced,Coastal / megacity / dense core,Strong HI-dominant,Mixed / transitional,6.414573173308553,0.1348695301301851
+San Francisco,Las Vegas,Coastal / compact / bay-influenced,Inland / desert,Strong HI-dominant,Coupled LST-HI,6.653453283004612,0.13065997308961394
+San Francisco,Phoenix,Coastal / compact / bay-influenced,Inland / desert,Strong HI-dominant,Mixed / transitional,6.892388376923745,0.12670435769783733
+San Francisco,Houston,Coastal / compact / bay-influenced,Coastal / humid,Strong HI-dominant,Mixed / transitional,6.9589698447701505,0.1256444011604217

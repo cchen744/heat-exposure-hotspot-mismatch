@@ -1,0 +1,3 @@
+city,tract_rows,unique_geoids,missing_hi_mean,missing_hi_median,era5_hourly_count
+Houston,654,654,105,105,2208
+Phoenix,373,373,41,41,2208

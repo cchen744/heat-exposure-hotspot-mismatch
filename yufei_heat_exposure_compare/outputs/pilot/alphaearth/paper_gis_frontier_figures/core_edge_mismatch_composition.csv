@@ -1,0 +1,49 @@
+city,zone,mismatch_class,pct,n_zone
+houston,Core,Both LST and HI hotspot,8.695652173913043,138
+houston,Core,LST-only hotspot,16.666666666666664,138
+houston,Core,HI-only hotspot,21.014492753623188,138
+houston,Core,Neither hotspot,53.62318840579711,138
+houston,Inner ring,Both LST and HI hotspot,8.75912408759124,137
+houston,Inner ring,LST-only hotspot,20.437956204379564,137
+houston,Inner ring,HI-only hotspot,1.4598540145985401,137
+houston,Inner ring,Neither hotspot,69.34306569343066,137
+houston,Outer ring,Both LST and HI hotspot,8.75912408759124,137
+houston,Outer ring,LST-only hotspot,16.78832116788321,137
+houston,Outer ring,HI-only hotspot,10.218978102189782,137
+houston,Outer ring,Neither hotspot,64.23357664233576,137
+houston,Edge,Both LST and HI hotspot,10.948905109489052,137
+houston,Edge,LST-only hotspot,9.48905109489051,137
+houston,Edge,HI-only hotspot,32.11678832116788,137
+houston,Edge,Neither hotspot,47.44525547445255,137
+phoenix,Core,Both LST and HI hotspot,0.0,83
+phoenix,Core,LST-only hotspot,12.048192771084338,83
+phoenix,Core,HI-only hotspot,0.0,83
+phoenix,Core,Neither hotspot,87.95180722891565,83
+phoenix,Inner ring,Both LST and HI hotspot,2.4096385542168677,83
+phoenix,Inner ring,LST-only hotspot,7.228915662650602,83
+phoenix,Inner ring,HI-only hotspot,2.4096385542168677,83
+phoenix,Inner ring,Neither hotspot,87.95180722891565,83
+phoenix,Outer ring,Both LST and HI hotspot,31.32530120481928,83
+phoenix,Outer ring,LST-only hotspot,15.66265060240964,83
+phoenix,Outer ring,HI-only hotspot,12.048192771084338,83
+phoenix,Outer ring,Neither hotspot,40.963855421686745,83
+phoenix,Edge,Both LST and HI hotspot,9.63855421686747,83
+phoenix,Edge,LST-only hotspot,21.686746987951807,83
+phoenix,Edge,HI-only hotspot,59.036144578313255,83
+phoenix,Edge,Neither hotspot,9.63855421686747,83
+las_vegas,Core,Both LST and HI hotspot,36.52173913043478,115
+las_vegas,Core,LST-only hotspot,25.217391304347824,115
+las_vegas,Core,HI-only hotspot,6.086956521739131,115
+las_vegas,Core,Neither hotspot,32.17391304347826,115
+las_vegas,Inner ring,Both LST and HI hotspot,12.280701754385964,114
+las_vegas,Inner ring,LST-only hotspot,5.263157894736842,114
+las_vegas,Inner ring,HI-only hotspot,15.789473684210526,114
+las_vegas,Inner ring,Neither hotspot,66.66666666666666,114
+las_vegas,Outer ring,Both LST and HI hotspot,7.894736842105263,114
+las_vegas,Outer ring,LST-only hotspot,3.508771929824561,114
+las_vegas,Outer ring,HI-only hotspot,10.526315789473683,114
+las_vegas,Outer ring,Neither hotspot,78.0701754385965,114
+las_vegas,Edge,Both LST and HI hotspot,7.82608695652174,115
+las_vegas,Edge,LST-only hotspot,1.7391304347826086,115
+las_vegas,Edge,HI-only hotspot,3.4782608695652173,115
+las_vegas,Edge,Neither hotspot,86.95652173913044,115

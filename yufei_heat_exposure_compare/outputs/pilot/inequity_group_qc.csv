@@ -1,0 +1,11 @@
+city,inequity_group,count
+Houston,Low income + High poverty,271
+Houston,High income + Low poverty,269
+Houston,High income + High poverty,53
+Houston,Low income + Low poverty,52
+Houston,Missing,9
+Phoenix,Low income + High poverty,147
+Phoenix,High income + Low poverty,147
+Phoenix,Low income + Low poverty,37
+Phoenix,High income + High poverty,37
+Phoenix,Missing,5

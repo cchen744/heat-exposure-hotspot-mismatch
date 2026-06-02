@@ -1,0 +1,2 @@
+hypothesis,observed_coastal_mean,observed_noncoastal_mean,observed_difference,permutation_p_descriptive,interpretation
+Coastal / water-influenced cities have larger HI-only shift than other cities,22.705007499024223,7.028150020447835,15.676857478576387,0.10678932106789321,Pattern exists but should be framed cautiously

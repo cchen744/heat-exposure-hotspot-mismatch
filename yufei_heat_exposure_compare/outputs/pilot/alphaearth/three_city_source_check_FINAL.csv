@@ -1,0 +1,4 @@
+city,source_path,geoid_col,lst_col,hi_col,n_ready
+houston,/Users/yufeizhou/Desktop/heat-exposure-compare/data_processed/houston/houston_master_lst_hi_hotcompare.gpkg,GEOID,lst_summer_mean_c,hi_summer_mean_c,549
+phoenix,/Users/yufeizhou/Desktop/heat-exposure-compare/data_processed/phoenix/phoenix_master_with_lst_hi_fixed.gpkg,GEOID,lst_c,hi_c,332
+las_vegas,/Users/yufeizhou/Desktop/heat-exposure-compare/city_intake/las_vegas/working/las_vegas_heat_master_template.csv,GEOID,lst_c,hi_c,458

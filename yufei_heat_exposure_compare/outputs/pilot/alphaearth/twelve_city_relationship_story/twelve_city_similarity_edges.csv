@@ -1,0 +1,17 @@
+i,j,distance,city_i,city_j
+0,1,1.245025655024216,Houston,Phoenix
+0,9,1.54560522564582,Houston,Dallas
+3,6,1.6428814652687895,Los Angeles,New York
+8,10,1.6947798614084506,Atlanta,Seattle
+6,8,1.8428555199339147,New York,Atlanta
+6,10,1.8931151851621417,New York,Seattle
+0,2,2.210955278662682,Houston,Las Vegas
+1,9,2.2392359621990954,Phoenix,Dallas
+3,9,2.3227366060494696,Los Angeles,Dallas
+2,7,2.493608921980303,Las Vegas,Chicago
+3,7,2.778861959954493,Los Angeles,Chicago
+4,11,2.876807704994121,Miami,San Francisco
+5,8,2.9088592306717533,Boston,Atlanta
+5,10,2.9969724255289383,Boston,Seattle
+4,5,3.014665589032459,Miami,Boston
+5,11,3.14220326177499,Boston,San Francisco

@@ -1,0 +1,5 @@
+section,city,tract_rows,missing_lst,missing_hi,city_median_lst_c,city_median_hi_c,lst_anomaly_min,lst_anomaly_max,hi_anomaly_min,hi_anomaly_max,lst_hotspot_threshold_c,hi_hotspot_threshold_c,overlap_hotspot_count,lst_only_hotspot_count,hi_only_hotspot_count,neither_count,missing_count
+anomaly_base,Houston,654,0,105,48.531,34.182,-14.599,4.95,-0.377,0.374,,,,,,,
+anomaly_base,Phoenix,373,0,41,57.217,33.308,-5.776,3.249,-2.002,0.879,,,,,,,
+hotspot_compare,Houston,654,0,105,,,,,,,50.315,34.198,38.0,45.0,108.0,358.0,105.0
+hotspot_compare,Phoenix,373,0,41,,,,,,,58.607,33.694,29.0,37.0,44.0,222.0,41.0

@@ -1,0 +1,7 @@
+city,required_item,description,status,notes
+las_vegas,heat_master_table,tract-level heat table with at least GEOID and heat variables such as LST / HI / hi_minus_lst,missing,
+las_vegas,alphaearth_embedding,tract-level AlphaEarth embedding or tract-mean mosaic table,missing,
+las_vegas,pc_scores,"PC1-PC7 scores for the city, or enough embedding data to recompute PCA",missing,
+miami,heat_master_table,tract-level heat table with at least GEOID and heat variables such as LST / HI / hi_minus_lst,missing,
+miami,alphaearth_embedding,tract-level AlphaEarth embedding or tract-mean mosaic table,missing,
+miami,pc_scores,"PC1-PC7 scores for the city, or enough embedding data to recompute PCA",missing,

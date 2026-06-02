@@ -1,0 +1,4 @@
+| city | tract_count | valid_both_count | missing_hi_count | median_lst_c | median_hi_c | lst_hotspot_threshold_c | hi_hotspot_threshold_c | lst_hotspot_count | hi_hotspot_count | overlap_hotspot_count | lst_only_hotspot_count | hi_only_hotspot_count | jaccard_index | overlap_share_pct | lst_only_share_pct | hi_only_share_pct | population_overlap_share_pct |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Houston | 654.0 | 549.0 | 105.0 | 48.531 | 34.182 | 50.315 | 34.198 | 131.0 | 146.0 | 38.0 | 45.0 | 108.0 | 0.199 | 6.922 | 8.197 | 19.672 | 6.188 |
+| Phoenix | 373.0 | 332.0 | 41.0 | 57.217 | 33.308 | 58.607 | 33.694 | 75.0 | 73.0 | 29.0 | 37.0 | 44.0 | 0.264 | 8.735 | 11.145 | 13.253 | 9.344 |

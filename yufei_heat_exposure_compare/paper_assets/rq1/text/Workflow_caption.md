@@ -1,0 +1,3 @@
+# RQ1 workflow figure caption
+
+Figure X. Workflow for tract-level comparison of Land Surface Temperature (LST) and Heat Index (HI) in Houston and Phoenix. Summer LST and HI were harmonized to census-tract geometries and analyzed at the tract level. Within each city and each measure, hotspots were defined as the top 20% of tracts. Tracts were then classified into overlap hotspots, LST-only hotspots, HI-only hotspots, neither, or missing. To support interpretation beyond hotspot overlap, a standardized HI−LST gap was also computed to show where humidity-sensitive heat is relatively stronger or weaker than surface heat. Final outputs include original-value choropleth maps, hotspot mismatch maps, standardized gap maps, and city-level summary tables.

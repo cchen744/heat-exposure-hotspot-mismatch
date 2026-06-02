@@ -1,0 +1,9 @@
+city,slot,required,subfolder,example_expected_path,description,status
+las_vegas,heat_master_table,True,raw,/Users/yufeizhou/Desktop/heat-exposure-compare/city_intake/las_vegas/raw/las_vegas_heat_master_table.csv,Tract-level heat table with GEOID and target heat variables (LST / HI / hi_minus_lst if available).,missing
+las_vegas,alphaearth_embedding,True,raw,/Users/yufeizhou/Desktop/heat-exposure-compare/city_intake/las_vegas/raw/las_vegas_alphaearth_tract_mean_mosaic.csv,Tract-level AlphaEarth embedding / tract-mean mosaic table.,missing
+las_vegas,pc_scores,False,working,/Users/yufeizhou/Desktop/heat-exposure-compare/city_intake/las_vegas/working/las_vegas_alphaearth_pc1_pc7_scores.csv,Optional if already computed; otherwise we can recompute from embedding.,missing
+las_vegas,notes,False,final,/Users/yufeizhou/Desktop/heat-exposure-compare/city_intake/las_vegas/final/las_vegas_intake_notes.md,"Short note documenting data source, date, CRS, and any preprocessing decisions.",missing
+miami,heat_master_table,True,raw,/Users/yufeizhou/Desktop/heat-exposure-compare/city_intake/miami/raw/miami_heat_master_table.csv,Tract-level heat table with GEOID and target heat variables (LST / HI / hi_minus_lst if available).,missing
+miami,alphaearth_embedding,True,raw,/Users/yufeizhou/Desktop/heat-exposure-compare/city_intake/miami/raw/miami_alphaearth_tract_mean_mosaic.csv,Tract-level AlphaEarth embedding / tract-mean mosaic table.,missing
+miami,pc_scores,False,working,/Users/yufeizhou/Desktop/heat-exposure-compare/city_intake/miami/working/miami_alphaearth_pc1_pc7_scores.csv,Optional if already computed; otherwise we can recompute from embedding.,missing
+miami,notes,False,final,/Users/yufeizhou/Desktop/heat-exposure-compare/city_intake/miami/final/miami_intake_notes.md,"Short note documenting data source, date, CRS, and any preprocessing decisions.",missing

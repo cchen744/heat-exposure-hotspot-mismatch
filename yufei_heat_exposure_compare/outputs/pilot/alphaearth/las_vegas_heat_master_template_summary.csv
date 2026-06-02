@@ -1,0 +1,2 @@
+city,rows,unique_geoid_n,missing_total_population_n,missing_income_n,missing_poverty_rate_n,missing_lst_c_n,missing_hi_c_n,missing_hi_minus_lst_n,tract_file_used,ready_for_modeling,note
+las_vegas,779,779,779,779,779,779,779,779,/Users/yufeizhou/Desktop/heat-exposure-compare/data_processed/las_vegas/las_vegas_tracts_projected.gpkg,False,Template only. Need real tract-level heat + demographic values before modeling.

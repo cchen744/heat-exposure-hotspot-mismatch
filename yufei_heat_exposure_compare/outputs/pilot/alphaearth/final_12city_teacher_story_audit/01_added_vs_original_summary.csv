@@ -1,0 +1,3 @@
+expansion_group,n_cities,cities,mean_HI_minus_LST_gap,median_HI_minus_LST_gap,mean_HI_only,mean_LST_only,mean_total_detected_hotspot,mean_ready
+Added 6,6,"New York, Chicago, Atlanta, Dallas, Seattle, San Francisco",15.936805633694137,11.089693538942026,29.041925043477363,13.105119409783226,54.35440673782483,92.51126342396647
+Original 6,6,"Houston, Phoenix, Las Vegas, Los Angeles, Miami, Boston",16.40916146554065,6.18250780901383,28.184442880899486,11.775281415358839,53.347221610881284,97.77378006581556

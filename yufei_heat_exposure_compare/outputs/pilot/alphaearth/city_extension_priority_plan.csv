@@ -1,0 +1,3 @@
+city,priority_rank,recommended_now,reason,next_action
+las_vegas,1,True,Dry-climate extension city; easier first test against Phoenix-style workflow.,Prepare this city first.
+miami,2,False,Humid-climate contrast city; better as second extension after one new city runs successfully.,Prepare after Las Vegas.

@@ -1,0 +1,7 @@
+scan_root,evidence_type,candidate_city,path,file_name,score
+data_processed,filename_token,poverty,/Users/yufeizhou/Desktop/heat-exposure-compare/data_processed/phoenix/phoenix_master_demo_poverty.gpkg,phoenix_master_demo_poverty.gpkg,2
+data_processed,filename_token,poverty,/Users/yufeizhou/Desktop/heat-exposure-compare/data_processed/houston/houston_master_demo_poverty.gpkg,houston_master_demo_poverty.gpkg,2
+data_raw,parent_folder,tract_2025,/Users/yufeizhou/Desktop/heat-exposure-compare/data_raw/phoenix/tract_2025/tl_2025_04_tract.shp,tl_2025_04_tract.shp,6
+data_raw,parent_folder,tract_2025,/Users/yufeizhou/Desktop/heat-exposure-compare/data_raw/houston/tract_2025/tl_2025_48_tract.shp,tl_2025_48_tract.shp,6
+city_intake,folder,las_vegas,/Users/yufeizhou/Desktop/heat-exposure-compare/city_intake/las_vegas,,5
+city_intake,folder,miami,/Users/yufeizhou/Desktop/heat-exposure-compare/city_intake/miami,,5

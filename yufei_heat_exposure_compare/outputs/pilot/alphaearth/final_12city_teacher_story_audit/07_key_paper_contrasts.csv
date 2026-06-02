@@ -1,0 +1,7 @@
+city_A,city_B,context_A,context_B,story_A,story_B,gap_A,gap_B,gap_difference_A_minus_B,why_this_pair_matters
+San Francisco,Phoenix,Coastal / water-influenced,Inland desert,Strong HI-shift,Mixed / transitional,53.191489361702125,4.216867469879515,48.97462189182261,Strong coastal/bay apparent-heat case vs inland desert mixed case
+Miami,Houston,Coastal / water-influenced,Coastal / water-influenced,Strong HI-shift,Mixed / transitional,49.6,0.3642987249544624,49.23570127504554,"Both humid/coastal, but Miami is HI-shift while Houston is mixed"
+Boston,New York,Coastal / water-influenced,Coastal / water-influenced,Strong HI-shift,Mixed / transitional,36.12565445026178,0.3352490421455911,35.790405408116186,"Both northeastern/coastal, but Boston is strong HI-shift while New York is large mixed/caution case"
+Atlanta,Dallas,Inland Sun Belt,Inland Sun Belt,Moderate HI-shift,Mixed / transitional,13.90134529147982,6.013363028953231,7.88798226252659,"Both inland Sun Belt, but Atlanta is more HI-shift than Dallas"
+Chicago,Las Vegas,Great Lakes,Inland desert,Moderate HI-shift,Coupled LST-HI,11.009174311926609,0.0,11.009174311926609,High LST-HI coupling comparison across Great Lakes vs desert
+Seattle,Los Angeles,Coastal / water-influenced,Coastal / water-influenced,Moderate HI-shift,Moderate HI-shift,11.170212765957444,8.148148148148145,3.022064617809299,Coastal/water-influenced moderate HI-shift contrast

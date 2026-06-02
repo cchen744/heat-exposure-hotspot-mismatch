@@ -1,0 +1,2 @@
+city,rows,crs,utm_crs,geoid_unique_n,geoid_duplicated_n,area_km2_min,area_km2_median,area_km2_max,tract_file_used
+las_vegas,779,EPSG:32611,EPSG:32611,779,0,0.15468945484035085,2.005483417455895,22500.782653274382,/Users/yufeizhou/Desktop/heat-exposure-compare/data_processed/las_vegas/las_vegas_tracts_projected.gpkg

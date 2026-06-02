@@ -1,0 +1,3 @@
+city,tracts_path,boundary_path,rows,crs,lst_col,hi_col,geoid_col,pop_col,missing_lst_n,missing_hi_n
+Houston,/Users/yufeizhou/Desktop/heat-exposure-compare/data_processed/houston/houston_master_with_lst_hi_fixed.gpkg,/Users/yufeizhou/Desktop/heat-exposure-compare/data_processed/houston/houston_city_boundary.gpkg,654,EPSG:32615,lst_c,hi_c,GEOID,total_population,0,105
+Phoenix,/Users/yufeizhou/Desktop/heat-exposure-compare/data_processed/phoenix/phoenix_master_with_lst_hi_fixed.gpkg,/Users/yufeizhou/Desktop/heat-exposure-compare/data_processed/phoenix/phoenix_city_boundary.gpkg,373,EPSG:32612,lst_c,hi_c,GEOID,total_population,0,41

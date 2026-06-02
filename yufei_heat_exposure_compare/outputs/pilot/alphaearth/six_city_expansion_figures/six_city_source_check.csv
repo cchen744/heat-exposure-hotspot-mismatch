@@ -1,0 +1,7 @@
+city,path,status,reason,n_total,n_ready,score,lst_col,hi_col,geoid_col,path_short
+houston,/Users/yufeizhou/Desktop/heat-exposure-compare/outputs/pilot/alphaearth/paper_gis_figures/three_city_lstadaptive_heat_index_mismatch_GIS_READY.gpkg,ok,ok,549,549,559549,lst_c,hi_c,GEOID,outputs/pilot/alphaearth/paper_gis_figures/three_city_lstadaptive_heat_index_mismatch_GIS_READY.gpkg
+phoenix,/Users/yufeizhou/Desktop/heat-exposure-compare/outputs/pilot/alphaearth/paper_gis_advanced_figures/three_city_GIS_ADVANCED.gpkg,ok,ok,332,332,337332,lst_c,hi_c,GEOID,outputs/pilot/alphaearth/paper_gis_advanced_figures/three_city_GIS_ADVANCED.gpkg
+las_vegas,/Users/yufeizhou/Desktop/heat-exposure-compare/outputs/pilot/alphaearth/paper_gis_advanced_figures/three_city_GIS_ADVANCED.gpkg,ok,ok,458,458,463458,lst_c,hi_c,GEOID,outputs/pilot/alphaearth/paper_gis_advanced_figures/three_city_GIS_ADVANCED.gpkg
+los_angeles,/Users/yufeizhou/Desktop/heat-exposure-compare/data/processed/los_angeles/los_angeles_master_lst_hi_hotcompare.gpkg,ok,ok,1108,1080,1131108,lst_c,hi_c,GEOID,data/processed/los_angeles/los_angeles_master_lst_hi_hotcompare.gpkg
+miami,/Users/yufeizhou/Desktop/heat-exposure-compare/data/processed/miami/miami_master_lst_hi_hotcompare.gpkg,ok,ok,129,125,175129,lst_c,hi_c,GEOID,data/processed/miami/miami_master_lst_hi_hotcompare.gpkg
+boston,/Users/yufeizhou/Desktop/heat-exposure-compare/data/processed/boston/boston_master_lst_hi_hotcompare.gpkg,ok,ok,207,191,241207,lst_c,hi_c,GEOID,data/processed/boston/boston_master_lst_hi_hotcompare.gpkg

@@ -1,0 +1,13 @@
+city,n_tracts_plotted,both,lst_only,hi_only,neither,missing
+houston,549,51,87,89,322,0
+phoenix,332,36,47,61,188,0
+las_vegas,458,74,41,41,302,0
+los_angeles,1108,78,192,280,530,28
+miami,129,29,3,65,28,4
+boston,207,26,22,91,52,16
+new_york,2365,121,401,408,1158,277
+chicago,872,161,57,153,501,0
+atlanta,223,15,41,72,95,0
+dallas,449,56,57,84,252,0
+seattle,199,6,41,62,79,11
+san_francisco,260,50,0,100,38,72

@@ -1,0 +1,47 @@
+path,name,matched_text_keys,n_matches
+/Users/yufeizhou/Desktop/heat-exposure-compare/notebooks/04_heat_pilot_setup.ipynb,04_heat_pilot_setup.ipynb,"air_temp_c, heat index, hi_c, relative humidity",4
+/Users/yufeizhou/Desktop/heat-exposure-compare/notebooks/04_heat_pilot_setup.ipynb,04_heat_pilot_setup.ipynb,"air_temp_c, heat index, hi_c, relative humidity",4
+/Users/yufeizhou/Desktop/heat-exposure-compare/notebooks/05_rq1_city_comparison.ipynb,05_rq1_city_comparison.ipynb,"heat index, hi_c, hi_minus_lst, relative humidity",4
+/Users/yufeizhou/Desktop/heat-exposure-compare/notebooks/05_rq1_city_comparison.ipynb,05_rq1_city_comparison.ipynb,"heat index, hi_c, hi_minus_lst, relative humidity",4
+/Users/yufeizhou/Desktop/heat-exposure-compare/city_intake/las_vegas/final/las_vegas_heat_extraction_input_readme.md,las_vegas_heat_extraction_input_readme.md,"air_temp_c, hi_c, hi_minus_lst, rh_pct",4
+/Users/yufeizhou/Desktop/heat-exposure-compare/city_intake/las_vegas/final/las_vegas_heat_master_template_readme.md,las_vegas_heat_master_template_readme.md,"air_temp_c, hi_c, hi_minus_lst, rh_pct",4
+/Users/yufeizhou/Desktop/heat-exposure-compare/notebooks/08_rq1_deep_dive_maps.ipynb,08_rq1_deep_dive_maps.ipynb,"heat index, hi_c, hi_minus_lst",3
+/Users/yufeizhou/Desktop/heat-exposure-compare/notebooks/08_rq1_deep_dive_maps.ipynb,08_rq1_deep_dive_maps.ipynb,"heat index, hi_c, hi_minus_lst",3
+/Users/yufeizhou/Desktop/heat-exposure-compare/notebooks/07_build_new_city_inputs.ipynb,07_build_new_city_inputs.ipynb,"heat index, hi_c",2
+/Users/yufeizhou/Desktop/heat-exposure-compare/notebooks/07_build_new_city_inputs.ipynb,07_build_new_city_inputs.ipynb,"heat index, hi_c",2
+/Users/yufeizhou/Desktop/heat-exposure-compare/notebooks/09_rq1_interactive_overlay_maps.ipynb,09_rq1_interactive_overlay_maps.ipynb,"heat index, hi_c",2
+/Users/yufeizhou/Desktop/heat-exposure-compare/notebooks/09_rq1_interactive_overlay_maps.ipynb,09_rq1_interactive_overlay_maps.ipynb,"heat index, hi_c",2
+/Users/yufeizhou/Desktop/heat-exposure-compare/notebooks/10_alphaearth_pc_interpretation.ipynb,10_alphaearth_pc_interpretation.ipynb,"hi_c, hi_minus_lst",2
+/Users/yufeizhou/Desktop/heat-exposure-compare/notebooks/10_alphaearth_pc_interpretation.ipynb,10_alphaearth_pc_interpretation.ipynb,"hi_c, hi_minus_lst",2
+/Users/yufeizhou/Desktop/heat-exposure-compare/notebooks/12_alphaearth_cross_city_transfer.ipynb,12_alphaearth_cross_city_transfer.ipynb,"hi_c, hi_minus_lst",2
+/Users/yufeizhou/Desktop/heat-exposure-compare/notebooks/12_alphaearth_cross_city_transfer.ipynb,12_alphaearth_cross_city_transfer.ipynb,"hi_c, hi_minus_lst",2
+/Users/yufeizhou/Desktop/heat-exposure-compare/notebooks/13_alphaearth_transfer_plus_pc.ipynb,13_alphaearth_transfer_plus_pc.ipynb,"hi_c, hi_minus_lst",2
+/Users/yufeizhou/Desktop/heat-exposure-compare/notebooks/13_alphaearth_transfer_plus_pc.ipynb,13_alphaearth_transfer_plus_pc.ipynb,"hi_c, hi_minus_lst",2
+/Users/yufeizhou/Desktop/heat-exposure-compare/notebooks/16_las_vegas_build_inputs.ipynb,16_las_vegas_build_inputs.ipynb,"heat index, hi_c",2
+/Users/yufeizhou/Desktop/heat-exposure-compare/notebooks/16_las_vegas_build_inputs.ipynb,16_las_vegas_build_inputs.ipynb,"heat index, hi_c",2
+/Users/yufeizhou/Desktop/heat-exposure-compare/paper_assets/rq1/text/Methods_draft.md,Methods_draft.md,"heat index, relative humidity",2
+/Users/yufeizhou/Desktop/heat-exposure-compare/README.md,README.md,"heat index, relative humidity",2
+/Users/yufeizhou/Desktop/heat-exposure-compare/outputs/pilot/rq1_methods_draft.md,rq1_methods_draft.md,"heat index, relative humidity",2
+/Users/yufeizhou/Desktop/heat-exposure-compare/notebooks/01_pilot_inventory.ipynb,01_pilot_inventory.ipynb,heat index,1
+/Users/yufeizhou/Desktop/heat-exposure-compare/notebooks/01_pilot_inventory.ipynb,01_pilot_inventory.ipynb,heat index,1
+/Users/yufeizhou/Desktop/heat-exposure-compare/notebooks/06_rq1_batch_city_pipeline.ipynb,06_rq1_batch_city_pipeline.ipynb,hi_c,1
+/Users/yufeizhou/Desktop/heat-exposure-compare/notebooks/06_rq1_batch_city_pipeline.ipynb,06_rq1_batch_city_pipeline.ipynb,hi_c,1
+/Users/yufeizhou/Desktop/heat-exposure-compare/notebooks/11_alphaearth_cross_city_shared_dims.ipynb,11_alphaearth_cross_city_shared_dims.ipynb,hi_minus_lst,1
+/Users/yufeizhou/Desktop/heat-exposure-compare/notebooks/11_alphaearth_cross_city_shared_dims.ipynb,11_alphaearth_cross_city_shared_dims.ipynb,hi_minus_lst,1
+/Users/yufeizhou/Desktop/heat-exposure-compare/notebooks/14_alphaearth_final_summary.ipynb,14_alphaearth_final_summary.ipynb,hi_minus_lst,1
+/Users/yufeizhou/Desktop/heat-exposure-compare/notebooks/14_alphaearth_final_summary.ipynb,14_alphaearth_final_summary.ipynb,hi_minus_lst,1
+/Users/yufeizhou/Desktop/heat-exposure-compare/paper_assets/rq1/text/Figure_captions.md,Figure_captions.md,heat index,1
+/Users/yufeizhou/Desktop/heat-exposure-compare/paper_assets/rq1/text/MANUSCRIPT_MAP.md,MANUSCRIPT_MAP.md,heat index,1
+/Users/yufeizhou/Desktop/heat-exposure-compare/city_intake/README_new_city_intake.md,README_new_city_intake.md,heat index,1
+/Users/yufeizhou/Desktop/heat-exposure-compare/paper_assets/rq1/text/Results_draft.md,Results_draft.md,heat index,1
+/Users/yufeizhou/Desktop/heat-exposure-compare/paper_assets/rq1/text/Workflow_caption.md,Workflow_caption.md,heat index,1
+/Users/yufeizhou/Desktop/heat-exposure-compare/outputs/pilot/alphaearth/city_alphaearth_final_teacher_note.md,city_alphaearth_final_teacher_note.md,hi_minus_lst,1
+/Users/yufeizhou/Desktop/heat-exposure-compare/outputs/pilot/alphaearth/city_alphaearth_teacher_bullets.md,city_alphaearth_teacher_bullets.md,hi_minus_lst,1
+/Users/yufeizhou/Desktop/heat-exposure-compare/outputs/pilot/rq1_advisor_update_draft.md,rq1_advisor_update_draft.md,heat index,1
+/Users/yufeizhou/Desktop/heat-exposure-compare/outputs/pilot/rq1_figure_captions.md,rq1_figure_captions.md,heat index,1
+/Users/yufeizhou/Desktop/heat-exposure-compare/outputs/pilot/rq1_methods_workflow_caption_terminal.md,rq1_methods_workflow_caption_terminal.md,heat index,1
+/Users/yufeizhou/Desktop/heat-exposure-compare/rq1_methods_workflow_terminal.py,rq1_methods_workflow_terminal.py,heat index,1
+/Users/yufeizhou/Desktop/heat-exposure-compare/outputs/pilot/rq1_new_city_onboarding_note.md,rq1_new_city_onboarding_note.md,hi_c,1
+/Users/yufeizhou/Desktop/heat-exposure-compare/outputs/pilot/rq1_paper_results_notes.md,rq1_paper_results_notes.md,heat index,1
+/Users/yufeizhou/Desktop/heat-exposure-compare/outputs/pilot/rq1_results_draft.md,rq1_results_draft.md,heat index,1
+/Users/yufeizhou/Desktop/heat-exposure-compare/outputs/pilot/rq1_table1_twocity_baseline.md,rq1_table1_twocity_baseline.md,hi_c,1

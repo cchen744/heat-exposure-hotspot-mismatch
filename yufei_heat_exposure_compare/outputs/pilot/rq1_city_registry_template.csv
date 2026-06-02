@@ -1,0 +1,5 @@
+city,is_active,status,main_gpkg,boundary_file,lst_col,hi_col,pop_col,geoid_col,notes
+Houston,True,ready,/Users/yufeizhou/Desktop/heat-exposure-compare/data_processed/houston/houston_master_with_lst_hi_fixed.gpkg,/Users/yufeizhou/Desktop/heat-exposure-compare/outputs/pilot/heat_ready/houston/houston_boundary_heat_ready.geojson,lst_c,hi_c,total_population,GEOID,Auto-filled from detected registry
+Phoenix,True,ready,/Users/yufeizhou/Desktop/heat-exposure-compare/data_processed/phoenix/phoenix_master_with_lst_hi_fixed.gpkg,/Users/yufeizhou/Desktop/heat-exposure-compare/outputs/pilot/heat_ready/phoenix/phoenix_boundary_heat_ready.geojson,lst_c,hi_c,total_population,GEOID,Auto-filled from detected registry
+Miami,False,missing_inputs,,,,,,,Need merged tract-level gpkg + boundary + columns before batch run
+Las Vegas,False,missing_inputs,,,,,,,Need merged tract-level gpkg + boundary + columns before batch run

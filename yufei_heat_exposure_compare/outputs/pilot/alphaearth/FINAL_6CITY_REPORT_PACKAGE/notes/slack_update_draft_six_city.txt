@@ -1,0 +1,9 @@
+Hi Professor Gao,
+
+I expanded the analysis to six cities: Houston, Phoenix, Las Vegas, Los Angeles, Miami, and Boston. The core LST + Heat Index workflow is now working for all six cities, with high analysis-ready coverage for each city.
+
+The main pattern I see so far is that LST and Heat Index do not identify the same hotspot areas across cities. Miami and Boston show strong Heat-Index-dominant patterns, while Las Vegas appears more coupled between LST and Heat Index. Los Angeles looks like a useful coastal/dry comparison case.
+
+I organized the outputs into a cleaner six-city package with the main mismatch maps, relative dominance maps, priority tract maps, and a mechanism summary figure. I think the strongest current framing is that LST and Heat Index reveal different spatial mechanisms of urban heat risk across coastal/inland and dry/humid city contexts.
+
+I will keep refining the maps and summary figures, but I wanted to share this update first and check whether this six-city direction looks appropriate for the paper-style analysis.
