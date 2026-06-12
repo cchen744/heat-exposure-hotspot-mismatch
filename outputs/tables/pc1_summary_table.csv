@@ -1,0 +1,13 @@
+City,PC1 corr. with LST (|r|>0.5),PC1 corr. with HI (|r|>0.5),PC1 corr. with HI−LST_z (|r|>0.5),PC1 dominant in SHAP (rank-1)
+Atlanta,Yes,No,Yes,Yes
+Boston,Yes,No,Yes,Yes
+Chicago,No,No,No,Yes
+Dallas,Yes,No,Yes,Yes
+Houston,Yes,No,Yes,Yes
+Las Vegas,No,No,No,No
+Los Angeles,No,No,No,No
+Miami,Yes,No,Yes,Yes
+New York,No,No,No,Yes
+Phoenix,No,No,No,No
+San Francisco,No,No,No,No
+Seattle,No,No,No,Yes
