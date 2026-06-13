@@ -1,0 +1,5 @@
+metric,test,stat_F,p_value,R2_between_city,n,n_perm
+euclidean,PERMANOVA,218.46,0.001,0.6692,1200,999
+cosine,PERMANOVA,450.53,0.001,0.8066,1200,999
+euclidean,PERMDISP_ANOVA,17.09,1.0221404033911536e-31,,1200,
+euclidean,PERMDISP_Kruskal,269.71,2.0557755783393667e-51,,1200,
